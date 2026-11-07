@@ -1,0 +1,8 @@
+---
+import NewsIndex from '../../../../components/NewsIndex.astro';
+import { CATEGORIES } from '../../../../data/site';
+export function getStaticPaths() {
+  return Object.keys(CATEGORIES).filter((c) => c !== 'hall-of-fame').map((cat) => ({ params: { cat } }));
+}
+---
+<NewsIndex cat={Astro.params.cat} />

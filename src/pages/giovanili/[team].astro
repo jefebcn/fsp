@@ -1,0 +1,31 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import NewsGrid from '../../components/NewsGrid.astro';
+import PersonCard from '../../components/PersonCard.astro';
+import { GIOVANILI, STAFF_TECNICO } from '../../data/site';
+import { getAllNews, matching } from '../../lib/news';
+export function getStaticPaths() { return GIOVANILI.map((t) => ({ params: { team: t.slug }, props: { team: t } })); }
+const { team } = Astro.props;
+const news = matching((await getAllNews()).filter((n) => !n.data.categories.includes('nazionali')), team.match);
+const coaches = STAFF_TECNICO.filter((p) => team.coaches.includes(p.name));
+---
+<Base title={`${team.name} – Settore giovanile`} description={`La squadra ${team.name} della Federazione Sammarinese Pallacanestro.`}>
+  <PageHero title={team.name} intro={`Settore giovanile · indicativamente ${team.age}`} crumbs={[{ label: 'Giovani' }, { label: 'Settore giovanile', href: '/giovanili/' }]} />
+  {coaches.length > 0 && (
+    <section class="section">
+      <div class="wrap">
+        <h2>Lo staff</h2>
+        <ul class="grid grid--3" style="list-style:none;padding:0;margin:0">{coaches.map((p) => <PersonCard person={p} />)}</ul>
+      </div>
+    </section>
+  )}
+  <section class:list={['section', { 'section--soft': coaches.length > 0 }]}>
+    <div class="wrap">
+      <h2>Notizie {team.name}</h2>
+      <p class="lead">{news.length} articoli in archivio.</p>
+      <NewsGrid items={news.slice(0, 24)} empty="Non ci sono ancora notizie per questa squadra." />
+      {news.length > 24 && <p style="margin-top:24px"><a class="btn btn--ghost" href="/cerca/">Cerca nell'archivio</a></p>}
+    </div>
+  </section>
+</Base>

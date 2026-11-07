@@ -1,0 +1,11 @@
+---
+import NewsCard from './NewsCard.astro';
+import type { News } from '../lib/news';
+interface Props { items: News[]; empty?: string; headingLevel?: 'h2' | 'h3' }
+const { items, empty = 'Non ci sono ancora notizie in questa sezione.', headingLevel } = Astro.props;
+---
+{items.length ? (
+  <div class="grid grid--3">{items.map((n) => <NewsCard item={n} headingLevel={headingLevel} />)}</div>
+) : (
+  <p class="info-box">{empty}</p>
+)}

@@ -1,0 +1,209 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+import NewsCard from '../components/NewsCard.astro';
+import SponsorStrip from '../components/SponsorStrip.astro';
+import { getAllNews, byCategory, formatDate, newsUrl } from '../lib/news';
+import { SITE, tel } from '../data/site';
+
+const all = await getAllNews();
+const featured = all.find((n) => n.data.featured) ?? all[0];
+const latest = all.filter((n) => n.id !== featured.id).slice(0, 4);
+const hof = byCategory(all, 'hall-of-fame').slice(0, 3);
+
+const paths = [
+  { icon: 'child', age: '5-11 anni', title: 'Minibasket', text: 'Il primo canestro non si scorda mai. Corsi da settembre a giugno a Serravalle e San Marino Città.', href: '/minibasket/', tone: 'orange' },
+  { icon: 'users', age: '11-19 anni', title: 'Settore giovanile', text: 'Squadre dall’Under 13 all’Under 19, allenate da uno staff tecnico qualificato.', href: '/giovanili/', tone: 'blue' },
+  { icon: 'sun', age: 'Estate · 5-11 anni', title: 'Centro estivo', text: 'Basket, giochi all’aria aperta, merenda e pranzo: l’estate più divertente!', href: '/attivita/centro-estivo/', tone: 'cyan' },
+  { icon: 'school', age: 'Elementari e medie', title: 'Basket a scuola', text: 'Lezioni e tornei con le classi quarte delle elementari e seconde delle medie.', href: '/attivita/scuole/', tone: 'green' },
+  { icon: 'flag', age: 'Under 16 · Under 18 · Senior', title: 'Nazionali', text: 'I colori biancazzurri nei campionati europei FIBA e ai Giochi dei Piccoli Stati.', href: '/nazionali/', tone: 'navy' },
+  { icon: 'trophy', age: 'Squadre e appassionati', title: 'Campionato Sammarinese', text: 'Il torneo di casa, oggi Tim San Marino Cup: risultati e tabellini dal 2009.', href: '/campionato/', tone: 'blue' },
+];
+---
+<Base>
+  <section class="hero">
+    <img class="hero__bg" src="/media/home-6273_9920_186063.webp" alt="" width="960" height="720" fetchpriority="high" decoding="async" />
+    <div class="wrap hero__in">
+      <p class="hero__kicker">Federazione Sammarinese Pallacanestro</p>
+      <h1>Il basket di San Marino è una grande famiglia</h1>
+      <p class="hero__lead">Dal primo palleggio al Minibasket fino alla maglia della Nazionale: insegniamo impegno, lealtà, rispetto delle regole e sano divertimento, dentro e fuori dal campo.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="/minibasket/"><Icon name="ball" /> Inizia a giocare</a>
+        <a class="btn btn--light" href="/news/"><Icon name="news" /> Ultime notizie</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="percorsi-t">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Per bambini, ragazzi e famiglie</p>
+          <h2 id="percorsi-t">Trova il tuo percorso</h2>
+        </div>
+        <p class="lead">Scegli l'attività giusta per età e passione: ti spieghiamo tutto, passo dopo passo.</p>
+      </div>
+      <ul class="paths">
+        {paths.map((p) => (
+          <li class={`path path--${p.tone}`}>
+            <span class="path__icon"><Icon name={p.icon} size={30} /></span>
+            <span class="path__age">{p.age}</span>
+            <h3><a href={p.href}>{p.title}</a></h3>
+            <p>{p.text}</p>
+            <span class="path__go" aria-hidden="true">Scopri <Icon name="arrow" size={18} /></span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--soft" aria-labelledby="news-t">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">In primo piano</p>
+          <h2 id="news-t">Ultime notizie</h2>
+        </div>
+        <a class="btn btn--ghost" href="/news/">Tutte le news <Icon name="arrow" /></a>
+      </div>
+      <div class="news-layout">
+        <NewsCard item={featured} big />
+        <div class="news-side">
+          {latest.map((n) => <NewsCard item={n} />)}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="chi-t">
+    <div class="wrap welcome">
+      <div>
+        <p class="eyebrow">Benvenuti</p>
+        <h2 id="chi-t">Benvenuti nel sito ufficiale della Federazione Sammarinese Pallacanestro</h2>
+        <p><strong>La FSP è stata fondata il 9 febbraio 1968</strong>, mentre la Pallacanestro Titano, la prima società di San Marino, è nata l'anno successivo, nel <strong>1969</strong>. Si tratta della prima società sammarinese autorizzata a partecipare ai campionati italiani, grazie alla convenzione sottoscritta con l'omologa <strong>Federazione Italiana</strong> e riconosciuta a livello mondiale dalla Federazione Internazionale.</p>
+        <p><strong>Impegno, lealtà, sacrificio, sano divertimento, rispetto delle regole</strong>, capacità di sviluppare lo spirito di gruppo e di esaltare le caratteristiche di ognuno nel gioco di squadra, dentro e fuori dal campo: riassumendo in una sola parola, il Basket. Questi sono i valori fondamentali che dalla sua nascita la FSP ha cercato di trasmettere ai propri affiliati e che ancora oggi persegue con <strong>dedizione in ogni attività</strong>.</p>
+        <a class="link-arrow" href="/federazione/storia/">Leggi la nostra storia <Icon name="arrow" size={18} /></a>
+      </div>
+      <ul class="facts" aria-label="La FSP in numeri">
+        <li><strong>1968</strong><span>anno di fondazione</span></li>
+        <li><strong>2</strong><span>centri Minibasket</span></li>
+        <li><strong>3</strong><span>palestre sul territorio</span></li>
+        <li><strong>Oro</strong><span>Nazionale Senior, Malta 2002</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="family" aria-labelledby="fam-t">
+    <img src="/media/n-1686085268_festa-minibk-1.webp" alt="Foto di gruppo di bambine e bambini del Minibasket con i loro istruttori in palestra" width="1400" height="778" loading="lazy" />
+    <div class="family__card">
+      <p class="eyebrow">Minibasket</p>
+      <h2 id="fam-t">Il nostro fiore all'occhiello</h2>
+      <p>La voglia di giocare, la competenza e una grande dose di empatia: il Minibasket accoglie bambine e bambini dai 5 agli 11 anni, con uno staff coordinato da Oscar Valentini.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="/minibasket/">Scopri il Minibasket</a>
+        <a class="btn btn--ghost" href="/contatti/">Chiedi informazioni</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--navy" aria-labelledby="hof-t">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow eyebrow--light">RSM Hall of Fame</p>
+          <h2 id="hof-t">Le leggende del basket sammarinese</h2>
+        </div>
+        <a class="btn btn--light" href="/hall-of-fame/">Vedi tutti</a>
+      </div>
+      <ul class="hof">
+        {hof.map((h) => (
+          <li>
+            <a href={newsUrl(h)}>
+              <img src={h.data.cover} alt="" loading="lazy" width="440" height="290" />
+              <span class="hof__date">{formatDate(h.data.date)}</span>
+              <span class="hof__t">{h.data.title}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="info-t">
+    <div class="wrap info-grid">
+      <div>
+        <p class="eyebrow">Serve aiuto?</p>
+        <h2 id="info-t">La segreteria FSP è a disposizione delle famiglie</h2>
+        <p class="lead">Per iscrizioni, orari, certificati e qualsiasi domanda, contattaci: ti risponderemo il prima possibile.</p>
+        <a class="btn btn--blue" href="/contatti/"><Icon name="chat" /> Scrivici</a>
+      </div>
+      <div class="info-box"><ul class="info-list">
+        <li><Icon name="pin" /> <span>{SITE.address.place}<br />{SITE.address.street}, {SITE.address.cap} {SITE.address.city}</span></li>
+        <li><Icon name="phone" /> <span><a href={tel(SITE.phone)}>{SITE.phone}</a> · Cell. <a href={tel(SITE.mobile)}>{SITE.mobile}</a></span></li>
+        <li><Icon name="mail" /> <a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+        <li><Icon name="court" /> <a href="/federazione/impianti/">Le nostre palestre</a></li>
+      </ul></div>
+    </div>
+  </section>
+
+  <SponsorStrip />
+</Base>
+
+<style>
+  .hero { position: relative; color: #fff; overflow: hidden; background: var(--c-navy); }
+  .hero__bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 35%; }
+  .hero::after { content: ''; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(7, 38, 74, .95) 0%, rgba(7, 38, 74, .82) 45%, rgba(7, 38, 74, .35) 100%); }
+  .hero__in { position: relative; z-index: 1; padding-block: clamp(64px, 11vw, 140px); }
+  .hero h1 { color: #fff; max-width: 15ch; font-size: clamp(2.3rem, 5.6vw, 4rem); }
+  .hero__kicker { display: inline-block; background: var(--c-cyan); color: #04223f; font-weight: 800; padding: 6px 14px; border-radius: 999px; font-size: .9rem; letter-spacing: .04em; }
+  .hero__lead { font-size: clamp(1.1rem, 1.8vw, 1.3rem); max-width: 52ch; color: #e3effa; }
+  .hero__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+
+  .paths { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 320px), 1fr)); }
+  .path { --tone: var(--c-blue-dark); --tone-soft: var(--c-cyan-soft); position: relative; padding: 26px; border-radius: var(--radius); background: var(--tone-soft); border: 2px solid transparent; transition: transform .2s, border-color .2s, box-shadow .2s; }
+  .path:hover, .path:focus-within { transform: translateY(-3px); border-color: var(--tone); box-shadow: var(--shadow); }
+  .path--orange { --tone: var(--c-orange-dark); --tone-soft: var(--c-orange-soft); }
+  .path--cyan { --tone: #00739a; --tone-soft: #e1f7fd; }
+  .path--green { --tone: var(--c-green); --tone-soft: #e6f5ea; }
+  .path--navy { --tone: var(--c-navy); --tone-soft: #e5ecf5; }
+  .path__icon { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 16px; background: var(--tone); color: #fff; margin-bottom: 14px; }
+  .path__age { display: block; font-size: .85rem; font-weight: 800; text-transform: uppercase; letter-spacing: .06em; color: var(--tone); }
+  .path h3 { font-size: 1.4rem; margin: 4px 0 8px; }
+  .path h3 a { color: var(--c-navy); text-decoration: none; }
+  .path h3 a::after { content: ''; position: absolute; inset: 0; border-radius: var(--radius); }
+  .path h3 a:focus-visible { outline: none; }
+  .path:has(a:focus-visible) { outline: 3px solid var(--c-focus); outline-offset: 3px; }
+  .path p { margin: 0 0 12px; color: var(--c-text); }
+  .path__go { display: inline-flex; gap: 6px; align-items: center; font-weight: 800; color: var(--tone); }
+
+  .news-layout { display: grid; grid-template-columns: 1.15fr 1fr; gap: 24px; }
+  .news-side { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .news-side :global(.news-card__exc) { display: none; }
+  .news-side :global(.news-card__title) { font-size: 1.02rem; }
+  @media (max-width: 960px) { .news-layout { grid-template-columns: 1fr; } }
+  @media (max-width: 560px) { .news-side { grid-template-columns: 1fr; } }
+
+  .welcome { display: grid; grid-template-columns: 1.5fr 1fr; gap: 48px; align-items: center; }
+  .welcome h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); }
+  .facts { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .facts li { background: var(--c-bg-soft); border-radius: var(--radius); padding: 22px; border: 1px solid var(--c-border); }
+  .facts strong { display: block; font-size: 2.2rem; color: var(--c-orange-dark); line-height: 1.1; }
+  .facts span { color: var(--c-muted); font-weight: 600; }
+  @media (max-width: 860px) { .welcome { grid-template-columns: 1fr; } }
+
+  .family { position: relative; display: grid; grid-template-columns: 1fr 1fr; background: var(--c-orange-soft); }
+  .family img { width: 100%; height: 100%; object-fit: cover; min-height: 340px; }
+  .family__card { padding: clamp(32px, 6vw, 72px); align-self: center; max-width: 620px; }
+  @media (max-width: 860px) { .family { grid-template-columns: 1fr; } .family img { min-height: 0; aspect-ratio: 3/2; } }
+
+  .eyebrow--light { color: #ffc28f; }
+  .hof { list-style: none; padding: 0; margin: 0; display: grid; gap: 24px; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); }
+  .hof a { display: block; color: #fff; text-decoration: none; border-radius: var(--radius); overflow: hidden; background: rgba(255,255,255,.06); height: 100%; }
+  .hof a:hover { background: rgba(255,255,255,.12); color: #fff; }
+  .hof img { aspect-ratio: 3/2; width: 100%; object-fit: cover; }
+  .hof__date { display: block; padding: 16px 20px 0; color: #9fd8f2; font-weight: 700; font-size: .9rem; }
+  .hof__t { display: block; padding: 4px 20px 20px; font-weight: 800; font-size: 1.15rem; }
+
+  .info-grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 40px; align-items: center; }
+  @media (max-width: 860px) { .info-grid { grid-template-columns: 1fr; } }
+</style>

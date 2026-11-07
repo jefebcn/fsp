@@ -1,0 +1,132 @@
+---
+import Icon from './Icon.astro';
+import { NAV } from '../data/site';
+const path = Astro.url.pathname;
+const isActive = (href: string) => (href === '/' ? path === '/' : path.startsWith(href));
+const groupActive = (item: (typeof NAV)[number]) => isActive(item.href) || !!item.children?.some((c) => isActive(c.href));
+---
+<header class="site-header">
+  <div class="topbar">
+    <div class="wrap topbar__in">
+      <span class="topbar__claim">Dal 1968 il basket di San Marino</span>
+      <div class="topbar__tools">
+        <button type="button" class="tool-btn" id="text-toggle" aria-pressed="false" title="Ingrandisci il testo">
+          <Icon name="text" size={18} /> <span>Testo grande</span>
+        </button>
+        <a class="tool-btn" href="https://www.instagram.com/fsp1968/" rel="noopener" target="_blank"><Icon name="instagram" size={18} /><span class="visually-hidden">Instagram (si apre in una nuova scheda)</span></a>
+        <a class="tool-btn" href="https://www.facebook.com/federazionesammarinese.pallacanestro/" rel="noopener" target="_blank"><Icon name="facebook" size={18} /><span class="visually-hidden">Facebook (si apre in una nuova scheda)</span></a>
+      </div>
+    </div>
+  </div>
+  <div class="wrap header__in">
+    <a href="/" class="brand" aria-label="FSP – Federazione Sammarinese Pallacanestro, torna alla home">
+      <img src="/media/logo_top.webp" width="255" height="120" alt="" />
+    </a>
+    <button type="button" class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+      <Icon name="menu" class="i-open" /><Icon name="close" class="i-close" />
+      <span>Menu</span>
+    </button>
+    <nav id="main-nav" class="nav" aria-label="Menu principale">
+      <ul class="nav__list">
+        {NAV.map((item, i) => (
+          <li class:list={['nav__item', { 'has-sub': item.children }]}>
+            {item.children ? (
+              <>
+                <button type="button" class:list={['nav__link', { active: groupActive(item) }]} aria-expanded="false" aria-controls={`sub-${i}`}>
+                  {item.label} <Icon name="chevron" size={16} class="chev" />
+                </button>
+                <ul class="sub" id={`sub-${i}`}>
+                  {item.children.map((c) => (
+                    <li><a href={c.href} aria-current={path === c.href ? 'page' : undefined}>{c.label}</a></li>
+                  ))}
+                </ul>
+              </>
+            ) : (
+              <a href={item.href} class:list={['nav__link', { active: isActive(item.href) }]} aria-current={path === item.href ? 'page' : undefined}>{item.label}</a>
+            )}
+          </li>
+        ))}
+        <li class="nav__item nav__search">
+          <a href="/cerca/" class="nav__link nav__icon" aria-current={path === '/cerca/' ? 'page' : undefined}><Icon name="search" size={20} /><span class="search-label">Cerca</span></a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .site-header { position: sticky; top: 0; z-index: 50; background: rgba(255,255,255,.97); backdrop-filter: saturate(1.4) blur(8px); border-bottom: 1px solid var(--c-border); }
+  .topbar { background: var(--c-navy); color: #dcecfb; font-size: .85rem; }
+  .topbar__in { display: flex; justify-content: space-between; align-items: center; gap: 12px; min-height: 38px; }
+  .topbar__claim { font-weight: 600; letter-spacing: .02em; }
+  .topbar__tools { display: flex; gap: 4px; align-items: center; }
+  .tool-btn { display: inline-flex; align-items: center; gap: 6px; color: #fff; background: none; border: 0; padding: 6px 10px; min-height: 36px; border-radius: 8px; font: inherit; font-weight: 600; cursor: pointer; text-decoration: none; }
+  .tool-btn:hover, .tool-btn[aria-pressed='true'] { background: rgba(255,255,255,.14); color: #fff; }
+  .header__in { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 84px; }
+  .brand img { height: 64px; width: auto; }
+  .nav__list { list-style: none; margin: 0; padding: 0; display: flex; align-items: center; gap: 2px; }
+  .nav__item { position: relative; }
+  .nav__link { display: inline-flex; align-items: center; gap: 4px; padding: 10px 12px; min-height: 44px; border-radius: 10px; font: inherit; font-weight: 700; font-size: 1rem; color: var(--c-navy); text-decoration: none; background: none; border: 0; cursor: pointer; white-space: nowrap; }
+  .nav__link:hover, .nav__link[aria-expanded='true'] { background: var(--c-cyan-soft); color: var(--c-navy); }
+  .nav__link.active { box-shadow: inset 0 -3px 0 var(--c-orange); }
+  :global(.chev) { transition: transform .2s; }
+  .nav__link[aria-expanded="true"] :global(.chev) { transform: rotate(180deg); }
+  .sub { list-style: none; margin: 0; padding: 8px; position: absolute; top: calc(100% + 6px); left: 0; min-width: 240px; background: #fff; border-radius: 14px; box-shadow: var(--shadow-lg); border: 1px solid var(--c-border); display: none; }
+  .nav__link[aria-expanded='true'] + .sub { display: block; }
+  .sub a { display: block; padding: 10px 14px; border-radius: 10px; color: var(--c-text); text-decoration: none; font-weight: 600; }
+  .sub a:hover, .sub a[aria-current='page'] { background: var(--c-cyan-soft); color: var(--c-navy); }
+  .search-label { display: none; }
+  .menu-toggle { display: none; align-items: center; gap: 8px; min-height: 48px; padding: 8px 16px; border-radius: 999px; border: 2px solid var(--c-navy); background: #fff; color: var(--c-navy); font: inherit; font-weight: 800; cursor: pointer; }
+  .menu-toggle :global(.i-close) { display: none; }
+  .menu-toggle[aria-expanded="true"] :global(.i-close) { display: block; }
+  .menu-toggle[aria-expanded="true"] :global(.i-open) { display: none; }
+
+  @media (max-width: 1080px) {
+    .topbar__claim { display: none; }
+    .topbar__in { justify-content: flex-end; }
+    .brand img { height: 52px; }
+    .header__in { min-height: 72px; }
+    .menu-toggle { display: inline-flex; }
+    .nav { display: none; position: absolute; left: 0; right: 0; top: 100%; background: #fff; border-bottom: 1px solid var(--c-border); box-shadow: var(--shadow-lg); max-height: calc(100vh - 110px); overflow-y: auto; }
+    .nav.open { display: block; }
+    .nav__list { flex-direction: column; align-items: stretch; padding: 12px var(--gutter) 24px; gap: 4px; }
+    .nav__link { width: 100%; justify-content: space-between; font-size: 1.1rem; padding: 14px 12px; }
+    .nav__link.active { box-shadow: inset 4px 0 0 var(--c-orange); }
+    .sub { position: static; box-shadow: none; border: 0; padding: 0 0 8px 12px; min-width: 0; }
+    .search-label { display: inline; }
+    .nav__icon { justify-content: flex-start; gap: 10px; }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector<HTMLButtonElement>('.menu-toggle');
+  const nav = document.getElementById('main-nav');
+  toggle?.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') !== 'true';
+    toggle.setAttribute('aria-expanded', String(open));
+    nav?.classList.toggle('open', open);
+  });
+  const subs = Array.from(document.querySelectorAll<HTMLButtonElement>('.nav__item.has-sub > button'));
+  const closeAll = (except?: HTMLButtonElement) => subs.forEach((b) => b !== except && b.setAttribute('aria-expanded', 'false'));
+  subs.forEach((b) => b.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = b.getAttribute('aria-expanded') !== 'true';
+    closeAll(b);
+    b.setAttribute('aria-expanded', String(open));
+  }));
+  document.addEventListener('click', (e) => { if (!(e.target as Element).closest('.nav')) closeAll(); });
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'Escape') return;
+    const openBtn = subs.find((b) => b.getAttribute('aria-expanded') === 'true');
+    if (openBtn) { closeAll(); openBtn.focus(); }
+    else if (toggle?.getAttribute('aria-expanded') === 'true') { toggle.click(); toggle.focus(); }
+  });
+  const tt = document.getElementById('text-toggle');
+  const sync = () => tt?.setAttribute('aria-pressed', String(document.documentElement.classList.contains('text-lg')));
+  sync();
+  tt?.addEventListener('click', () => {
+    const on = document.documentElement.classList.toggle('text-lg');
+    try { localStorage.setItem('fsp-text', on ? 'lg' : ''); } catch (e) {}
+    sync();
+  });
+</script>

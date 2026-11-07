@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import storia from '../../data/pages/storia.html?raw';
+const timeline = [
+  { y: '1968', t: 'Il 9 febbraio nasce la Federazione Sammarinese Pallacanestro, fondata dal Prof. Luciano Capicchioni.' },
+  { y: '1969', t: 'Nasce la Pallacanestro Titano, prima società sammarinese ammessa ai campionati italiani.' },
+  { y: '1971', t: 'Si disputa il primo Campionato Sammarinese, vinto dal Città I (Tre Penne).' },
+  { y: '1987', t: 'Prima partecipazione ai Giochi dei Piccoli Stati d’Europa.' },
+  { y: '1996', t: 'San Marino organizza la Promotion Cup: la Nazionale conquista la prima medaglia della sua storia.' },
+  { y: '2002', t: 'A Malta la Nazionale Senior vince l’oro battendo il Galles 82-70 in finale.' },
+  { y: '2012', t: 'Nasce la Hall of Fame del basket sammarinese: il primo è Stefano Rossini.' },
+];
+---
+<Base title="La nostra storia" description="La storia della Federazione Sammarinese Pallacanestro dal 1968.">
+  <PageHero title="La nostra storia" intro="1968-2008: 40 anni di grandi emozioni, amore e... passione che riviviamo insieme." crumbs={[{ label: 'Federazione', href: '/federazione/' }]} />
+  <section class="section section--soft">
+    <div class="wrap">
+      <h2>Le tappe principali</h2>
+      <ol class="timeline">
+        {timeline.map((s) => <li><span class="tl__y">{s.y}</span><p>{s.t}</p></li>)}
+      </ol>
+    </div>
+  </section>
+  <section class="section">
+    <div class="wrap">
+      <h2>Il racconto del quarantennale</h2>
+      <div class="prose" set:html={storia} />
+    </div>
+  </section>
+</Base>
+<style>
+  .timeline { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 16px; counter-reset: s; }
+  .timeline li { background: #fff; border-radius: var(--radius); padding: 22px; border: 1px solid var(--c-border); border-top: 5px solid var(--c-cyan); }
+  .tl__y { display: block; font-size: 1.9rem; font-weight: 800; color: var(--c-orange-dark); }
+  .timeline p { margin: 4px 0 0; }
+</style>

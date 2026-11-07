@@ -1,0 +1,35 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import NewsGrid from '../../components/NewsGrid.astro';
+import Icon from '../../components/Icon.astro';
+import { NAZIONALI } from '../../data/site';
+import { getAllNews, byCategory } from '../../lib/news';
+const news = byCategory(await getAllNews(), 'nazionali');
+---
+<Base title="Nazionali" description="Le squadre nazionali di basket di San Marino: Senior, Under 18 e Under 16.">
+  <PageHero title="Le Nazionali" intro="I colori biancazzurri nei campionati europei FIBA e ai Giochi dei Piccoli Stati d'Europa." crumbs={[]} />
+  <section class="section">
+    <div class="wrap grid grid--3">
+      {NAZIONALI.map((s) => (
+        <a class="card squad" href={`/nazionali/${s.slug}/`}>
+          <img src={s.photo} alt="" loading="lazy" width="520" height="300" />
+          <span class="card__body"><span class="squad__n">{s.name}</span><span class="squad__s">Rosa {s.season} · {s.players.length} giocatori</span><span class="link-arrow">Vedi la squadra <Icon name="arrow" size={18} /></span></span>
+        </a>
+      ))}
+    </div>
+  </section>
+  <section class="section section--soft">
+    <div class="wrap">
+      <div class="section-head"><h2>Notizie dalle Nazionali</h2><a class="btn btn--ghost" href="/news/categoria/nazionali/">Tutte <Icon name="arrow" /></a></div>
+      <NewsGrid items={news.slice(0, 6)} />
+    </div>
+  </section>
+</Base>
+<style>
+  .squad { text-decoration: none; color: var(--c-text); transition: transform .2s, box-shadow .2s; }
+  .squad:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); color: var(--c-text); }
+  .squad img { aspect-ratio: 16/10; object-fit: cover; width: 100%; }
+  .squad__n { font-weight: 800; font-size: 1.35rem; color: var(--c-navy); }
+  .squad__s { color: var(--c-muted); }
+</style>

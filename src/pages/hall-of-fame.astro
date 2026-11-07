@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import { getAllNews, byCategory, formatDate, newsUrl } from '../lib/news';
+const items = byCategory(await getAllNews(), 'hall-of-fame');
+---
+<Base title="Hall of Fame" description="La Hall of Fame del basket sammarinese.">
+  <PageHero title="RSM Hall of Fame" intro="Le persone e le squadre che hanno fatto la storia della pallacanestro sammarinese." crumbs={[]} />
+  <section class="section">
+    <div class="wrap">
+      <ol class="hof-list">
+        {items.map((h) => (
+          <li class="card">
+            {h.data.cover && <img src={h.data.cover} alt="" loading="lazy" width="500" height="330" />}
+            <div class="card__body">
+              <span class="hof-d">Nella Hall of Fame dal {formatDate(h.data.date)}</span>
+              <h2><a href={newsUrl(h)}>{h.data.title}</a></h2>
+              <p>{h.data.excerpt}</p>
+            </div>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+</Base>
+<style>
+  .hof-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 24px; }
+  .hof-list li { flex-direction: row; position: relative; }
+  .hof-list img { width: 40%; max-width: 420px; object-fit: cover; }
+  .hof-list h2 { font-size: 1.5rem; margin: 0; }
+  .hof-list h2 a { color: var(--c-navy); text-decoration: none; }
+  .hof-list h2 a::after { content: ''; position: absolute; inset: 0; }
+  .hof-list li:hover h2 a { text-decoration: underline; }
+  .hof-d { color: var(--c-gold); font-weight: 800; font-size: .9rem; text-transform: uppercase; letter-spacing: .05em; }
+  .hof-list p { margin: 0; color: var(--c-muted); }
+  @media (max-width: 700px) { .hof-list li { flex-direction: column; } .hof-list img { width: 100%; max-width: none; aspect-ratio: 3/2; } }
+</style>

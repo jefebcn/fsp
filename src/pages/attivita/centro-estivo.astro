@@ -1,0 +1,80 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import NewsGrid from '../../components/NewsGrid.astro';
+import { SITE, tel } from '../../data/site';
+import { getAllNews, matching } from '../../lib/news';
+const news = matching(await getAllNews(), /centro estivo|centri estivi|summer camp|camp estivo/i).slice(0, 3);
+const program = [
+  ['8:00-9:00', 'Accoglienza in palestra', 'users'],
+  ['9:00-10:00', 'Basket divisi per annate o uscita in passeggiata', 'ball'],
+  ['10:00-10:30', 'Merenda offerta da noi a base di frutta fresca', 'heart'],
+  ['10:30-12:30', "Giochi all'aria aperta ed attività varie", 'sun'],
+  ['12:30', 'Uscita SMALL', 'clock'],
+  ['13:00-14:00', 'Pranzo presso il ristorante Match Point al centro tennis', 'food'],
+  ['14:00-15:00', 'Gioco libero', 'child'],
+  ['15:00-16:00', 'Giochi organizzati', 'star'],
+  ['16:00', 'Uscita FULL', 'clock'],
+];
+---
+<Base title="Centro estivo" description="Centro estivo di basket a San Marino per bambini e bambine dai 5 agli 11 anni." image="/media/n-1679303416_summer-camp-fsp-2023.webp">
+  <PageHero title="Centro estivo" intro="Il Centro estivo di basket a San Marino è pensato per i bambini e bambine dai 5 agli 11 anni di età (compresi)." crumbs={[{ label: 'Attività', href: '/attivita/' }]}>
+    <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
+      <a class="btn btn--primary" href="/contatti/?oggetto=Centro%20estivo">Richiedi informazioni</a>
+    </div>
+  </PageHero>
+  <section class="section">
+    <div class="wrap ce">
+      <div>
+        <ul class="ce-facts">
+          <li><Icon name="child" size={28} /><div><strong>Età</strong>Bambini e bambine dai 5 agli 11 anni (compresi)</div></li>
+          <li><Icon name="calendar" size={28} /><div><strong>Turni</strong>Da metà giugno fino alla fine di luglio, poi da fine agosto fino alla prima settimana di settembre</div></li>
+          <li><Icon name="pin" size={28} /><div><strong>Dove</strong>Palestra U. Briganti di Fonte dell'Ovo</div></li>
+          <li><Icon name="bus" size={28} /><div><strong>Navetta</strong>Servizio di navetta dal Multieventi</div></li>
+          <li><Icon name="clock" size={28} /><div><strong>Orari</strong>FULL dalle 8:00 alle 16:00, oppure SMALL con uscita anticipata prima del pranzo alle 12:30</div></li>
+        </ul>
+        <h2>Programma della giornata</h2>
+        <ol class="day">
+          {program.map(([h, t, i]) => <li><span class="day__h">{h}</span><Icon name={i} size={22} /><span>{t}</span></li>)}
+        </ol>
+        <p class="note"><strong>Tariffe:</strong> consultare il volantino. Per riceverlo, contatta la segreteria.</p>
+      </div>
+      <aside>
+        <img class="ce-poster" src="/media/n-1679303416_summer-camp-fsp-2023.webp" alt="Volantino del Summer Camp FSP" loading="lazy" />
+        <div class="info-box" style="margin-top:20px">
+          <h3>Info e iscrizioni</h3>
+          <ul class="info-list">
+            <li><Icon name="phone" /><span>Segreteria FSP <a href={tel(SITE.phone)}>0549 885691</a><br />Cell. <a href={tel(SITE.mobile)}>335 5704089</a></span></li>
+            <li><Icon name="mail" /><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
+            <li><Icon name="facebook" /><a href={SITE.social.facebook} rel="noopener" target="_blank">Federazione Sammarinese Pallacanestro</a></li>
+            <li><Icon name="users" /><span>Oscar Valentini (Responsabile): <a href="tel:3333617850">333 3617850</a></span></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+  </section>
+  <section class="section section--soft">
+    <div class="wrap">
+      <div class="photos"><img src="/media/estivo_1.webp" alt="" loading="lazy" width="640" height="260" /><img src="/media/estivo_2.webp" alt="" loading="lazy" width="640" height="260" /></div>
+      {news.length > 0 && <><h2 style="margin-top:40px">Notizie sul centro estivo</h2><NewsGrid items={news} /></>}
+    </div>
+  </section>
+</Base>
+<style>
+  .ce { display: grid; grid-template-columns: 1.5fr 1fr; gap: 48px; align-items: start; }
+  .ce-facts { list-style: none; padding: 0; margin: 0 0 40px; display: grid; gap: 12px; }
+  .ce-facts li { display: flex; gap: 14px; align-items: flex-start; background: var(--c-cyan-soft); padding: 16px 18px; border-radius: var(--radius-sm); }
+  .ce-facts :global(svg) { color: var(--c-blue-dark); flex: none; }
+  .ce-facts strong { display: block; color: var(--c-navy); }
+  .day { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; border-left: 3px solid var(--c-orange); }
+  .day li { display: grid; grid-template-columns: 120px 28px 1fr; gap: 10px; align-items: center; padding: 10px 0 10px 16px; position: relative; }
+  .day li::before { content: ''; position: absolute; left: -8px; top: 50%; width: 13px; height: 13px; border-radius: 50%; background: #fff; border: 3px solid var(--c-orange); transform: translateY(-50%); }
+  .day__h { font-weight: 800; color: var(--c-navy); }
+  .day :global(svg) { color: var(--c-orange-dark); }
+  .note { margin-top: 24px; }
+  .ce-poster { border-radius: var(--radius); box-shadow: var(--shadow); width: 100%; }
+  .photos { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .photos img { width: 100%; border-radius: var(--radius); }
+  @media (max-width: 860px) { .ce, .photos { grid-template-columns: 1fr; } .day li { grid-template-columns: 96px 24px 1fr; } }
+</style>

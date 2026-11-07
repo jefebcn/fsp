@@ -1,0 +1,19 @@
+---
+import type { Person } from '../data/site';
+interface Props { person: Person }
+const { person } = Astro.props;
+const initials = person.name.split(' ').map((p) => p[0]).slice(0, 2).join('');
+---
+<li class="person card">
+  {person.photo ? <img class="avatar" src={person.photo} alt={`Foto di ${person.name}`} loading="lazy" width="160" height="160" /> : <span class="avatar" aria-hidden="true">{initials}</span>}
+  <div>
+    <h3>{person.name}</h3>
+    <p>{person.role}</p>
+  </div>
+</li>
+<style>
+  .person { flex-direction: row; align-items: center; gap: 18px; padding: 18px; }
+  .person .avatar { width: 84px; height: 84px; flex: none; }
+  .person h3 { font-size: 1.1rem; margin: 0 0 4px; }
+  .person p { margin: 0; color: var(--c-muted); font-size: .98rem; line-height: 1.45; }
+</style>

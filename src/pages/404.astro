@@ -1,0 +1,17 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+---
+<Base title="Pagina non trovata">
+  <section class="section">
+    <div class="wrap" style="text-align:center;max-width:640px">
+      <p style="font-size:5rem;font-weight:800;color:var(--c-orange);margin:0;line-height:1">404</p>
+      <h1>Palla persa!</h1>
+      <p class="lead" style="margin-inline:auto">La pagina che cerchi non esiste o è stata spostata nel nuovo sito. Prova a cercarla o torna alla home.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px">
+        <a class="btn btn--primary" href="/">Torna alla home</a>
+        <a class="btn btn--ghost" href="/cerca/"><Icon name="search" /> Cerca nel sito</a>
+      </div>
+    </div>
+  </section>
+</Base>

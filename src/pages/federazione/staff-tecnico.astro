@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import PersonCard from '../../components/PersonCard.astro';
+import { STAFF_TECNICO } from '../../data/site';
+---
+<Base title="Staff tecnico" description="Allenatori, istruttori minibasket e staff della FSP.">
+  <PageHero title="Staff tecnico" intro="Gli allenatori e le allenatrici che ogni giorno accompagnano in campo bambini, ragazzi e Nazionali." crumbs={[{ label: 'Federazione', href: '/federazione/' }]} />
+  <section class="section">
+    <div class="wrap">
+      <ul class="grid grid--3" style="list-style:none;padding:0;margin:0">
+        {STAFF_TECNICO.map((p) => <PersonCard person={p} />)}
+      </ul>
+    </div>
+  </section>
+</Base>

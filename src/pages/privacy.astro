@@ -1,0 +1,18 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import { SITE } from '../data/site';
+---
+<Base title="Privacy e cookie" description="Informativa privacy e cookie del sito della Federazione Sammarinese Pallacanestro.">
+  <PageHero title="Privacy e cookie" crumbs={[]} />
+  <section class="section">
+    <div class="wrap prose">
+      <p><strong>Titolare del trattamento:</strong> {SITE.name}, {SITE.address.street}, {SITE.address.cap} {SITE.address.city} ({SITE.address.country}) – {SITE.coe} – <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+      <h2>Cookie</h2>
+      <p>Questo sito non utilizza cookie di profilazione né strumenti di tracciamento pubblicitario. I caratteri tipografici sono ospitati direttamente sul sito, senza richieste a servizi esterni. Viene salvata nel browser solo la preferenza "Testo grande", se attivata.</p>
+      <p>I link verso Instagram, Facebook, WhatsApp e altri siti esterni portano a servizi che applicano le proprie informative.</p>
+      <h2>Modulo contatti</h2>
+      <p>I dati inseriti nel modulo contatti (nome, cognome, e-mail e messaggio) sono usati esclusivamente per rispondere alla richiesta e, se richiesto, per l'invio della newsletter. Per richiedere l'accesso, la rettifica o la cancellazione dei dati scrivi a <a href={`mailto:${SITE.email}`}>{SITE.email}</a>.</p>
+    </div>
+  </section>
+</Base>

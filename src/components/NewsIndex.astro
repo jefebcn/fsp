@@ -1,0 +1,55 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from './PageHero.astro';
+import NewsGrid from './NewsGrid.astro';
+import Pagination from './Pagination.astro';
+import Icon from './Icon.astro';
+import { CATEGORIES } from '../data/site';
+import { getAllNews, byCategory } from '../lib/news';
+import { pageCount, slice } from '../lib/paging';
+
+interface Props { cat?: string; page?: number; year?: number }
+const { cat, page = 1, year } = Astro.props;
+const all = await getAllNews();
+let list = cat ? byCategory(all, cat) : all;
+if (year) list = list.filter((n) => n.data.date.getUTCFullYear() === year);
+const years = [...new Set(all.map((n) => n.data.date.getUTCFullYear()))].sort((a, b) => b - a);
+const total = year ? 1 : pageCount(list.length);
+const items = year ? list : slice(list, page);
+const label = cat ? CATEGORIES[cat].label : year ? `Notizie del ${year}` : 'Tutte le notizie';
+const base = cat ? `/news/categoria/${cat}/` : '/news/';
+const title = cat ? `News ${label}` : year ? label : 'News';
+const filters = [{ key: '', label: 'Tutte', href: '/news/' }, ...Object.entries(CATEGORIES).filter(([k]) => k !== 'hall-of-fame').map(([k, v]) => ({ key: k, label: v.label, href: v.href }))];
+---
+<Base title={page > 1 ? `${title} – pagina ${page}` : title} description={`${label}: le notizie della Federazione Sammarinese Pallacanestro.`}>
+  <PageHero title={title} crumbs={cat || year ? [{ label: 'News', href: '/news/' }] : []} intro={`${list.length} articoli dall'archivio FSP${page > 1 ? ` · pagina ${page} di ${total}` : ''}.`} />
+  <section class="section">
+    <div class="wrap">
+      <div class="toolbar">
+        <nav aria-label="Filtra per categoria" class="chips">
+          {filters.map((f) => <a class="filter-chip" href={f.href} aria-current={(f.key === (cat ?? '') && !year) ? 'page' : undefined}>{f.label}</a>)}
+        </nav>
+        <div class="toolbar__right">
+          <label for="year-select" class="visually-hidden">Vai all'anno</label>
+          <select id="year-select" class="year-select" data-year-select>
+            <option value="">Archivio per anno</option>
+            {years.map((y) => <option value={`/news/anno/${y}/`} selected={y === year}>{y}</option>)}
+          </select>
+          <a class="btn btn--ghost" href="/cerca/"><Icon name="search" /> Cerca</a>
+        </div>
+      </div>
+      <NewsGrid items={items} headingLevel="h2" />
+      {!year && <Pagination current={page} total={total} base={base} />}
+    </div>
+  </section>
+</Base>
+<style>
+  .toolbar { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; margin-bottom: 32px; align-items: center; }
+  .toolbar__right { display: flex; gap: 10px; flex-wrap: wrap; }
+  .year-select { min-height: 48px; padding: 0 16px; border-radius: 999px; border: 2px solid var(--c-border); font: inherit; font-weight: 700; color: var(--c-navy); background: #fff; }
+</style>
+<script>
+  document.querySelector<HTMLSelectElement>('[data-year-select]')?.addEventListener('change', (e) => {
+    const v = (e.target as HTMLSelectElement).value; if (v) location.href = v;
+  });
+</script>

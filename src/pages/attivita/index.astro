@@ -1,0 +1,23 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+const items = [
+  { href: '/attivita/scuole/', icon: 'school', t: 'Basket a scuola', d: 'Tornei e lezioni con le scuole elementari e medie.' },
+  { href: '/attivita/centro-estivo/', icon: 'sun', t: 'Centro estivo', d: 'Per bambini e bambine dai 5 agli 11 anni.' },
+  { href: '/minibasket/', icon: 'child', t: 'Minibasket', d: 'Corsi da settembre a giugno.' },
+  { href: '/federazione/', icon: 'flag', t: 'Federazione', d: 'Tutte le attività organizzate dalla FSP.' },
+];
+---
+<Base title="Attività" description="Le attività della FSP: scuole, centro estivo, minibasket.">
+  <PageHero title="Attività" intro="Il basket per tutti, tutto l'anno." crumbs={[]} />
+  <section class="section"><div class="wrap grid grid--4">
+    {items.map((l) => (
+      <a class="card" style="padding:24px;text-decoration:none;gap:8px" href={l.href}>
+        <Icon name={l.icon} size={32} />
+        <strong style="font-size:1.2rem;color:var(--c-navy)">{l.t}</strong>
+        <span style="color:var(--c-muted)">{l.d}</span>
+      </a>
+    ))}
+  </div></section>
+</Base>

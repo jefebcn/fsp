@@ -1,0 +1,31 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+import { IMPIANTI, tel } from '../../data/site';
+const map = (a: string[]) => `https://www.openstreetmap.org/search?query=${encodeURIComponent(a.join(' ') + ' San Marino')}`;
+---
+<Base title="Impianti" description="Le palestre della pallacanestro sammarinese: Multieventi, Fonte dell'Ovo, Acquaviva.">
+  <PageHero title="Impianti" intro="Le palestre dove si allenano e giocano le nostre squadre." crumbs={[{ label: 'Federazione', href: '/federazione/' }]} />
+  <section class="section">
+    <div class="wrap grid grid--3">
+      {IMPIANTI.map((i) => (
+        <article class="card">
+          <img src={i.photo} alt={`La ${i.name}`} loading="lazy" width="525" height="290" style="aspect-ratio:525/290;object-fit:cover" />
+          <div class="card__body">
+            <h2 class="imp-t">{i.name}</h2>
+            <ul class="info-list">
+              <li><Icon name="pin" /><span>{i.venue}<br />{i.address.join(', ')}</span></li>
+              {i.phone && <li><Icon name="phone" /><a href={tel(i.phone)}>{i.phone}</a></li>}
+              <li><Icon name="court" /><span>{i.surface}</span></li>
+              <li><Icon name="users" /><span>Tribuna: {i.seats}</span></li>
+              <li><Icon name="calendar" /><span>Anno di costruzione: {i.built}</span></li>
+            </ul>
+            <a class="btn btn--ghost" style="margin-top:12px;align-self:flex-start" href={map(i.address)} rel="noopener" target="_blank">Apri la mappa <Icon name="external" size={18} /></a>
+          </div>
+        </article>
+      ))}
+    </div>
+  </section>
+</Base>
+<style>.imp-t { font-size: 1.25rem; }</style>

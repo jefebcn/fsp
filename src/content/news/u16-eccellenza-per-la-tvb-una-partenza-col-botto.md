@@ -1,0 +1,19 @@
+---
+title: "U16 ECCELLENZA: PER LA TVB UNA PARTENZA COL BOTTO"
+date: "2017-10-22"
+categories: ["giovanili"]
+featured: false
+cover: "/media/n-1508675754_22281599_10154763886285826_8678030812503044611_n.webp"
+excerpt: "TVB-Fortitudo 89-79 , giocata domenica 8/10 Tabellino: Palmieri 34, Buo 24, Piscaglia 4, Dellapasqua 4, Pasolini 7, Zafferani 7, Ronci 6, Omar Fabbri 3, Leo Fabbri, Dappozzo, Forlani, Grassi. All.…"
+legacyId: 439
+legacyUrl: "/u16-eccellenza-per-la-tvb-una-partenza-col-botto-n439.php"
+---
+
+<p><strong>TVB-Fortitudo 89-79</strong><em>, giocata domenica 8/10</em><br>
+	<em><strong>Tabellino: Palmieri 34, Buo 24, Piscaglia 4, Dellapasqua 4, Pasolini 7, Zafferani 7, Ronci 6, Omar Fabbri 3, Leo Fabbri, Dappozzo, Forlani, Grassi. All. Padovano</strong></em><br>
+	Pubblico delle grandi occasioni, gara emozionante, un over-time e alla fine pure la (meritata) vittoria contro una formazione storica del basket italiano, la Fortitudo Bologna: un esordio migliore nel Campionato nazionale di Eccellenza la TVB u16 (Titano Villanova Basket) non poteva sperare.<br>
+	Nata dalla collaborazione tra Pallacanestro Titano e Villanova Basket Tigers, la squadra allenata da coach massimo Padovano con la fresca divisa bianconera che presenta un cuore al centro, è scesa in campo domenica mattina contro la ben più blasonata Fortitudo Academy in una Tigers Arena di Villa Verucchio colma all’inverosimile. Sia per San Marino sia per Villa Verucchio era la prima volta in un campionato Eccellenza ma l’emozione è durata pochi minuti: i ragazzi in campo han subito preso confidenza con la categoria gettando il cuore oltre all’ostacolo. TVB conduce per buona parte del primo periodo (11-6), poi la maggiore fisicità dei bolognesi (Tognoni e Longagnani in particolare) e una tripla consentono il sorpasso: 19-22. Alex Della Pasqua ha un impatto notevole sulla gara: un rimbalzo appena messo piede sul parquet e 4 punti a fila per l’ala forte TVB, che impatta 26-26 a 7’38 dall’intervallo lungo. Nelle fila bolognesi Tognoni continua a fare il bello e il cattivo tempo sotto le plance ma sono le palle perse il vero tallone d’Achille della TVB (saranno oltre 2’ al termine). Ronci, Palmieri e Buo tengono viva la gara: 37-35 al riposo.<br>
+	Al rientro dagli spogliatoi, la TVB morde ancor di più la gara. Sale l’intensità, Palmieri e Buo salgono in cattedra: 14 punti per la coppia ben coadiuvata da Piscaglia, Paoslini e Zafferani. La fisicità della Fortitudo però fa la differenza: 57-63.<br>
+	L’ultimo quarto inizia con alcune ingenuità della TVB punite dagli emiliani: 57-68, massimo svantaggio a 7’43. Una rubata di Buo dà la scossa ai padroni di casa. La stessa guardia e Palmi perforano la difesa ospite in tutti i modi, la difesa diventa un bunker, Leo Fabbri fa a sportellate e TVB è su tutti i palloni. I 2 liberi di Palmieri a 30 secondi dal termine valgono il -3 (72-75). Buo è implacabile: segna e realizza il libero aggiuntivo: parità! Supplementari.<br>
+	All’over time, non c’è più partita. L’inerzia è tutta di TVB, Buo marca a fuoco i minuti finali con Palmieri, Omar Fabbri sporca ogni pallone. Finisce 89-79 con i bianconeri in festa al centro del campo.<br>
+	<em>«E’ stata una partita bella ed emozionante - </em>commenta coach Padovano <em>-: eravamo curiosi ed anche un po' intimoriti per il fatto di non sapere se saremmo stati competitivi a livello di Campionato Eccellenza. I ragazzi hanno lavorato bene in queste settimane e hanno risposto sul campo con grande intensità ed energia. Sappiamo che incontreremo anche avversari non alla nostra portata, Reggio Emilia su tutti, che ci impediranno di sviluppare il nostro gioco; per questo dovremo migliorare sia a livello di fondamentali individuali che di gioco di squadra e di letture e imparare a crescere anche nelle sconfitte. Oggi, ad ogni modo, i ragazzi hanno pienamente meritato questa bella vittoria»</em>.</p>

@@ -1,0 +1,23 @@
+---
+title: "PRESENTAZIONE CAMPIONATI EUROPEI PER PICCOLI STATI E U16"
+date: "2018-06-25"
+categories: ["nazionali"]
+featured: false
+cover: "/media/n-1529910320_35785589_2151348271768969_8771950177813528576_n.webp"
+excerpt: "Si è svolta nel primo pomeriggio di mercoledì 20 giugno la CONFERENZA STAMPA di presentazione delle Nazionali impegnate nei prossimi Campionati Europei. Senior (26/6-1/7) e Under 16 (3/7-11/7) a San…"
+legacyId: 459
+legacyUrl: "/presentazione-campionati-europei-per-piccoli-stati-e-u16-n459.php"
+---
+
+<p>Si è svolta nel primo pomeriggio di mercoledì 20 giugno la CONFERENZA STAMPA di presentazione delle Nazionali impegnate nei prossimi Campionati Europei. Senior (26/6-1/7) e Under 16 (3/7-11/7) a San Marino, Under 18 in Kosovo (22/7-29/7).<br>
+Queste le parole dei protagonisti.</p>
+<p>DAMIANO BATTISTINI, Presidente Federazione Sammarinese Pallacanestro<br>
+“Il 2018 per noi è stato e continua ad essere un anno speciale. Coincide col cinquantenario dalla nostra nascita e adesso ci porta in Repubblica due delle tre competizioni per nazionali della Division C. É un onore, un onere e un orgoglio per noi organizzare questi campionati, qualche anno fa andavamo solo fuori e invece adesso siamo arrivati a livelli assoluti anche in questo senso. Ci presentiamo al meglio e con tanta voglia: per le Nazionali giovanili siamo consapevoli che sarà sempre un terno al lotto ma vogliamo fare il massimo. I tornei sono sempre più difficili e competitivi, una volta ci trovavamo ad affrontare sempre le stesse quattro-cinque squadre, mentre adesso troviamo stati non proprio piccoli come Austria o Norvegia. A livello di capoallenatori troviamo due facce nuove, quelle di Massimo Padovano e Simone Porcarelli per Senior e Under 18, poi ci sarà Stefano Rossini che guiderà l’Under 16. Assieme a loro degli staff di qualità, con Fabio Podeschi nelle mansioni di vice in Nazionale Senior e Alessandro Muratori con anche Nicola Borello nello staff dell’Under 16. Senza dimenticare il preparatore atletico Andrea Cambrini, il fisioterapista Alessandro Vio. Qui con noi c’è anche il vicepresidente FSP, Fabio Berardi, che ringrazio assieme a tutti gli altri componenti della Federazione. L’arrivo di coach Padovano quest’anno ci ha fornito linfa e una buona dose di rinnovamento, siamo pronti a questi Europei”.</p>
+<p>MASSIMO PADOVANO – COACH NAZIONALE SENIOR<br>
+“Ringrazio il presidente Battistini, è un onore per me allenare la Nazionale di San Marino. Rappresentare uno Stato e un Popolo è meraviglioso. Abbiam fatto un buon lavoro in fase di preparazione, al di là di qualche problemino fisico per alcuni elementi del gruppo. Si sta creando affiatamento in squadra e questo naturalmente è positivo. È chiaro, avremo grande concorrenza: la Norvegia è una buonissima squadra con un quintetto tutto NCAA. Questo però non ci spaventa, affronteremo questi campionati con umiltà e grande voglia”.</p>
+<p>ANDREA RASCHI – CAPITANO <br>
+“Il gruppo è sempre più affiatato. Il ricambio generazionale avvenuto in questi anni ha fatto crescere dei ragazzi di valore, dei giovani di cui adesso si nota l’evoluzione. La squadra sta acquistando identità, ma è altrettanto vero che ogni Campionato Europeo fa storia a sé e ogni partita andrà affrontata al massimo delle potenzialità singole e di squadra”.</p>
+<p>STEFANO ROSSINI – COACH NAZIONALE UNDER 16<br>
+“Mi associo a Massimo nei ringraziamenti alla Federazione. Per me è sempre motivo d’orgoglio e di onore rappresentare il Paese. Quello dell’Under 16 in questi Europei dovrà essere un percorso di crescita. Io guarderò a quello: naturalmente giocheremo per vincere e onoreremo al massimo l’appuntamento, ma prima di tutto vorrei vedere la crescita dei ragazzi. Tutti dobbiamo ricordarci che rappresentare San Marino è un privilegio. La squadra? Conosco quasi tutti questi ragazzi per averli già allenati, in diverse fasi. Il girone non è abbordabile, Austria e Azerbaijan sono avversari tosti, in ogni caso faremo di tutto per fare il meglio di noi stessi”.</p>
+<p>SIMONE PORCARELLI – COACH NAZIONALE UNDER 18<br>
+“Ringrazio la Federazione Sammarinese Pallacanestro e ringrazio Massimo Padovano. Anche per me è un onore e un privilegio allenare la Nazionale e rappresentare dunque San Marino. Spero che i ragazzi sentano la mia carica e percepiscano l’importanza dell’appuntamento. In Kosovo vogliamo ben figurare. Non sarà facile contro ragazzi già impegnati in Division B o contro lo stesso Cipro che è di alto livello. In ogni caso non siamo spaventati. Abbiamo appena cominciato ad allenarci perché noi partiamo dopo (22-29 luglio), ma ci faremo trovare pronti”</p>

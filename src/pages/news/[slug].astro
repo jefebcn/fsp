@@ -1,0 +1,96 @@
+---
+import { render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Gallery from '../../components/Gallery.astro';
+import NewsCard from '../../components/NewsCard.astro';
+import Icon from '../../components/Icon.astro';
+import { CATEGORIES } from '../../data/site';
+import { getAllNews, formatDate, isoDate, byCategory, type News } from '../../lib/news';
+
+export async function getStaticPaths() {
+  const all = await getAllNews();
+  return all.map((entry, i) => ({ params: { slug: entry.id }, props: { entry, prev: all[i + 1], next: all[i - 1] } }));
+}
+interface Props { entry: News; prev?: News; next?: News }
+const { entry, prev, next } = Astro.props;
+const { Content } = await render(entry);
+const d = entry.data;
+const cats = d.categories.map((c) => ({ key: c, ...CATEGORIES[c] }));
+const main = cats[0];
+const all = await getAllNews();
+const related = byCategory(all, main.key).filter((n) => n.id !== entry.id && Math.abs(n.data.date.getTime() - d.date.getTime()) < 1000 * 3600 * 24 * 400).slice(0, 3);
+const shareUrl = new URL(Astro.url.pathname, Astro.site).toString();
+const jsonLd = { '@context': 'https://schema.org', '@type': 'NewsArticle', headline: d.title, datePublished: isoDate(d.date), image: d.cover ? [new URL(d.cover, Astro.site).toString()] : undefined, publisher: { '@type': 'Organization', name: 'Federazione Sammarinese Pallacanestro' } };
+---
+<Base title={d.title} description={d.excerpt} image={d.cover} type="article">
+  <script type="application/ld+json" slot="head" set:html={JSON.stringify(jsonLd)} />
+  <PageHero title={d.title} crumbs={[{ label: 'News', href: '/news/' }, ...(main.key === 'hall-of-fame' ? [{ label: 'Hall of Fame', href: '/hall-of-fame/' }] : [{ label: main.label, href: main.href }])]}>
+    <div class="art-meta">
+      <span><Icon name="calendar" size={18} /> <time datetime={isoDate(d.date)}>{formatDate(d.date)}</time></span>
+      {cats.map((c) => <a class="chip" style={`--chip:${c.color}`} href={c.href}>{c.label}</a>)}
+    </div>
+  </PageHero>
+  <article class="section">
+    <div class="wrap art">
+      <div class="art__main">
+        {d.cover && (
+          <figure class="art__cover">
+            <img src={d.cover} alt="" width="1200" height="700" />
+          </figure>
+        )}
+        <div class="prose">
+          <Content />
+        </div>
+        {d.videos.map((v) => (
+          <div class="prose"><iframe src={`https://www.youtube-nocookie.com/embed/${v}`} title="Video" loading="lazy" allowfullscreen></iframe></div>
+        ))}
+        <Gallery images={d.gallery} />
+        <div class="share no-print">
+          <span class="share__t"><Icon name="share" size={20} /> Condividi</span>
+          <a href={`https://wa.me/?text=${encodeURIComponent(d.title + ' ' + shareUrl)}`} rel="noopener" target="_blank">WhatsApp</a>
+          <a href={`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`} rel="noopener" target="_blank">Facebook</a>
+          <a href={`mailto:?subject=${encodeURIComponent(d.title)}&body=${encodeURIComponent(shareUrl)}`}>Email</a>
+          <button type="button" data-copy={shareUrl}>Copia link</button>
+        </div>
+        <nav class="prevnext no-print" aria-label="Altre notizie">
+          {prev ? <a href={`/news/${prev.id}/`} rel="prev"><span>← Notizia precedente</span>{prev.data.title}</a> : <span />}
+          {next ? <a href={`/news/${next.id}/`} rel="next" class="next"><span>Notizia successiva →</span>{next.data.title}</a> : <span />}
+        </nav>
+      </div>
+    </div>
+  </article>
+  {related.length > 0 && (
+    <section class="section section--soft no-print" aria-labelledby="rel-t">
+      <div class="wrap">
+        <h2 id="rel-t">Potrebbe interessarti anche</h2>
+        <div class="grid grid--3">{related.map((n) => <NewsCard item={n} />)}</div>
+      </div>
+    </section>
+  )}
+</Base>
+<style>
+  .art-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-top: 18px; color: #d6e7f7; font-weight: 600; }
+  .art-meta span { display: inline-flex; gap: 6px; align-items: center; }
+  .art-meta .chip { background: rgba(255,255,255,.16); }
+  :global(.page-hero h1) { overflow-wrap: anywhere; }
+  .art { max-width: 920px; }
+  .art__cover { margin: 0 0 32px; }
+  .art__cover img { width: 100%; max-height: 560px; object-fit: contain; background: var(--c-bg-soft); border-radius: var(--radius); }
+  .art .prose { margin-inline: auto; }
+  .share { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--c-border); }
+  .share__t { display: inline-flex; gap: 6px; align-items: center; font-weight: 800; color: var(--c-navy); margin-right: 6px; }
+  .share a, .share button { min-height: 44px; display: inline-flex; align-items: center; padding: 0 16px; border-radius: 999px; border: 2px solid var(--c-border); background: #fff; color: var(--c-navy); font: inherit; font-weight: 700; text-decoration: none; cursor: pointer; }
+  .share a:hover, .share button:hover { border-color: var(--c-cyan); }
+  .prevnext { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 32px; }
+  .prevnext a { display: block; padding: 18px 20px; border-radius: var(--radius-sm); background: var(--c-bg-soft); text-decoration: none; color: var(--c-navy); font-weight: 700; line-height: 1.35; overflow-wrap: anywhere; }
+  .prevnext a:hover { background: var(--c-cyan-soft); }
+  .prevnext span { display: block; font-size: .85rem; color: var(--c-muted); margin-bottom: 4px; }
+  .prevnext .next { text-align: right; }
+  @media (max-width: 640px) { .prevnext { grid-template-columns: 1fr; } .prevnext .next { text-align: left; } }
+</style>
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((b) => b.addEventListener('click', async () => {
+    try { await navigator.clipboard.writeText(b.dataset.copy!); b.textContent = 'Link copiato!'; } catch { b.textContent = 'Copia non riuscita'; }
+  }));
+</script>

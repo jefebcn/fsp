@@ -1,0 +1,3131 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "astro",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "trailingSlash": true,
+  "redirects": [
+    {
+      "source": "/index.php",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/federazione.php",
+      "destination": "/federazione/",
+      "permanent": true
+    },
+    {
+      "source": "/la-nostra-storia.php",
+      "destination": "/federazione/storia/",
+      "permanent": true
+    },
+    {
+      "source": "/staff-direttivo.php",
+      "destination": "/federazione/direttivo/",
+      "permanent": true
+    },
+    {
+      "source": "/staff-tecnico.php",
+      "destination": "/federazione/staff-tecnico/",
+      "permanent": true
+    },
+    {
+      "source": "/impianti.php",
+      "destination": "/federazione/impianti/",
+      "permanent": true
+    },
+    {
+      "source": "/under-18-giovanile.php",
+      "destination": "/giovanili/under-18/",
+      "permanent": true
+    },
+    {
+      "source": "/under-16-giovanile.php",
+      "destination": "/giovanili/under-16/",
+      "permanent": true
+    },
+    {
+      "source": "/under-15-giovanile.php",
+      "destination": "/giovanili/under-15/",
+      "permanent": true
+    },
+    {
+      "source": "/under-14-giovanile.php",
+      "destination": "/giovanili/under-14/",
+      "permanent": true
+    },
+    {
+      "source": "/under-13-giovanile.php",
+      "destination": "/giovanili/under-13/",
+      "permanent": true
+    },
+    {
+      "source": "/u13-giovanile.php",
+      "destination": "/giovanili/under-13/",
+      "permanent": true
+    },
+    {
+      "source": "/u14-giovanile.php",
+      "destination": "/giovanili/under-14/",
+      "permanent": true
+    },
+    {
+      "source": "/u15-regionale-giovanile.php",
+      "destination": "/giovanili/under-15/",
+      "permanent": true
+    },
+    {
+      "source": "/u16-regionale-giovanile.php",
+      "destination": "/giovanili/under-16/",
+      "permanent": true
+    },
+    {
+      "source": "/tvb-under-16-eccellenza-giovanile.php",
+      "destination": "/giovanili/under-16/",
+      "permanent": true
+    },
+    {
+      "source": "/tvb-under-18-regionale-giovanile.php",
+      "destination": "/giovanili/under-18/",
+      "permanent": true
+    },
+    {
+      "source": "/tvb-under-18-elite-giovanile.php",
+      "destination": "/giovanili/under-18/",
+      "permanent": true
+    },
+    {
+      "source": "/esordienti.php",
+      "destination": "/giovanili/esordienti/",
+      "permanent": true
+    },
+    {
+      "source": "/mini-basket.php",
+      "destination": "/minibasket/",
+      "permanent": true
+    },
+    {
+      "source": "/nazionale-senior.php",
+      "destination": "/nazionali/senior/",
+      "permanent": true
+    },
+    {
+      "source": "/nazionale-under-18.php",
+      "destination": "/nazionali/under-18/",
+      "permanent": true
+    },
+    {
+      "source": "/nazionale-under-16.php",
+      "destination": "/nazionali/under-16/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-2013.php",
+      "destination": "/campionato/2013/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-2014.php",
+      "destination": "/campionato/2014/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-2015.php",
+      "destination": "/campionato/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-2016.php",
+      "destination": "/campionato/",
+      "permanent": true
+    },
+    {
+      "source": "/hall-of-fame.php",
+      "destination": "/hall-of-fame/",
+      "permanent": true
+    },
+    {
+      "source": "/scuole.php",
+      "destination": "/attivita/scuole/",
+      "permanent": true
+    },
+    {
+      "source": "/centro-estivo.php",
+      "destination": "/attivita/centro-estivo/",
+      "permanent": true
+    },
+    {
+      "source": "/contatti.php",
+      "destination": "/contatti/",
+      "permanent": true
+    },
+    {
+      "source": "/news-in-primo-piano.php",
+      "destination": "/news/",
+      "permanent": true
+    },
+    {
+      "source": "/news-giovanili-c1.php",
+      "destination": "/news/categoria/giovanili/",
+      "permanent": true
+    },
+    {
+      "source": "/news-nazionali-c2.php",
+      "destination": "/news/categoria/nazionali/",
+      "permanent": true
+    },
+    {
+      "source": "/news-campionato-rsm-c3.php",
+      "destination": "/news/categoria/campionato/",
+      "permanent": true
+    },
+    {
+      "source": "/news-mini-basket-c4.php",
+      "destination": "/news/categoria/minibasket/",
+      "permanent": true
+    },
+    {
+      "source": "/news-federazione-c5.php",
+      "destination": "/news/categoria/federazione/",
+      "permanent": true
+    },
+    {
+      "source": "/-vittorie-per-andorra-e-san-marino-n3.php",
+      "destination": "/news/vittorie-per-andorra-e-san-marino/",
+      "permanent": true
+    },
+    {
+      "source": "/103-torneo-minibasket-quotcimonequot-2017-n431.php",
+      "destination": "/news/103-torneo-minibasket-cimone-2017/",
+      "permanent": true
+    },
+    {
+      "source": "/12-luglio-al-via-il-torneo-under-16-n49.php",
+      "destination": "/news/12-luglio-al-via-il-torneo-under-16/",
+      "permanent": true
+    },
+    {
+      "source": "/83-trofeo-bim-basket-n443.php",
+      "destination": "/news/83-trofeo-bim-basket/",
+      "permanent": true
+    },
+    {
+      "source": "/9-supercoppa-giovanile-martin-mancini-n414.php",
+      "destination": "/news/9-supercoppa-giovanile-martin-mancini/",
+      "permanent": true
+    },
+    {
+      "source": "/a-san-marino-i-campionati-europei-maschili-u16-e-u18-n59.php",
+      "destination": "/news/a-san-marino-i-campionati-europei-maschili-u16-e-u18/",
+      "permanent": true
+    },
+    {
+      "source": "/a-san-marino-i-campionati-europei-u18-division-c-n369.php",
+      "destination": "/news/a-san-marino-i-campionati-europei-u18-division-c/",
+      "permanent": true
+    },
+    {
+      "source": "/a-san-marino-il-trofeo-delle-regioni.-tra-i-protagonisti-il-titano-pietro-ugolini-n248.php",
+      "destination": "/news/a-san-marino-il-trofeo-delle-regioni-tra-i-protagonisti-il-titano-pietro-ugolini/",
+      "permanent": true
+    },
+    {
+      "source": "/aggiornamento-dellattivit-men-ricchissimo-per-la-pallacanestro-n212.php",
+      "destination": "/news/aggiornamento-dellattivit-men-ricchissimo-per-la-pallacanestro/",
+      "permanent": true
+    },
+    {
+      "source": "/al-multieventi-la-festa-di-natale-del-minibasket-n68.php",
+      "destination": "/news/al-multieventi-la-festa-di-natale-del-minibasket/",
+      "permanent": true
+    },
+    {
+      "source": "/al-via-ad-andorra-gli-europei-u18-div.-c--n219.php",
+      "destination": "/news/al-via-ad-andorra-gli-europei-u18-div-c/",
+      "permanent": true
+    },
+    {
+      "source": "/al-via-da-giugno-i-primi-centri-estivi-fsp-n309.php",
+      "destination": "/news/al-via-da-giugno-i-primi-centri-estivi-fsp/",
+      "permanent": true
+    },
+    {
+      "source": "/al-via-i-nuovi-corsi-di-minibasket-n274.php",
+      "destination": "/news/al-via-i-nuovi-corsi-di-minibasket/",
+      "permanent": true
+    },
+    {
+      "source": "/al-via-il-fibaeurope-under-16-european-championship-men-division-c-san-marino-2015-6-11-luglio-n317.php",
+      "destination": "/news/al-via-il-fibaeurope-under-16-european-championship-men-division-c-san-marino-2015-6-11-lu/",
+      "permanent": true
+    },
+    {
+      "source": "/allunder-18-non-basta-una-grande-partita-per-superare-lazerbaijan-n591.php",
+      "destination": "/news/allunder-18-non-basta-una-grande-partita-per-superare-lazerbaijan/",
+      "permanent": true
+    },
+    {
+      "source": "/amichevole-nazionale-seniores-contro-team-college-usa-n69.php",
+      "destination": "/news/amichevole-nazionale-seniores-contro-team-college-usa/",
+      "permanent": true
+    },
+    {
+      "source": "/amichevoli-di-rodaggio-san-marino--galles-con-vista-europei-division-c-n311.php",
+      "destination": "/news/amichevoli-di-rodaggio-san-marino-galles-con-vista-europei-division-c/",
+      "permanent": true
+    },
+    {
+      "source": "/andorra-e-san-marino-in-finale-medaglia-storica-per-il-titano-n74.php",
+      "destination": "/news/andorra-e-san-marino-in-finale-medaglia-storica-per-il-titano/",
+      "permanent": true
+    },
+    {
+      "source": "/andorra-e-san-marino-raddoppiano-e-volano-in-semifinale-n54.php",
+      "destination": "/news/andorra-e-san-marino-raddoppiano-e-volano-in-semifinale/",
+      "permanent": true
+    },
+    {
+      "source": "/andorra-san-marino-galles-il-podio-u16.-marted-scatta-lu18-n75.php",
+      "destination": "/news/andorra-san-marino-galles-il-podio-u16-marted-scatta-lu18/",
+      "permanent": true
+    },
+    {
+      "source": "/anno-2011-n231.php",
+      "destination": "/news/anno-2011/",
+      "permanent": true
+    },
+    {
+      "source": "/anno-2012-n230.php",
+      "destination": "/news/anno-2012/",
+      "permanent": true
+    },
+    {
+      "source": "/arbitri-e-ufficiali-di-campo-n66.php",
+      "destination": "/news/arbitri-e-ufficiali-di-campo/",
+      "permanent": true
+    },
+    {
+      "source": "/arriva-la-minibasket-cup-n613.php",
+      "destination": "/news/arriva-la-minibasket-cup/",
+      "permanent": true
+    },
+    {
+      "source": "/asset-banca-nuovo-main-sponsor-della-federbasket-n253.php",
+      "destination": "/news/asset-banca-nuovo-main-sponsor-della-federbasket/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-2000-consolemania-n118.php",
+      "destination": "/news/basket-2000-consolemania/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-2000-ecb-finalissima-n201.php",
+      "destination": "/news/basket-2000-ecb-finalissima/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-2000-la-fiorita--n101.php",
+      "destination": "/news/basket-2000-la-fiorita/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-2000-la-fiorita-semifinale-n127.php",
+      "destination": "/news/basket-2000-la-fiorita-semifinale/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-2000-la-serenissima-n182.php",
+      "destination": "/news/basket-2000-la-serenissima/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-2000-promosso-il-racconto-di-un-trionfo-n621.php",
+      "destination": "/news/basket-2000-promosso-il-racconto-di-un-trionfo/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-2000-red-devils-orologio-n296.php",
+      "destination": "/news/basket-2000-red-devils-orologio/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-2000-titano-u17-n109.php",
+      "destination": "/news/basket-2000-titano-u17/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-2000-titano-u19-n282.php",
+      "destination": "/news/basket-2000-titano-u19/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-2000-titano-u19-semifinale-n194.php",
+      "destination": "/news/basket-2000-titano-u19-semifinale/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-2000-tre-penne-n171.php",
+      "destination": "/news/basket-2000-tre-penne/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-2000-tre-penne-n286.php",
+      "destination": "/news/basket-2000-tre-penne-286/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-2000-tre-penne-orologio-n187.php",
+      "destination": "/news/basket-2000-tre-penne-orologio/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-2000-tre-penne-semifinale-n303.php",
+      "destination": "/news/basket-2000-tre-penne-semifinale/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-femminile-al-via-n506.php",
+      "destination": "/news/basket-femminile-al-via/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-femminile-open-day-in-arrivo-n654.php",
+      "destination": "/news/basket-femminile-open-day-in-arrivo/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-in-rosa-sul-titano-n526.php",
+      "destination": "/news/basket-in-rosa-sul-titano/",
+      "permanent": true
+    },
+    {
+      "source": "/basket-sammarinese-quotalive-and-kickingquot-n308.php",
+      "destination": "/news/basket-sammarinese-alive-and-kicking/",
+      "permanent": true
+    },
+    {
+      "source": "/battistini-padovano-intervista-doppia-n478.php",
+      "destination": "/news/battistini-padovano-intervista-doppia/",
+      "permanent": true
+    },
+    {
+      "source": "/battuta-gibilterra-e-semifinale-n396.php",
+      "destination": "/news/battuta-gibilterra-e-semifinale/",
+      "permanent": true
+    },
+    {
+      "source": "/cade-anche-andorra-san-marino-vola-n77.php",
+      "destination": "/news/cade-anche-andorra-san-marino-vola/",
+      "permanent": true
+    },
+    {
+      "source": "/camp-estivo-femminile-n616.php",
+      "destination": "/news/camp-estivo-femminile/",
+      "permanent": true
+    },
+    {
+      "source": "/camp.-europei-under-18-division-c--day-5-semifinale-smr--gibilterra-43-69-n271.php",
+      "destination": "/news/camp-europei-under-18-division-c-day-5-semifinale-smr-gibilterra-43-69/",
+      "permanent": true
+    },
+    {
+      "source": "/camp.-europei-under-18-division-c--day-6-finale-3-posto-smr--andorra-46-51-n272.php",
+      "destination": "/news/camp-europei-under-18-division-c-day-6-finale-3-posto-smr-andorra-46-51/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-dei-piccoli-stati--day-1--n260.php",
+      "destination": "/news/campionati-europei-dei-piccoli-stati-day-1/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-dei-piccoli-stati--day-2-smr--gibilterra-80--39-n261.php",
+      "destination": "/news/campionati-europei-dei-piccoli-stati-day-2-smr-gibilterra-80-39/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-dei-piccoli-stati--day-3-smr--andorra-47--83-n262.php",
+      "destination": "/news/campionati-europei-dei-piccoli-stati-day-3-smr-andorra-47-83/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-dei-piccoli-stati--day-4-quarti-di-finale-smr--galles-62--55-n263.php",
+      "destination": "/news/campionati-europei-dei-piccoli-stati-day-4-quarti-di-finale-smr-galles-62-55/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-dei-piccoli-stati--day-5-semifinale-smr--malta-68--89-n264.php",
+      "destination": "/news/campionati-europei-dei-piccoli-stati-day-5-semifinale-smr-malta-68-89/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-dei-piccoli-stati--day-6-finale-34-posto-smr--scozia-55--67-n265.php",
+      "destination": "/news/campionati-europei-dei-piccoli-stati-day-6-finale-34-posto-smr-scozia-55-67/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-division-c-la-fsp-presenta-alla-stampa-le-delegazioni-under-16-ed-under-18-n313.php",
+      "destination": "/news/campionati-europei-division-c-la-fsp-presenta-alla-stampa-le-delegazioni-under-16-ed-under/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-under-16-division-c--day-1-n255.php",
+      "destination": "/news/campionati-europei-under-16-division-c-day-1/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-under-16-division-c--day-2-smr-gibilterra-42-48-n256.php",
+      "destination": "/news/campionati-europei-under-16-division-c-day-2-smr-gibilterra-42-48/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-under-16-division-c--day-3-smr-andorra-47-103-n257.php",
+      "destination": "/news/campionati-europei-under-16-division-c-day-3-smr-andorra-47-103/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-under-16-division-c--day-4-smr-malta-71-72-n258.php",
+      "destination": "/news/campionati-europei-under-16-division-c-day-4-smr-malta-71-72/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-under-16-division-c--day-5-smr-galles-56-61-n259.php",
+      "destination": "/news/campionati-europei-under-16-division-c-day-5-smr-galles-56-61/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-under-18-division-c--day-1-n267.php",
+      "destination": "/news/campionati-europei-under-18-division-c-day-1/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-under-18-division-c--day-1-n325.php",
+      "destination": "/news/campionati-europei-under-18-division-c-day-1-325/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-under-18-division-c--day-2-n326.php",
+      "destination": "/news/campionati-europei-under-18-division-c-day-2/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-under-18-division-c--day-2-smr-monaco-46-45--n268.php",
+      "destination": "/news/campionati-europei-under-18-division-c-day-2-smr-monaco-46-45/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-under-18-division-c--day-3-pesante-stop-contro-malta.-domani-sfida-al-galles.-n327.php",
+      "destination": "/news/campionati-europei-under-18-division-c-day-3-pesante-stop-contro-malta-domani-sfida-al-gal/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-under-18-division-c--day-3-smr--malta-76-69--n269.php",
+      "destination": "/news/campionati-europei-under-18-division-c-day-3-smr-malta-76-69/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-under-18-division-c--day-4-domani-semifinale-smr--gibilterra-n270.php",
+      "destination": "/news/campionati-europei-under-18-division-c-day-4-domani-semifinale-smr-gibilterra/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-under-18-division-c--day-4-san-marino-cede-al-galles-n328.php",
+      "destination": "/news/campionati-europei-under-18-division-c-day-4-san-marino-cede-al-galles/",
+      "permanent": true
+    },
+    {
+      "source": "/campionati-europei-under-18-division-c-san-marino-chiude-al-quinto-posto.--n329.php",
+      "destination": "/news/campionati-europei-under-18-division-c-san-marino-chiude-al-quinto-posto/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-promozione-partono-i-play-off-per-il-basket-2000-n210.php",
+      "destination": "/news/campionato-promozione-partono-i-play-off-per-il-basket-2000/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-samm.se-al-via-le-semifinali-n56.php",
+      "destination": "/news/campionato-samm-se-al-via-le-semifinali/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-samm.se-chiusa-la-regular-season-al-via-i-quarti-di-finale-n57.php",
+      "destination": "/news/campionato-samm-se-chiusa-la-regular-season-al-via-i-quarti-di-finale/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-samm.se-le-sfide-di-gioved-e-i-prossimi-appuntamenti-n58.php",
+      "destination": "/news/campionato-samm-se-le-sfide-di-gioved-e-i-prossimi-appuntamenti/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-10a-giornata-u19-ok-basket-2000-secondo--n119.php",
+      "destination": "/news/campionato-sammarinese-10a-giornata-u19-ok-basket-2000-secondo/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2011-calendario-e-risultati-n86.php",
+      "destination": "/news/campionato-sammarinese-2011-calendario-e-risultati/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2011-classifica-round-robin-n85.php",
+      "destination": "/news/campionato-sammarinese-2011-classifica-round-robin/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2011-foto-premiazioni-n133.php",
+      "destination": "/news/campionato-sammarinese-2011-foto-premiazioni/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2011-play-off-n120.php",
+      "destination": "/news/campionato-sammarinese-2011-play-off/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2011-trionfa-leuro-commercial-bank-n132.php",
+      "destination": "/news/campionato-sammarinese-2011-trionfa-leuro-commercial-bank/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2012-calendario-e-risultati-n166.php",
+      "destination": "/news/campionato-sammarinese-2012-calendario-e-risultati/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2012-classifica-round-robin-n165.php",
+      "destination": "/news/campionato-sammarinese-2012-classifica-round-robin/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2012-domani-le-finali-al-multieventi.-basket-2000-ecb-per-il-titolo.-n197.php",
+      "destination": "/news/campionato-sammarinese-2012-domani-le-finali-al-multieventi-basket-2000-ecb-per-il-titolo/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2012-foto-premiazioni-n199.php",
+      "destination": "/news/campionato-sammarinese-2012-foto-premiazioni/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2012-play-off-n184.php",
+      "destination": "/news/campionato-sammarinese-2012-play-off/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2013-calendario-e-risultati-n237.php",
+      "destination": "/news/campionato-sammarinese-2013-calendario-e-risultati/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2013-chiusa-la-regular-season-partono-i-play-off-n240.php",
+      "destination": "/news/campionato-sammarinese-2013-chiusa-la-regular-season-partono-i-play-off/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2013-classifica-round-robin-n238.php",
+      "destination": "/news/campionato-sammarinese-2013-classifica-round-robin/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2013-foto-premiazioni-n245.php",
+      "destination": "/news/campionato-sammarinese-2013-foto-premiazioni/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2013-play-off-n239.php",
+      "destination": "/news/campionato-sammarinese-2013-play-off/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2014-calendario-e-risultati-n276.php",
+      "destination": "/news/campionato-sammarinese-2014-calendario-e-risultati/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2014-classifica-n275.php",
+      "destination": "/news/campionato-sammarinese-2014-classifica/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2014-domani-le-finali-n304.php",
+      "destination": "/news/campionato-sammarinese-2014-domani-le-finali/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2014-foto-premiazioni-n277.php",
+      "destination": "/news/campionato-sammarinese-2014-foto-premiazioni/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2014-la-seconda-giornata-n284.php",
+      "destination": "/news/campionato-sammarinese-2014-la-seconda-giornata/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2014-le-prime-due-sfide-giocate-luned-n281.php",
+      "destination": "/news/campionato-sammarinese-2014-le-prime-due-sfide-giocate-luned/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2023-resoconto-prima-giornata-n595.php",
+      "destination": "/news/campionato-sammarinese-2023-resoconto-prima-giornata/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2023-si-parte-n593.php",
+      "destination": "/news/campionato-sammarinese-2023-si-parte/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2024-giornata-3-vincono-under-19-e-basket-2000-n645.php",
+      "destination": "/news/campionato-sammarinese-2024-giornata-3-vincono-under-19-e-basket-2000/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2024-le-semifinali-saranno-under-19-ducks-e-iam-basket-2000-n647.php",
+      "destination": "/news/campionato-sammarinese-2024-le-semifinali-saranno-under-19-ducks-e-iam-basket-2000/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-2a-giornata-ok-ecb-e-basket-2000-n96.php",
+      "destination": "/news/campionato-sammarinese-2a-giornata-ok-ecb-e-basket-2000/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-3a-giornata-ancora-w-per-ecb-e-fiorita-n99.php",
+      "destination": "/news/campionato-sammarinese-3a-giornata-ancora-w-per-ecb-e-fiorita/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-4a-giornata-brusco-stop-per-la-fiorita.-n102.php",
+      "destination": "/news/campionato-sammarinese-4a-giornata-brusco-stop-per-la-fiorita/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-5a-giornata-ecb-in-testa-primo-hurr-per-consolemania-n105.php",
+      "destination": "/news/campionato-sammarinese-5a-giornata-ecb-in-testa-primo-hurr-per-consolemania/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-6a-giornata-comanda-lecb-riscatto-fiorita-n108.php",
+      "destination": "/news/campionato-sammarinese-6a-giornata-comanda-lecb-riscatto-fiorita/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-7a-giornata-basket-2000-ok-lunder-19-sciupa-n111.php",
+      "destination": "/news/campionato-sammarinese-7a-giornata-basket-2000-ok-lunder-19-sciupa/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-8a-giornata-ecb-travolge-la-fiorita-domani-due-partite-n113.php",
+      "destination": "/news/campionato-sammarinese-8a-giornata-ecb-travolge-la-fiorita-domani-due-partite/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-9a-giornata-ecb-prima-risale-consolemania-n116.php",
+      "destination": "/news/campionato-sammarinese-9a-giornata-ecb-prima-risale-consolemania/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-basket-2000-ancora-imbattuto-n597.php",
+      "destination": "/news/campionato-sammarinese-basket-2000-ancora-imbattuto/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-basket-2000-e-tre-penne-gi-in-semifinale.-domani-i-quarti.-n189.php",
+      "destination": "/news/campionato-sammarinese-basket-2000-e-tre-penne-gi-in-semifinale-domani-i-quarti/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-basket-2000-e-under-19-travolgenti-su-under-17-e-ducks-n596.php",
+      "destination": "/news/campionato-sammarinese-basket-2000-e-under-19-travolgenti-su-under-17-e-ducks/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-basket-2000-imbattuto-ok-tre-penne-e-la-fiorita.-n183.php",
+      "destination": "/news/campionato-sammarinese-basket-2000-imbattuto-ok-tre-penne-e-la-fiorita/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-basket-2000-titano-u19-e-tre-penne-ecb-le-semifinali.-fiorita-e-serenissima-out-nei-quarti.-n192.php",
+      "destination": "/news/campionato-sammarinese-basket-2000-titano-u19-e-tre-penne-ecb-le-semifinali-fiorita-e-sere/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-chiusa-la-prima-fase.-da-luned-scatta-lorologio.-n185.php",
+      "destination": "/news/campionato-sammarinese-chiusa-la-prima-fase-da-luned-scatta-lorologio/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-chiusa-la-prima-parte.-luned-inizia-la-fase-ad-orologio-n293.php",
+      "destination": "/news/campionato-sammarinese-chiusa-la-prima-parte-luned-inizia-la-fase-ad-orologio/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-disputate-le-prime-tre-giornate-n174.php",
+      "destination": "/news/campionato-sammarinese-disputate-le-prime-tre-giornate/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-domani-folgore-titano-u19-e-basket-2000-la-fiorita-le-semifinali-n241.php",
+      "destination": "/news/campionato-sammarinese-domani-folgore-titano-u19-e-basket-2000-la-fiorita-le-semifinali/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-domani-scatta-ledizione-2012-n167.php",
+      "destination": "/news/campionato-sammarinese-domani-scatta-ledizione-2012/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-dopo-cinque-giornate-comandano-basket-2000-e-la-serenissima.-n179.php",
+      "destination": "/news/campionato-sammarinese-dopo-cinque-giornate-comandano-basket-2000-e-la-serenissima/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-finale-basket-2000-under-19-n648.php",
+      "destination": "/news/campionato-sammarinese-finale-basket-2000-under-19/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-folgore-basket-2000-la-finalissima-2013-n243.php",
+      "destination": "/news/campionato-sammarinese-folgore-basket-2000-la-finalissima-2013/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-giornata-nr-1-vincono-ducks-e-iam-n643.php",
+      "destination": "/news/campionato-sammarinese-giornata-nr-1-vincono-ducks-e-iam/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-giornata-nr-2-vincono-basket-2000-e-titans-under-19-n644.php",
+      "destination": "/news/campionato-sammarinese-giornata-nr-2-vincono-basket-2000-e-titans-under-19/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-il-trionfo-del-basket-2000-n599.php",
+      "destination": "/news/campionato-sammarinese-il-trionfo-del-basket-2000/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-la-finale-sara-ciu-ciu-basket-2000-n513.php",
+      "destination": "/news/campionato-sammarinese-la-finale-sara-ciu-ciu-basket-2000/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-la-fiorita-campione-sammarinese-2014-battuto-il-basket-2000.-tre-penne-terzo.-n307.php",
+      "destination": "/news/campionato-sammarinese-la-fiorita-campione-sammarinese-2014-battuto-il-basket-2000-tre-pen/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-la-fiorita-e-basket-2000-ai-primi-due-posti-n297.php",
+      "destination": "/news/campionato-sammarinese-la-fiorita-e-basket-2000-ai-primi-due-posti/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-la-fiorita-e-titano-under-19-alle-semifinali-al-via-domani-n126.php",
+      "destination": "/news/campionato-sammarinese-la-fiorita-e-titano-under-19-alle-semifinali-al-via-domani/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-le-sfide-della-quarta-giornata-n290.php",
+      "destination": "/news/campionato-sammarinese-le-sfide-della-quarta-giornata/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-marted-16-le-semifinali-n301.php",
+      "destination": "/news/campionato-sammarinese-marted-16-le-semifinali/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-resoconto-semifinali-n598.php",
+      "destination": "/news/campionato-sammarinese-resoconto-semifinali/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-resoconto-terza-giornata-n512.php",
+      "destination": "/news/campionato-sammarinese-resoconto-terza-giornata/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-tim-san-marino-cup-luned-si-comincia-n665.php",
+      "destination": "/news/campionato-sammarinese-tim-san-marino-cup-luned-si-comincia/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-ultima-giornata-under-17-ai-play-off-la-fiorita-terza-n123.php",
+      "destination": "/news/campionato-sammarinese-ultima-giornata-under-17-ai-play-off-la-fiorita-terza/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-sammarinese-vincono-iam-e-basket-2000-n646.php",
+      "destination": "/news/campionato-sammarinese-vincono-iam-e-basket-2000/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-seniores-maschile-edizione-2009-n67.php",
+      "destination": "/news/campionato-seniores-maschile-edizione-2009/",
+      "permanent": true
+    },
+    {
+      "source": "/campionato-seniores-maschile-edizione-2010-n64.php",
+      "destination": "/news/campionato-seniores-maschile-edizione-2010/",
+      "permanent": true
+    },
+    {
+      "source": "/centro-estivo-2024-a-cinque-stelle-n662.php",
+      "destination": "/news/centro-estivo-2024-a-cinque-stelle/",
+      "permanent": true
+    },
+    {
+      "source": "/centro-estivo-fsp-aperte-le-iscrizioni-n557.php",
+      "destination": "/news/centro-estivo-fsp-aperte-le-iscrizioni/",
+      "permanent": true
+    },
+    {
+      "source": "/centro-estivo-iscrizioni-aperte-n659.php",
+      "destination": "/news/centro-estivo-iscrizioni-aperte/",
+      "permanent": true
+    },
+    {
+      "source": "/certificato-di-qualita-gold-plus-al-minibasket-sammarinese-n660.php",
+      "destination": "/news/certificato-di-qualita-gold-plus-al-minibasket-sammarinese/",
+      "permanent": true
+    },
+    {
+      "source": "/chiusa-anche-la-basketcup-per-la-nazionale-u16-viaggio-a-gibilterra-per-gli-europei-n157.php",
+      "destination": "/news/chiusa-anche-la-basketcup-per-la-nazionale-u16-viaggio-a-gibilterra-per-gli-europei/",
+      "permanent": true
+    },
+    {
+      "source": "/chiuso-il-campionato-sammarinese-basket-2000-euro-commercial-bank-tre-penne-il-podio-n198.php",
+      "destination": "/news/chiuso-il-campionato-sammarinese-basket-2000-euro-commercial-bank-tre-penne-il-podio/",
+      "permanent": true
+    },
+    {
+      "source": "/ciao-willy-n81.php",
+      "destination": "/news/ciao-willy/",
+      "permanent": true
+    },
+    {
+      "source": "/ciu-ciu-team-si-qualifica-alla-final-four-uisp-n566.php",
+      "destination": "/news/ciu-ciu-team-si-qualifica-alla-final-four-uisp/",
+      "permanent": true
+    },
+    {
+      "source": "/coach-sergio-del-bianco-lascia-la-nazionale-senior-n434.php",
+      "destination": "/news/coach-sergio-del-bianco-lascia-la-nazionale-senior/",
+      "permanent": true
+    },
+    {
+      "source": "/colpo-del-galles-moldavia-ancora-ko.--n78.php",
+      "destination": "/news/colpo-del-galles-moldavia-ancora-ko/",
+      "permanent": true
+    },
+    {
+      "source": "/comunicato-congiunto-federazione-sammarinese-pallacanestro-e-a.p.-titano-n252.php",
+      "destination": "/news/comunicato-congiunto-federazione-sammarinese-pallacanestro-e-a-p-titano/",
+      "permanent": true
+    },
+    {
+      "source": "/con-sportinfiera-parte-ufficialmente-la-stagione-2022-2023-n509.php",
+      "destination": "/news/con-sportinfiera-parte-ufficialmente-la-stagione-2022-2023/",
+      "permanent": true
+    },
+    {
+      "source": "/congresso-fiba-a-manila-la-partecipazione-fsp-n592.php",
+      "destination": "/news/congresso-fiba-a-manila-la-partecipazione-fsp/",
+      "permanent": true
+    },
+    {
+      "source": "/consolemania-la-fiorita--n97.php",
+      "destination": "/news/consolemania-la-fiorita/",
+      "permanent": true
+    },
+    {
+      "source": "/consolemania-titano-u17-n114.php",
+      "destination": "/news/consolemania-titano-u17/",
+      "permanent": true
+    },
+    {
+      "source": "/consolemania-titano-u19-n110.php",
+      "destination": "/news/consolemania-titano-u19/",
+      "permanent": true
+    },
+    {
+      "source": "/consolemania-titano-u19-play-off-n125.php",
+      "destination": "/news/consolemania-titano-u19-play-off/",
+      "permanent": true
+    },
+    {
+      "source": "/convocazione-assemblea-elettiva-lunedi-21-ottobre-n650.php",
+      "destination": "/news/convocazione-assemblea-elettiva-lunedi-21-ottobre/",
+      "permanent": true
+    },
+    {
+      "source": "/coolthings-tim-titano-under-13-bella-vittoria-con-cesenatico-n608.php",
+      "destination": "/news/coolthings-tim-titano-under-13-bella-vittoria-con-cesenatico/",
+      "permanent": true
+    },
+    {
+      "source": "/coolthings-titano-u19-buon-debutto-ai-playoff-n568.php",
+      "destination": "/news/coolthings-titano-u19-buon-debutto-ai-playoff/",
+      "permanent": true
+    },
+    {
+      "source": "/coolthings-titano-under-19-in-finale-n620.php",
+      "destination": "/news/coolthings-titano-under-19-in-finale/",
+      "permanent": true
+    },
+    {
+      "source": "/coolthings-titano-under-19-vittoria-al-debutto-con-cesena-n600.php",
+      "destination": "/news/coolthings-titano-under-19-vittoria-al-debutto-con-cesena/",
+      "permanent": true
+    },
+    {
+      "source": "/corsi-minibasket-2015-2016-n45.php",
+      "destination": "/news/corsi-minibasket-2015-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/damiano-battistini-confermato-presidente-n427.php",
+      "destination": "/news/damiano-battistini-confermato-presidente/",
+      "permanent": true
+    },
+    {
+      "source": "/direttivo-fsp-quadriennio-olimpico-2013-2016-n44.php",
+      "destination": "/news/direttivo-fsp-quadriennio-olimpico-2013-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/domani-parte-il-campionato-sammarinese-2011-n84.php",
+      "destination": "/news/domani-parte-il-campionato-sammarinese-2011/",
+      "permanent": true
+    },
+    {
+      "source": "/domenica-2-ottobre-minibasket-in-carrozzina-al-multieventi-n94.php",
+      "destination": "/news/domenica-2-ottobre-minibasket-in-carrozzina-al-multieventi/",
+      "permanent": true
+    },
+    {
+      "source": "/domenica-4-settembre-a-fonte-dellovo-parte-il-tour-3-contro-3-femminile-n505.php",
+      "destination": "/news/domenica-4-settembre-a-fonte-dellovo-parte-il-tour-3-contro-3-femminile/",
+      "permanent": true
+    },
+    {
+      "source": "/doppia-vittoria-per-lunder-15-coolthings-titano-n655.php",
+      "destination": "/news/doppia-vittoria-per-lunder-15-coolthings-titano/",
+      "permanent": true
+    },
+    {
+      "source": "/ecb-basket-2000-finalissima-n131.php",
+      "destination": "/news/ecb-basket-2000-finalissima/",
+      "permanent": true
+    },
+    {
+      "source": "/ecb-basket-2000-n115.php",
+      "destination": "/news/ecb-basket-2000/",
+      "permanent": true
+    },
+    {
+      "source": "/ecb-consolemania-n95.php",
+      "destination": "/news/ecb-consolemania/",
+      "permanent": true
+    },
+    {
+      "source": "/ecb-la-fiorita-n112.php",
+      "destination": "/news/ecb-la-fiorita/",
+      "permanent": true
+    },
+    {
+      "source": "/ecb-titano-u19-n103.php",
+      "destination": "/news/ecb-titano-u19/",
+      "permanent": true
+    },
+    {
+      "source": "/ecb-titano-u19-n173.php",
+      "destination": "/news/ecb-titano-u19-173/",
+      "permanent": true
+    },
+    {
+      "source": "/ecb-titano-u19-semifinale-n128.php",
+      "destination": "/news/ecb-titano-u19-semifinale/",
+      "permanent": true
+    },
+    {
+      "source": "/ecb-tre-penne-n168.php",
+      "destination": "/news/ecb-tre-penne/",
+      "permanent": true
+    },
+    {
+      "source": "/esordienti-campioni-n622.php",
+      "destination": "/news/esordienti-campioni/",
+      "permanent": true
+    },
+    {
+      "source": "/euro-commercial-bank-e-basket-2000-in-finale-del-campionato-sammarinese-2011-n129.php",
+      "destination": "/news/euro-commercial-bank-e-basket-2000-in-finale-del-campionato-sammarinese-2011/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-andorra-moldavia-malta-il-podio.-da-luned-parte-la-basketcup-e-a-fine-mese-la-nazionale-u16-vola-a-gibilterra.-n156.php",
+      "destination": "/news/europei-andorra-moldavia-malta-il-podio-da-luned-parte-la-basketcup-e-a-fine-mese-la-nazio/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-day-2-il-resoconto-n492.php",
+      "destination": "/news/europei-day-2-il-resoconto/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-day-4-il-resoconto-n494.php",
+      "destination": "/news/europei-day-4-il-resoconto/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-dei-piccoli-stati-ad-andorra-marted-cominciano-le-gare-n625.php",
+      "destination": "/news/europei-dei-piccoli-stati-ad-andorra-marted-cominciano-le-gare/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-peccato-san-marino-la-scozia-si-impone-71-68.-tutto-facile-per-andorra-e-malta.-n153.php",
+      "destination": "/news/europei-peccato-san-marino-la-scozia-si-impone-71-68-tutto-facile-per-andorra-e-malta/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-san-marino-andorra-68-63-n626.php",
+      "destination": "/news/europei-san-marino-andorra-68-63/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-san-marino-batte-gibilterra-e-conquista-il-bronzo-n630.php",
+      "destination": "/news/europei-san-marino-batte-gibilterra-e-conquista-il-bronzo/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-san-marino-cede-alla-moldavia-e-sfider-malta-per-il-bronzo.-andorra-attende-i-moldavi-per-loro.-n155.php",
+      "destination": "/news/europei-san-marino-cede-alla-moldavia-e-sfider-malta-per-il-bronzo-andorra-attende-i-molda/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-san-marino-cede-il-passo-ad-andorra-in-semifinale-n629.php",
+      "destination": "/news/europei-san-marino-cede-il-passo-ad-andorra-in-semifinale/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-san-marino-in-semifinale-se-la-vedr-con-la-moldavia-andorra-malta-laltra-sfida.-n154.php",
+      "destination": "/news/europei-san-marino-in-semifinale-se-la-vedr-con-la-moldavia-andorra-malta-laltra-sfida/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-san-marino-ko-con-malta-n627.php",
+      "destination": "/news/europei-san-marino-ko-con-malta/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-san-marino-parte-alla-grande-superando-il-galles.-bene-anche-moldavia-e-malta.-n152.php",
+      "destination": "/news/europei-san-marino-parte-alla-grande-superando-il-galles-bene-anche-moldavia-e-malta/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-seniores-2012-a-san-marino-presentato-il-logo-ufficiale-n140.php",
+      "destination": "/news/europei-seniores-2012-a-san-marino-presentato-il-logo-ufficiale/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-terza-giornata-san-marino-ko-allovertime-con-gibilterra-n628.php",
+      "destination": "/news/europei-terza-giornata-san-marino-ko-allovertime-con-gibilterra/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-a-san-marino-va-tutto-storto-n407.php",
+      "destination": "/news/europei-u16-a-san-marino-va-tutto-storto/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-al-debutto-san-marino-cede-ad-andorra-n215.php",
+      "destination": "/news/europei-u16-al-debutto-san-marino-cede-ad-andorra/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-buona-prova-ma-vince-malta-n583.php",
+      "destination": "/news/europei-u16-buona-prova-ma-vince-malta/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-chiusura-pesante-contro-la-scozia.-oro-a-gibilterra-n218.php",
+      "destination": "/news/europei-u16-chiusura-pesante-contro-la-scozia-oro-a-gibilterra/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-con-un-gran-finale-san-marino-batte-landrsquoarmenia-n412.php",
+      "destination": "/news/europei-u16-con-un-gran-finale-san-marino-batte-landrsquoarmenia/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-div.-c-san-marino-in-finale-contro-il-kosovo-per-il-bronzo-si-affrontano-malta-e-galles.-n322.php",
+      "destination": "/news/europei-u16-div-c-san-marino-in-finale-contro-il-kosovo-per-il-bronzo-si-affrontano-malta/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-div.-c-san-marino-lotta-ma-lalbania-vince-50-43-n484.php",
+      "destination": "/news/europei-u16-div-c-san-marino-lotta-ma-lalbania-vince-50-43/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-division-c-san-marino-armenia-53-72-n632.php",
+      "destination": "/news/europei-u16-division-c-san-marino-armenia-53-72/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-esordio-vincente-per-san-marino-contro-malta.-n158.php",
+      "destination": "/news/europei-u16-esordio-vincente-per-san-marino-contro-malta/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-gibilterra-san-marino-60-54-n633.php",
+      "destination": "/news/europei-u16-gibilterra-san-marino-60-54/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-ieri-stop-contro-il-galles-per-i-biancazzurri-n216.php",
+      "destination": "/news/europei-u16-ieri-stop-contro-il-galles-per-i-biancazzurri/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-il-grande-cuore-dei-sammarinesi-propizia-la-rimonta-contro-il-galles.--n159.php",
+      "destination": "/news/europei-u16-il-grande-cuore-dei-sammarinesi-propizia-la-rimonta-contro-il-galles/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-kosovo-batte-san-marino-n634.php",
+      "destination": "/news/europei-u16-kosovo-batte-san-marino/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-nulla-da-fare-contro-i-padroni-di-casa-finisce-56-42-gibilterra-n217.php",
+      "destination": "/news/europei-u16-nulla-da-fare-contro-i-padroni-di-casa-finisce-56-42-gibilterra/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-peccato-ragazzi-finalina-equilibrata-ma-vince-gibilterra.-oro-a-monaco-e-argento-alla-scozia.-n162.php",
+      "destination": "/news/europei-u16-peccato-ragazzi-finalina-equilibrata-ma-vince-gibilterra-oro-a-monaco-e-argent/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-per-san-marino-una-sconfitta-in-volata-n409.php",
+      "destination": "/news/europei-u16-per-san-marino-una-sconfitta-in-volata/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-prima-giornata-grande-vittoria-di-san-marino.-vincono-anche-galles-kosovo-e-malta.--n319.php",
+      "destination": "/news/europei-u16-prima-giornata-grande-vittoria-di-san-marino-vincono-anche-galles-kosovo-e-mal/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-problemi-fisici-e-la-forza-di-monaco-stoppano-san-marino-n160.php",
+      "destination": "/news/europei-u16-problemi-fisici-e-la-forza-di-monaco-stoppano-san-marino/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-san-marino-batte-malta-70-40-e-chiude-al-5-posto-n636.php",
+      "destination": "/news/europei-u16-san-marino-batte-malta-70-40-e-chiude-al-5-posto/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-san-marino-da-imbattuto-in-semifinale-contro-il-galles.-kosovo-malta-laltra-sfida.--n321.php",
+      "destination": "/news/europei-u16-san-marino-da-imbattuto-in-semifinale-contro-il-galles-kosovo-malta-laltra-sfi/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-san-marino-ko-col-kosovo-n486.php",
+      "destination": "/news/europei-u16-san-marino-ko-col-kosovo/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-san-marino-moldova-56-70-n487.php",
+      "destination": "/news/europei-u16-san-marino-moldova-56-70/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-san-marino-moldova-66-54-n635.php",
+      "destination": "/news/europei-u16-san-marino-moldova-66-54/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-san-marino-paga-un-pessimo-avvio-n411.php",
+      "destination": "/news/europei-u16-san-marino-paga-un-pessimo-avvio/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-san-marino-sfiora-limpresa.-n408.php",
+      "destination": "/news/europei-u16-san-marino-sfiora-limpresa/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-san-marino-vince-e-lotta-per-il-quinto-posto-n410.php",
+      "destination": "/news/europei-u16-san-marino-vince-e-lotta-per-il-quinto-posto/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-semifinale-amara-per-i-biancazzurri-contro-la-scozia.-n161.php",
+      "destination": "/news/europei-u16-semifinale-amara-per-i-biancazzurri-contro-la-scozia/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u16-super-san-marino-malta-battuta-59-44-n485.php",
+      "destination": "/news/europei-u16-super-san-marino-malta-battuta-59-44/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-a-san-marino-formula-e-calendario-n490.php",
+      "destination": "/news/europei-u18-a-san-marino-formula-e-calendario/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-day-1-san-marino-ko-con-onore-con-lalbania-n491.php",
+      "destination": "/news/europei-u18-day-1-san-marino-ko-con-onore-con-lalbania/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-division-c-san-marino-chiude-al-63-posto-n477.php",
+      "destination": "/news/europei-u18-division-c-san-marino-chiude-al-63-posto/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-esordio-sammarinese-con-pesante-sconfitta-vince-la-moldova-90-55-n220.php",
+      "destination": "/news/europei-u18-esordio-sammarinese-con-pesante-sconfitta-vince-la-moldova-90-55/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-fantastica-battaglia-contro-monaco-il-74-70-vale-la-finalissima-per-san-marino-n223.php",
+      "destination": "/news/europei-u18-fantastica-battaglia-contro-monaco-il-74-70-vale-la-finalissima-per-san-marino/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-galles-spazzato-via-e-semifinale-n404.php",
+      "destination": "/news/europei-u18-galles-spazzato-via-e-semifinale/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-grandissimo-riscatto-di-san-marino-battuto-il-galles-77-62-n221.php",
+      "destination": "/news/europei-u18-grandissimo-riscatto-di-san-marino-battuto-il-galles-77-62/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-il-resoconto-della-conferenza-stampa-n489.php",
+      "destination": "/news/europei-u18-il-resoconto-della-conferenza-stampa/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-la-finale-sara-monaco-albania-n496.php",
+      "destination": "/news/europei-u18-la-finale-sara-monaco-albania/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-partita-memorabile-contro-la-moldova-la-vittoria-al-supplementare-vale-lo-storico-oro-per-san-marino-n224.php",
+      "destination": "/news/europei-u18-partita-memorabile-contro-la-moldova-la-vittoria-al-supplementare-vale-lo-stor/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-per-i-titani-un-ottimo-quarto-posto-n406.php",
+      "destination": "/news/europei-u18-per-i-titani-un-ottimo-quarto-posto/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-resoconto-conclusivo-trionfa-lalbania-n503.php",
+      "destination": "/news/europei-u18-resoconto-conclusivo-trionfa-lalbania/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-resoconto-quinta-giornata-n495.php",
+      "destination": "/news/europei-u18-resoconto-quinta-giornata/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-san-marino-affonda-di-triple-la-moldova-n403.php",
+      "destination": "/news/europei-u18-san-marino-affonda-di-triple-la-moldova/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-san-marino-andorra-55-57-n589.php",
+      "destination": "/news/europei-u18-san-marino-andorra-55-57/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-san-marino-batte-90-82-la-moldova-e-chiude-al-quinto-posto-n641.php",
+      "destination": "/news/europei-u18-san-marino-batte-90-82-la-moldova-e-chiude-al-quinto-posto/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-san-marino-batte-gibilterra-64-57-n588.php",
+      "destination": "/news/europei-u18-san-marino-batte-gibilterra-64-57/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-san-marino-lussemburgo-73-79-n639.php",
+      "destination": "/news/europei-u18-san-marino-lussemburgo-73-79/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-san-marino-sbatte-contro-il-muro-kosovo-n401.php",
+      "destination": "/news/europei-u18-san-marino-sbatte-contro-il-muro-kosovo/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-san-marino-va-ko-col-lussemburgo-dopo-unottima-gara-n587.php",
+      "destination": "/news/europei-u18-san-marino-va-ko-col-lussemburgo-dopo-unottima-gara/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-titani-intensi-ma-non-basta-n473.php",
+      "destination": "/news/europei-u18-titani-intensi-ma-non-basta/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-travolta-gibilterra-e-accesso-in-semifinale-per-i-sammarinesi-n222.php",
+      "destination": "/news/europei-u18-travolta-gibilterra-e-accesso-in-semifinale-per-i-sammarinesi/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-u18-vince-andorra-ma-per-san-marino-solo-appalusi-n405.php",
+      "destination": "/news/europei-u18-vince-andorra-ma-per-san-marino-solo-appalusi/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-under-16-azerbaijan-batte-san-marino-n582.php",
+      "destination": "/news/europei-under-16-azerbaijan-batte-san-marino/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-under-16-cipro-batte-san-marino-n581.php",
+      "destination": "/news/europei-under-16-cipro-batte-san-marino/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-under-16-grandissimo-trionfo-per-san-marino--n323.php",
+      "destination": "/news/europei-under-16-grandissimo-trionfo-per-san-marino/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-under-16-la-rosa-dei-giocatori-e-lintervista-a-coach-rossini-n578.php",
+      "destination": "/news/europei-under-16-la-rosa-dei-giocatori-e-lintervista-a-coach-rossini/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-under-16-nazionale-in-kosovo-n577.php",
+      "destination": "/news/europei-under-16-nazionale-in-kosovo/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-under-16-san-marino-gibilterra-65-48-n584.php",
+      "destination": "/news/europei-under-16-san-marino-gibilterra-65-48/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-under-16-san-marino-vince-ancora-e-vola-in-semifinale.-avanti-anche-kosovo-malta-e-galles.--n320.php",
+      "destination": "/news/europei-under-16-san-marino-vince-ancora-e-vola-in-semifinale-avanti-anche-kosovo-malta-e/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-under-18-albania-san-marino-82-73-n640.php",
+      "destination": "/news/europei-under-18-albania-san-marino-82-73/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-under-18-e-under-16-san-marino-presente-n554.php",
+      "destination": "/news/europei-under-18-e-under-16-san-marino-presente/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-under-18-in-albania-san-marino-da-marted-in-gara-n637.php",
+      "destination": "/news/europei-under-18-in-albania-san-marino-da-marted-in-gara/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-under-18-in-azerbaijan-domani-san-marino-affronta-monaco-n585.php",
+      "destination": "/news/europei-under-18-in-azerbaijan-domani-san-marino-affronta-monaco/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-under-18-monaco-batte-san-marino-n586.php",
+      "destination": "/news/europei-under-18-monaco-batte-san-marino/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-under-18-san-marino-a-gibilterra.-debutto-mercoled-n324.php",
+      "destination": "/news/europei-under-18-san-marino-a-gibilterra-debutto-mercoled/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-under-18-san-marino-batte-malta-61-55-n590.php",
+      "destination": "/news/europei-under-18-san-marino-batte-malta-61-55/",
+      "permanent": true
+    },
+    {
+      "source": "/europei-under-18-san-marino-domina-con-gibilterra-76-43-n638.php",
+      "destination": "/news/europei-under-18-san-marino-domina-con-gibilterra-76-43/",
+      "permanent": true
+    },
+    {
+      "source": "/europeo-dei-piccoli-stati-luned-2-luglio-alle-18.30-la-cerimonia-di-inaugurazione-n151.php",
+      "destination": "/news/europeo-dei-piccoli-stati-luned-2-luglio-alle-18-30-la-cerimonia-di-inaugurazione/",
+      "permanent": true
+    },
+    {
+      "source": "/fantastici-titani-la-semifinale-e-vostra-n467.php",
+      "destination": "/news/fantastici-titani-la-semifinale-e-vostra/",
+      "permanent": true
+    },
+    {
+      "source": "/federbasket-e-nazionale-u16-invitati-dai-capitani-reggenti-n332.php",
+      "destination": "/news/federbasket-e-nazionale-u16-invitati-dai-capitani-reggenti/",
+      "permanent": true
+    },
+    {
+      "source": "/festa-di-chiusura-corsi-minibasket-n70.php",
+      "destination": "/news/festa-di-chiusura-corsi-minibasket/",
+      "permanent": true
+    },
+    {
+      "source": "/fiba-europe-general-assembly-2024-n617.php",
+      "destination": "/news/fiba-europe-general-assembly-2024/",
+      "permanent": true
+    },
+    {
+      "source": "/fiba-europe-prime-indiscrezioni-sugli-europei-u16-e-u18-division-c-n208.php",
+      "destination": "/news/fiba-europe-prime-indiscrezioni-sugli-europei-u16-e-u18-division-c/",
+      "permanent": true
+    },
+    {
+      "source": "/fiba-ydf-fsp-titans-youth-project-summer-camp-n515.php",
+      "destination": "/news/fiba-ydf-fsp-titans-youth-project-summer-camp/",
+      "permanent": true
+    },
+    {
+      "source": "/fibaeurope-under-16-european-championship-men-division-c-san-marino-2015-6-11-luglio-n314.php",
+      "destination": "/news/fibaeurope-under-16-european-championship-men-division-c-san-marino-2015-6-11-luglio/",
+      "permanent": true
+    },
+    {
+      "source": "/finale-amaro-vince-gibilterra-n462.php",
+      "destination": "/news/finale-amaro-vince-gibilterra/",
+      "permanent": true
+    },
+    {
+      "source": "/focus-sulla-femminile-la-squadra-under-14-n609.php",
+      "destination": "/news/focus-sulla-femminile-la-squadra-under-14/",
+      "permanent": true
+    },
+    {
+      "source": "/focus-sulle-giovanili-coolthings-tim-titano-u17-n605.php",
+      "destination": "/news/focus-sulle-giovanili-coolthings-tim-titano-u17/",
+      "permanent": true
+    },
+    {
+      "source": "/focus-sulle-giovanili-coolthings-tim-titano-under-19-n607.php",
+      "destination": "/news/focus-sulle-giovanili-coolthings-tim-titano-under-19/",
+      "permanent": true
+    },
+    {
+      "source": "/focus-sulle-giovanili-under-13-n603.php",
+      "destination": "/news/focus-sulle-giovanili-under-13/",
+      "permanent": true
+    },
+    {
+      "source": "/folgore-campione-sammarinese-2013-basket-2000-secondo-e-titano-u19-sul-podio-n244.php",
+      "destination": "/news/folgore-campione-sammarinese-2013-basket-2000-secondo-e-titano-u19-sul-podio/",
+      "permanent": true
+    },
+    {
+      "source": "/fsp-non-ci-sono-soste-estive-anzi-lattivit-entra-nel-vivo-n213.php",
+      "destination": "/news/fsp-non-ci-sono-soste-estive-anzi-lattivit-entra-nel-vivo/",
+      "permanent": true
+    },
+    {
+      "source": "/galles-e-malta-in-semifinale-sul-titano-si-freme-per-la-caccia-alle-medaglie-n73.php",
+      "destination": "/news/galles-e-malta-in-semifinale-sul-titano-si-freme-per-la-caccia-alle-medaglie/",
+      "permanent": true
+    },
+    {
+      "source": "/gian-primo-giardi-n385.php",
+      "destination": "/news/gian-primo-giardi/",
+      "permanent": true
+    },
+    {
+      "source": "/gian_primo_giardi-n385.php",
+      "destination": "/news/gian-primo-giardi/",
+      "permanent": true
+    },
+    {
+      "source": "/gli-appuntamenti-della-fsp-n310.php",
+      "destination": "/news/gli-appuntamenti-della-fsp/",
+      "permanent": true
+    },
+    {
+      "source": "/gran-festa-minibasket-al-multieventi-n572.php",
+      "destination": "/news/gran-festa-minibasket-al-multieventi/",
+      "permanent": true
+    },
+    {
+      "source": "/gran-gala-del-basket-sammarinese-unesaltante-prima-edizione-n416.php",
+      "destination": "/news/gran-gala-del-basket-sammarinese-unesaltante-prima-edizione/",
+      "permanent": true
+    },
+    {
+      "source": "/grande-san-marino-moldavia-battuta.-vince-anche-il-galles.-n76.php",
+      "destination": "/news/grande-san-marino-moldavia-battuta-vince-anche-il-galles/",
+      "permanent": true
+    },
+    {
+      "source": "/grande-successo-per-la-festa-del-minibasket-n71.php",
+      "destination": "/news/grande-successo-per-la-festa-del-minibasket/",
+      "permanent": true
+    },
+    {
+      "source": "/grandi-piccoli-titans-al-memorial-barlera-n389.php",
+      "destination": "/news/grandi-piccoli-titans-al-memorial-barlera/",
+      "permanent": true
+    },
+    {
+      "source": "/i-giovani-titani-meritano-solo-applausi-n464.php",
+      "destination": "/news/i-giovani-titani-meritano-solo-applausi/",
+      "permanent": true
+    },
+    {
+      "source": "/i-nostri-ragazzi-ai-giochi-della-giovent-sammarinese-n72.php",
+      "destination": "/news/i-nostri-ragazzi-ai-giochi-della-giovent-sammarinese/",
+      "permanent": true
+    },
+    {
+      "source": "/i-titani-festeggiano-la-prima-vittoria-n466.php",
+      "destination": "/news/i-titani-festeggiano-la-prima-vittoria/",
+      "permanent": true
+    },
+    {
+      "source": "/i-titani-si-riscattano-col-botto-n461.php",
+      "destination": "/news/i-titani-si-riscattano-col-botto/",
+      "permanent": true
+    },
+    {
+      "source": "/iam-ciu-ciu-team-campione-di-san-marino-2022-n514.php",
+      "destination": "/news/iam-ciu-ciu-team-campione-di-san-marino-2022/",
+      "permanent": true
+    },
+    {
+      "source": "/ibc-campione-sammarinese-2010-n60.php",
+      "destination": "/news/ibc-campione-sammarinese-2010/",
+      "permanent": true
+    },
+    {
+      "source": "/il-basket-2000-si-gode-una-grande-impresa-n436.php",
+      "destination": "/news/il-basket-2000-si-gode-una-grande-impresa/",
+      "permanent": true
+    },
+    {
+      "source": "/il-basket-2000-vince-il-campionato-sammarinese-2024-n649.php",
+      "destination": "/news/il-basket-2000-vince-il-campionato-sammarinese-2024/",
+      "permanent": true
+    },
+    {
+      "source": "/il-basket-2000-vince-il-campionato-sammarinese-2025-tim-san-marino-cup-n672.php",
+      "destination": "/news/il-basket-2000-vince-il-campionato-sammarinese-2025-tim-san-marino-cup/",
+      "permanent": true
+    },
+    {
+      "source": "/il-basket-ai-giochi-della-giovent-sammarinese-2012-15-16-giugno-n150.php",
+      "destination": "/news/il-basket-ai-giochi-della-giovent-sammarinese-2012-15-16-giugno/",
+      "permanent": true
+    },
+    {
+      "source": "/il-basket-internazionale-a-san-marino-n226.php",
+      "destination": "/news/il-basket-internazionale-a-san-marino/",
+      "permanent": true
+    },
+    {
+      "source": "/il-campionato-sammarinese-comincia-con-le-vittorie-di-ciu-ciu-e-basket-2000-n510.php",
+      "destination": "/news/il-campionato-sammarinese-comincia-con-le-vittorie-di-ciu-ciu-e-basket-2000/",
+      "permanent": true
+    },
+    {
+      "source": "/il-consiglio-direttivo-prepara-gli-eventi-internazionali-estivi-n209.php",
+      "destination": "/news/il-consiglio-direttivo-prepara-gli-eventi-internazionali-estivi/",
+      "permanent": true
+    },
+    {
+      "source": "/il-cordoglio-della-fsp-per-la-scomparsa-di-simone-de-luigi-n504.php",
+      "destination": "/news/il-cordoglio-della-fsp-per-la-scomparsa-di-simone-de-luigi/",
+      "permanent": true
+    },
+    {
+      "source": "/il-galles-in-finale-ma-per-san-marino-solo-applausi-n468.php",
+      "destination": "/news/il-galles-in-finale-ma-per-san-marino-solo-applausi/",
+      "permanent": true
+    },
+    {
+      "source": "/il-percorso-di-san-marino-la-vittoria-con-gibilterra-n502.php",
+      "destination": "/news/il-percorso-di-san-marino-la-vittoria-con-gibilterra/",
+      "permanent": true
+    },
+    {
+      "source": "/il-presidente-damiano-battistini-commenta-unestate-di-basket-n413.php",
+      "destination": "/news/il-presidente-damiano-battistini-commenta-unestate-di-basket/",
+      "permanent": true
+    },
+    {
+      "source": "/il-punto-del-presidente-damiano-battistini-n415.php",
+      "destination": "/news/il-punto-del-presidente-damiano-battistini/",
+      "permanent": true
+    },
+    {
+      "source": "/il-punto-della-situazione-e-un-focus-su-la-fiorita-basket-n211.php",
+      "destination": "/news/il-punto-della-situazione-e-un-focus-su-la-fiorita-basket/",
+      "permanent": true
+    },
+    {
+      "source": "/il-punto-sul-minibasket-con-oscar-valentini-n368.php",
+      "destination": "/news/il-punto-sul-minibasket-con-oscar-valentini/",
+      "permanent": true
+    },
+    {
+      "source": "/il-terzo-posto-e-dellaustria-per-san-marino-e-stato-comunque-un-grande-torneo-n470.php",
+      "destination": "/news/il-terzo-posto-e-dellaustria-per-san-marino-e-stato-comunque-un-grande-torneo/",
+      "permanent": true
+    },
+    {
+      "source": "/incredibile-san-marino-n402.php",
+      "destination": "/news/incredibile-san-marino/",
+      "permanent": true
+    },
+    {
+      "source": "/iniziati-i-lavori-del-nuovo-consiglio-direttivo-n205.php",
+      "destination": "/news/iniziati-i-lavori-del-nuovo-consiglio-direttivo/",
+      "permanent": true
+    },
+    {
+      "source": "/intervista-a-coach-massimo-padovano-n445.php",
+      "destination": "/news/intervista-a-coach-massimo-padovano/",
+      "permanent": true
+    },
+    {
+      "source": "/intervista-a-coach-simone-porcarelli-n451.php",
+      "destination": "/news/intervista-a-coach-simone-porcarelli/",
+      "permanent": true
+    },
+    {
+      "source": "/intervista-a-leonardo-fiorani-n446.php",
+      "destination": "/news/intervista-a-leonardo-fiorani/",
+      "permanent": true
+    },
+    {
+      "source": "/intervista-a-nicolo-botteghi-n449.php",
+      "destination": "/news/intervista-a-nicolo-botteghi/",
+      "permanent": true
+    },
+    {
+      "source": "/intervista-a-tommaso-felici-n444.php",
+      "destination": "/news/intervista-a-tommaso-felici/",
+      "permanent": true
+    },
+    {
+      "source": "/intervista-al-presidente-damiano-battistini-n371.php",
+      "destination": "/news/intervista-al-presidente-damiano-battistini/",
+      "permanent": true
+    },
+    {
+      "source": "/julian-gualtieri-ai-campionati-europei-n236.php",
+      "destination": "/news/julian-gualtieri-ai-campionati-europei/",
+      "permanent": true
+    },
+    {
+      "source": "/la-federazione-vicina-alla-famiglia-marisi-n447.php",
+      "destination": "/news/la-federazione-vicina-alla-famiglia-marisi/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fiba-assegna-a-san-marino-gli-europei-under-16-division-c-n300.php",
+      "destination": "/news/la-fiba-assegna-a-san-marino-gli-europei-under-16-division-c/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fiorita-basket-2000-finale-1-2-n306.php",
+      "destination": "/news/la-fiorita-basket-2000-finale-1-2/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fiorita-basket-2000-n169.php",
+      "destination": "/news/la-fiorita-basket-2000/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fiorita-basket-2000-n291.php",
+      "destination": "/news/la-fiorita-basket-2000-291/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fiorita-ecb-n181.php",
+      "destination": "/news/la-fiorita-ecb/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fiorita-la-serenissima-n172.php",
+      "destination": "/news/la-fiorita-la-serenissima/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fiorita-red-devils-n283.php",
+      "destination": "/news/la-fiorita-red-devils/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fiorita-red-devils-semifinale-n302.php",
+      "destination": "/news/la-fiorita-red-devils-semifinale/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fiorita-titano-u17-play-off-n124.php",
+      "destination": "/news/la-fiorita-titano-u17-play-off/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fiorita-titano-u19-finale-34-n130.php",
+      "destination": "/news/la-fiorita-titano-u19-finale-34/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fiorita-titano-u19-n177.php",
+      "destination": "/news/la-fiorita-titano-u19/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fiorita-titano-u19-orologio-n295.php",
+      "destination": "/news/la-fiorita-titano-u19-orologio/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fiorita-titano-u19-quarti-n190.php",
+      "destination": "/news/la-fiorita-titano-u19-quarti/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fiorita-tre-penne-n107.php",
+      "destination": "/news/la-fiorita-tre-penne/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fiorita-vince-il-campionato-sammarinese-pallacanestro-n438.php",
+      "destination": "/news/la-fiorita-vince-il-campionato-sammarinese-pallacanestro/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fsp-allassemblea-generale-di-fiba-europe-n250.php",
+      "destination": "/news/la-fsp-allassemblea-generale-di-fiba-europe/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fsp-ha-un-nuovo-consiglio-direttivo-n479.php",
+      "destination": "/news/la-fsp-ha-un-nuovo-consiglio-direttivo/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fsp-presenta-alla-stampa-la-delegazione-under-16-in-partenza-per-gli-europei-division-c-di-malta-n254.php",
+      "destination": "/news/la-fsp-presenta-alla-stampa-la-delegazione-under-16-in-partenza-per-gli-europei-division-c/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fsp-presenta-alla-stampa-la-delegazione-under-18-in-partenza-per-gli-europei-division-c-di-andorra-n266.php",
+      "destination": "/news/la-fsp-presenta-alla-stampa-la-delegazione-under-18-in-partenza-per-gli-europei-division-c/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fsp-presenta-le-partnership-con-il-main-sponsor-asset-banca-e-con-macron-n273.php",
+      "destination": "/news/la-fsp-presenta-le-partnership-con-il-main-sponsor-asset-banca-e-con-macron/",
+      "permanent": true
+    },
+    {
+      "source": "/la-fsp-ricorda-dido-guerrieri-n207.php",
+      "destination": "/news/la-fsp-ricorda-dido-guerrieri/",
+      "permanent": true
+    },
+    {
+      "source": "/la-grande-crescita-del-minibasket-n424.php",
+      "destination": "/news/la-grande-crescita-del-minibasket/",
+      "permanent": true
+    },
+    {
+      "source": "/la-grande-stagione-di-francesco-palmieri-n469.php",
+      "destination": "/news/la-grande-stagione-di-francesco-palmieri/",
+      "permanent": true
+    },
+    {
+      "source": "/la-nazionale-del-2002-entra-nella-hall-of-fame-n508.php",
+      "destination": "/news/la-nazionale-del-2002-entra-nella-hall-of-fame/",
+      "permanent": true
+    },
+    {
+      "source": "/la-nazionale-senior-si-ritrova-al-multieventi-n611.php",
+      "destination": "/news/la-nazionale-senior-si-ritrova-al-multieventi/",
+      "permanent": true
+    },
+    {
+      "source": "/la-nazionale-u18-pronta-per-gli-europei-in-kosovo-n471.php",
+      "destination": "/news/la-nazionale-u18-pronta-per-gli-europei-in-kosovo/",
+      "permanent": true
+    },
+    {
+      "source": "/la-norvegia-non-fa-sconti-n460.php",
+      "destination": "/news/la-norvegia-non-fa-sconti/",
+      "permanent": true
+    },
+    {
+      "source": "/la-prima-squadra-femminile-della-storia-del-titano-ora-e-realta-n337.php",
+      "destination": "/news/la-prima-squadra-femminile-della-storia-del-titano-ora-e-realta/",
+      "permanent": true
+    },
+    {
+      "source": "/la-serenissima-ecb-n178.php",
+      "destination": "/news/la-serenissima-ecb/",
+      "permanent": true
+    },
+    {
+      "source": "/la-serenissima-ecb-quarti-n191.php",
+      "destination": "/news/la-serenissima-ecb-quarti/",
+      "permanent": true
+    },
+    {
+      "source": "/la-serenissima-la-fiorita-orologio-n186.php",
+      "destination": "/news/la-serenissima-la-fiorita-orologio/",
+      "permanent": true
+    },
+    {
+      "source": "/la-terza-giornata-del-campionato-sammarinese-2014-n287.php",
+      "destination": "/news/la-terza-giornata-del-campionato-sammarinese-2014/",
+      "permanent": true
+    },
+    {
+      "source": "/lanalisi-di-coach-luca-liberti-n367.php",
+      "destination": "/news/lanalisi-di-coach-luca-liberti/",
+      "permanent": true
+    },
+    {
+      "source": "/le-nostre-giovanili-coolthings-tim-titano-u15-n604.php",
+      "destination": "/news/le-nostre-giovanili-coolthings-tim-titano-u15/",
+      "permanent": true
+    },
+    {
+      "source": "/le-ragazze-under-14-al-debutto-in-campionato-n601.php",
+      "destination": "/news/le-ragazze-under-14-al-debutto-in-campionato/",
+      "permanent": true
+    },
+    {
+      "source": "/le-titane-al-torneo-di-como-n391.php",
+      "destination": "/news/le-titane-al-torneo-di-como/",
+      "permanent": true
+    },
+    {
+      "source": "/le-titane-avanti-con-entusiasmo-n425.php",
+      "destination": "/news/le-titane-avanti-con-entusiasmo/",
+      "permanent": true
+    },
+    {
+      "source": "/leuropeo-u18-e-chi-lha-vissuto-da-dentro...-i-nostri-autisti-n497.php",
+      "destination": "/news/leuropeo-u18-e-chi-lha-vissuto-da-dentro-i-nostri-autisti/",
+      "permanent": true
+    },
+    {
+      "source": "/leuropeo-u18-e-chi-lha-vissuto-da-dentro...-veronica-zavoli-e-oscar-valentini-n498.php",
+      "destination": "/news/leuropeo-u18-e-chi-lha-vissuto-da-dentro-veronica-zavoli-e-oscar-valentini/",
+      "permanent": true
+    },
+    {
+      "source": "/leuropeo-under-18-e-chi-lha-vissuto-da-dentro...-marco-stefanelli-n500.php",
+      "destination": "/news/leuropeo-under-18-e-chi-lha-vissuto-da-dentro-marco-stefanelli/",
+      "permanent": true
+    },
+    {
+      "source": "/leuropeo-under-18-e-chi-lha-vissuto-da-dentro...-roberto-berardi...-n501.php",
+      "destination": "/news/leuropeo-under-18-e-chi-lha-vissuto-da-dentro-roberto-berardi/",
+      "permanent": true
+    },
+    {
+      "source": "/leuropeo-under-18-e-chi-lha-vissuto-da-dentro...-simone-botteghi-e-monica-galli-n499.php",
+      "destination": "/news/leuropeo-under-18-e-chi-lha-vissuto-da-dentro-simone-botteghi-e-monica-galli/",
+      "permanent": true
+    },
+    {
+      "source": "/lorenzo-michelotti-vince-il-concorso-letterario-quotlo-sport-e-vita-sul-titanoquot-n658.php",
+      "destination": "/news/lorenzo-michelotti-vince-il-concorso-letterario-lo-sport-e-vita-sul-titano/",
+      "permanent": true
+    },
+    {
+      "source": "/luca-liberti-presidente-eletto-il-nuovo-consiglio-n651.php",
+      "destination": "/news/luca-liberti-presidente-eletto-il-nuovo-consiglio/",
+      "permanent": true
+    },
+    {
+      "source": "/lunder-16-oro-agli-europei-division-c-entra-nella-hall-of-fame-del-basket-sammarinese-n335.php",
+      "destination": "/news/lunder-16-oro-agli-europei-division-c-entra-nella-hall-of-fame-del-basket-sammarinese/",
+      "permanent": true
+    },
+    {
+      "source": "/lunder-17-gold-vince-la-coppa-primavera-n573.php",
+      "destination": "/news/lunder-17-gold-vince-la-coppa-primavera/",
+      "permanent": true
+    },
+    {
+      "source": "/lunder-18-oro-ad-andorra-entra-nella-hall-of-fame-del-basket-sammarinese-n242.php",
+      "destination": "/news/lunder-18-oro-ad-andorra-entra-nella-hall-of-fame-del-basket-sammarinese/",
+      "permanent": true
+    },
+    {
+      "source": "/lunder-19-vince-a-misano-e-rimane-imbattuta-n521.php",
+      "destination": "/news/lunder-19-vince-a-misano-e-rimane-imbattuta/",
+      "permanent": true
+    },
+    {
+      "source": "/lunedi-20-la-conferenza-stampa-di-presentazione-delle-nazionali-n390.php",
+      "destination": "/news/lunedi-20-la-conferenza-stampa-di-presentazione-delle-nazionali/",
+      "permanent": true
+    },
+    {
+      "source": "/marted-20-dicembre-al-multieventi-la-festa-di-natale-del-minibasket-n134.php",
+      "destination": "/news/marted-20-dicembre-al-multieventi-la-festa-di-natale-del-minibasket/",
+      "permanent": true
+    },
+    {
+      "source": "/massimo-padovano-e-il-nuovo-responsabile-del-settore-giovanile-n437.php",
+      "destination": "/news/massimo-padovano-e-il-nuovo-responsabile-del-settore-giovanile/",
+      "permanent": true
+    },
+    {
+      "source": "/matilde-e-lara-oggi-la-prima-partita-n520.php",
+      "destination": "/news/matilde-e-lara-oggi-la-prima-partita/",
+      "permanent": true
+    },
+    {
+      "source": "/memorial-papini-gran-bel-torneo-per-landrsquoasset-banca--n432.php",
+      "destination": "/news/memorial-papini-gran-bel-torneo-per-landrsquoasset-banca/",
+      "permanent": true
+    },
+    {
+      "source": "/minibasket-al-via-i-tornei-aquilotti-2001-e-2002-aperte-anche-le-iscrizioni-per-il-secondo-corso-febbraio-maggio-n135.php",
+      "destination": "/news/minibasket-al-via-i-tornei-aquilotti-2001-e-2002-aperte-anche-le-iscrizioni-per-il-secondo/",
+      "permanent": true
+    },
+    {
+      "source": "/minibasket-anche-questanno-bella-esperienza-per-gli-scolari-nel-torneo-delle-iv-elementari-n202.php",
+      "destination": "/news/minibasket-anche-questanno-bella-esperienza-per-gli-scolari-nel-torneo-delle-iv-elementari/",
+      "permanent": true
+    },
+    {
+      "source": "/minibasket-cup-gran-successo-n624.php",
+      "destination": "/news/minibasket-cup-gran-successo/",
+      "permanent": true
+    },
+    {
+      "source": "/minibasket-da-luned-19-parte-il-primo-corso-201112-n82.php",
+      "destination": "/news/minibasket-da-luned-19-parte-il-primo-corso-201112/",
+      "permanent": true
+    },
+    {
+      "source": "/minibasket-domani-al-multieventi-la-festa-di-natale-n203.php",
+      "destination": "/news/minibasket-domani-al-multieventi-la-festa-di-natale/",
+      "permanent": true
+    },
+    {
+      "source": "/minibasket-domenica-al-multieventi-la-prima-tappa-del-circuito-valmarecchia-protagonista-la-categoria-scoiattoli-n196.php",
+      "destination": "/news/minibasket-domenica-al-multieventi-la-prima-tappa-del-circuito-valmarecchia-protagonista-l/",
+      "permanent": true
+    },
+    {
+      "source": "/minibasket-fiba-ydf-christmas-tournament-a-san-marino-n533.php",
+      "destination": "/news/minibasket-fiba-ydf-christmas-tournament-a-san-marino/",
+      "permanent": true
+    },
+    {
+      "source": "/minibasket-gli-aquilotti-2001-al-torneo-di-sansepolcro-1-3-giugno-n146.php",
+      "destination": "/news/minibasket-gli-aquilotti-2001-al-torneo-di-sansepolcro-1-3-giugno/",
+      "permanent": true
+    },
+    {
+      "source": "/minibasket-gli-aquilotti-2002-impegnati-nel-torneo-nazionale-minibasket-cimone-n138.php",
+      "destination": "/news/minibasket-gli-aquilotti-2002-impegnati-nel-torneo-nazionale-minibasket-cimone/",
+      "permanent": true
+    },
+    {
+      "source": "/minibasket-luned-4-febbraio-parte-il-secondo-corso-della-stagione-20122013-n206.php",
+      "destination": "/news/minibasket-luned-4-febbraio-parte-il-secondo-corso-della-stagione-20122013/",
+      "permanent": true
+    },
+    {
+      "source": "/minibasket-ottimo-sesto-posto-per-gli-aquilotti-2002-nel-torneo-nazionale-minibasket-cimone-n139.php",
+      "destination": "/news/minibasket-ottimo-sesto-posto-per-gli-aquilotti-2002-nel-torneo-nazionale-minibasket-cimon/",
+      "permanent": true
+    },
+    {
+      "source": "/minibasket-pronti-a-ricominciare-n594.php",
+      "destination": "/news/minibasket-pronti-a-ricominciare/",
+      "permanent": true
+    },
+    {
+      "source": "/minibasket-si-chiude-la-stagione-con-la-festa-al-multieventi-n149.php",
+      "destination": "/news/minibasket-si-chiude-la-stagione-con-la-festa-al-multieventi/",
+      "permanent": true
+    },
+    {
+      "source": "/minibasket-si-comincia-n642.php",
+      "destination": "/news/minibasket-si-comincia/",
+      "permanent": true
+    },
+    {
+      "source": "/minibasket-tutte-le-attivit-in-corso-da-fonte-dellovo-trasloco-forzato-a-faetano-n137.php",
+      "destination": "/news/minibasket-tutte-le-attivit-in-corso-da-fonte-dellovo-trasloco-forzato-a-faetano/",
+      "permanent": true
+    },
+    {
+      "source": "/nato-per-essere-mvp-julian-gualtieri-n225.php",
+      "destination": "/news/nato-per-essere-mvp-julian-gualtieri/",
+      "permanent": true
+    },
+    {
+      "source": "/nazionale-u18-terzo-posto-a-lloret-de-mar-n576.php",
+      "destination": "/news/nazionale-u18-terzo-posto-a-lloret-de-mar/",
+      "permanent": true
+    },
+    {
+      "source": "/nazionale-under-16-in-albania-per-leuropeo-division-c-n631.php",
+      "destination": "/news/nazionale-under-16-in-albania-per-leuropeo-division-c/",
+      "permanent": true
+    },
+    {
+      "source": "/nazionale-under-16-ko-allesordio-con-larmenia-n579.php",
+      "destination": "/news/nazionale-under-16-ko-allesordio-con-larmenia/",
+      "permanent": true
+    },
+    {
+      "source": "/nazionale-under-16-n393.php",
+      "destination": "/news/nazionale-under-16/",
+      "permanent": true
+    },
+    {
+      "source": "/nazionale-under-18-a-lloret-de-mar-il-percorso-n575.php",
+      "destination": "/news/nazionale-under-18-a-lloret-de-mar-il-percorso/",
+      "permanent": true
+    },
+    {
+      "source": "/nazionale-under-18-n386.php",
+      "destination": "/news/nazionale-under-18/",
+      "permanent": true
+    },
+    {
+      "source": "/nazionale_under_16-n393.php",
+      "destination": "/news/nazionale-under-16/",
+      "permanent": true
+    },
+    {
+      "source": "/nazionale_under_18-n386.php",
+      "destination": "/news/nazionale-under-18/",
+      "permanent": true
+    },
+    {
+      "source": "/nazionali-under-16-e-under-18-test-positivi-contro-il-galles-in-vista-degli-europei-n249.php",
+      "destination": "/news/nazionali-under-16-e-under-18-test-positivi-contro-il-galles-in-vista-degli-europei/",
+      "permanent": true
+    },
+    {
+      "source": "/nuovo-torneo-3vs3-a-luglio-n664.php",
+      "destination": "/news/nuovo-torneo-3vs3-a-luglio/",
+      "permanent": true
+    },
+    {
+      "source": "/peccato-ma-e-una-gran-nazionale-n398.php",
+      "destination": "/news/peccato-ma-e-una-gran-nazionale/",
+      "permanent": true
+    },
+    {
+      "source": "/per-la-nazionale-u16-una-splendida-esperienza-tedesca-n453.php",
+      "destination": "/news/per-la-nazionale-u16-una-splendida-esperienza-tedesca/",
+      "permanent": true
+    },
+    {
+      "source": "/per-le-titane-uno-storico-esordio-n417.php",
+      "destination": "/news/per-le-titane-uno-storico-esordio/",
+      "permanent": true
+    },
+    {
+      "source": "/photogallery-squadre-nazionali-n48.php",
+      "destination": "/news/photogallery-squadre-nazionali/",
+      "permanent": true
+    },
+    {
+      "source": "/play-off-promozione-basket-2000-al-via-il-punto-della-situazione-di-coach-podeschi-n247.php",
+      "destination": "/news/play-off-promozione-basket-2000-al-via-il-punto-della-situazione-di-coach-podeschi/",
+      "permanent": true
+    },
+    {
+      "source": "/playoff-under-19-coolthings-titano-vincente-con-russi-n614.php",
+      "destination": "/news/playoff-under-19-coolthings-titano-vincente-con-russi/",
+      "permanent": true
+    },
+    {
+      "source": "/playoff-under-19-quarti-di-finale-coolthings-titano-sbanca-san-giovanni-in-persiceto-n615.php",
+      "destination": "/news/playoff-under-19-quarti-di-finale-coolthings-titano-sbanca-san-giovanni-in-persiceto/",
+      "permanent": true
+    },
+    {
+      "source": "/presentate-le-nazionali-senior-u18-e-u16-n394.php",
+      "destination": "/news/presentate-le-nazionali-senior-u18-e-u16/",
+      "permanent": true
+    },
+    {
+      "source": "/presentazione-campionati-europei-per-piccoli-stati-e-u16-n459.php",
+      "destination": "/news/presentazione-campionati-europei-per-piccoli-stati-e-u16/",
+      "permanent": true
+    },
+    {
+      "source": "/prima-giornata-campionato-sammarinese-vincono-fiorita-e-basket-2000-n92.php",
+      "destination": "/news/prima-giornata-campionato-sammarinese-vincono-fiorita-e-basket-2000/",
+      "permanent": true
+    },
+    {
+      "source": "/red-devils-basket-2000-n288.php",
+      "destination": "/news/red-devils-basket-2000/",
+      "permanent": true
+    },
+    {
+      "source": "/red-devils-titano-u19-orologio-n299.php",
+      "destination": "/news/red-devils-titano-u19-orologio/",
+      "permanent": true
+    },
+    {
+      "source": "/resi-noti-i-gironi-dei-campionati-europei-u18-e-u16-n423.php",
+      "destination": "/news/resi-noti-i-gironi-dei-campionati-europei-u18-e-u16/",
+      "permanent": true
+    },
+    {
+      "source": "/rinnovo-cariche-federali-damiano-battistini--il-nuovo-presidente-n204.php",
+      "destination": "/news/rinnovo-cariche-federali-damiano-battistini-il-nuovo-presidente/",
+      "permanent": true
+    },
+    {
+      "source": "/riparte-il-minibasket-n507.php",
+      "destination": "/news/riparte-il-minibasket/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-11-gennaio-2016-n370.php",
+      "destination": "/news/risultati-giovanili-11-gennaio-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-12-ottobre-2015-n331.php",
+      "destination": "/news/risultati-giovanili-12-ottobre-2015/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-13-dicembre-2015-n365.php",
+      "destination": "/news/risultati-giovanili-13-dicembre-2015/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-13-febbraio-2016-n375.php",
+      "destination": "/news/risultati-giovanili-13-febbraio-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-14-novembre-2015-n336.php",
+      "destination": "/news/risultati-giovanili-14-novembre-2015/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-17-gennaio-2016-n372.php",
+      "destination": "/news/risultati-giovanili-17-gennaio-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-17-marzo-2016-n377.php",
+      "destination": "/news/risultati-giovanili-17-marzo-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-19-ottobre-2015-n333.php",
+      "destination": "/news/risultati-giovanili-19-ottobre-2015/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-2-maggio-2016-n381.php",
+      "destination": "/news/risultati-giovanili-2-maggio-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-20-dicembre-2015-n366.php",
+      "destination": "/news/risultati-giovanili-20-dicembre-2015/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-20-novembre-2015-n362.php",
+      "destination": "/news/risultati-giovanili-20-novembre-2015/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-21-aprile-2016-n380.php",
+      "destination": "/news/risultati-giovanili-21-aprile-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-25-marzo-2016-n379.php",
+      "destination": "/news/risultati-giovanili-25-marzo-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-26-gennaio-2016-n373.php",
+      "destination": "/news/risultati-giovanili-26-gennaio-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-27-aprile-2016-n378.php",
+      "destination": "/news/risultati-giovanili-27-aprile-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-27-febbraio-2016-n376.php",
+      "destination": "/news/risultati-giovanili-27-febbraio-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-28-novembre-2015-n363.php",
+      "destination": "/news/risultati-giovanili-28-novembre-2015/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-3-febbraio-2016-n374.php",
+      "destination": "/news/risultati-giovanili-3-febbraio-2016/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-31-ottobre-2015-n334.php",
+      "destination": "/news/risultati-giovanili-31-ottobre-2015/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-giovanili-6-dicembre-2015-n364.php",
+      "destination": "/news/risultati-giovanili-6-dicembre-2015/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-settore-giovanile-12-17122016-n426.php",
+      "destination": "/news/risultati-settore-giovanile-12-17122016/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-settore-giovanile-15-2111-n421.php",
+      "destination": "/news/risultati-settore-giovanile-15-2111/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-settore-giovanile-2711-1112-n422.php",
+      "destination": "/news/risultati-settore-giovanile-2711-1112/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-settore-giovanile-2910-611-n419.php",
+      "destination": "/news/risultati-settore-giovanile-2910-611/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-settore-giovanile-4-2310-n418.php",
+      "destination": "/news/risultati-settore-giovanile-4-2310/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-settore-giovanile-9-1311-n420.php",
+      "destination": "/news/risultati-settore-giovanile-9-1311/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-settore-giovanile-aprile-2017-n433.php",
+      "destination": "/news/risultati-settore-giovanile-aprile-2017/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-settore-giovanile-dicembre-2017-n442.php",
+      "destination": "/news/risultati-settore-giovanile-dicembre-2017/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-settore-giovanile-e-promozione-maggiogiugno-2018-n463.php",
+      "destination": "/news/risultati-settore-giovanile-e-promozione-maggiogiugno-2018/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-settore-giovanile-febbraio-2017-n429.php",
+      "destination": "/news/risultati-settore-giovanile-febbraio-2017/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-settore-giovanile-gennaio-2017-n428.php",
+      "destination": "/news/risultati-settore-giovanile-gennaio-2017/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-settore-giovanile-gennaio-2018-n448.php",
+      "destination": "/news/risultati-settore-giovanile-gennaio-2018/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-settore-giovanile-maggio-2017-n435.php",
+      "destination": "/news/risultati-settore-giovanile-maggio-2017/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-settore-giovanile-marzo-2017-n430.php",
+      "destination": "/news/risultati-settore-giovanile-marzo-2017/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-settore-giovanile-novembre-2017-n441.php",
+      "destination": "/news/risultati-settore-giovanile-novembre-2017/",
+      "permanent": true
+    },
+    {
+      "source": "/risultati-settore-giovanile-ottobre-2017-n440.php",
+      "destination": "/news/risultati-settore-giovanile-ottobre-2017/",
+      "permanent": true
+    },
+    {
+      "source": "/ritorna-il-minibasket-domani-al-via-il-primo-corso-per-il-quadrimestre-settembre-2012-gennaio-2013-n163.php",
+      "destination": "/news/ritorna-il-minibasket-domani-al-via-il-primo-corso-per-il-quadrimestre-settembre-2012-genn/",
+      "permanent": true
+    },
+    {
+      "source": "/sabato-24-e-domenica-25-la-13a-edizione-di-sport-in-fiera-n83.php",
+      "destination": "/news/sabato-24-e-domenica-25-la-13a-edizione-di-sport-in-fiera/",
+      "permanent": true
+    },
+    {
+      "source": "/saluto-del-presidente-n55.php",
+      "destination": "/news/saluto-del-presidente/",
+      "permanent": true
+    },
+    {
+      "source": "/san-marino-2015-6-11-luglio-under-16-european-championship-men-division-c-n316.php",
+      "destination": "/news/san-marino-2015-6-11-luglio-under-16-european-championship-men-division-c/",
+      "permanent": true
+    },
+    {
+      "source": "/san-marino-azerbaijan-51-68-cronaca-e-tabellino-n482.php",
+      "destination": "/news/san-marino-azerbaijan-51-68-cronaca-e-tabellino/",
+      "permanent": true
+    },
+    {
+      "source": "/san-marino-e-galles-a-braccetto-sabato-scontro-diretto-per-loro.-n79.php",
+      "destination": "/news/san-marino-e-galles-a-braccetto-sabato-scontro-diretto-per-loro/",
+      "permanent": true
+    },
+    {
+      "source": "/san-marino-ko-con-lalbania-dopo-una-gran-partita-n580.php",
+      "destination": "/news/san-marino-ko-con-lalbania-dopo-una-gran-partita/",
+      "permanent": true
+    },
+    {
+      "source": "/san-marino-minibasket-cup-2018-n457.php",
+      "destination": "/news/san-marino-minibasket-cup-2018/",
+      "permanent": true
+    },
+    {
+      "source": "/san-marino-minibasket-cup-2025-un-successo-n663.php",
+      "destination": "/news/san-marino-minibasket-cup-2025-un-successo/",
+      "permanent": true
+    },
+    {
+      "source": "/san-marino-parte-col-piede-giusto-n395.php",
+      "destination": "/news/san-marino-parte-col-piede-giusto/",
+      "permanent": true
+    },
+    {
+      "source": "/san-marino-perde-una-partita-troppo-fisica-n465.php",
+      "destination": "/news/san-marino-perde-una-partita-troppo-fisica/",
+      "permanent": true
+    },
+    {
+      "source": "/san-marino-vince-62-52-con-gibilterra-e-chiude-leuropeo-al-53-posto-n483.php",
+      "destination": "/news/san-marino-vince-62-52-con-gibilterra-e-chiude-leuropeo-al-53-posto/",
+      "permanent": true
+    },
+    {
+      "source": "/seconda-giornata-vincono-ducks-e-ciu-ciu-n511.php",
+      "destination": "/news/seconda-giornata-vincono-ducks-e-ciu-ciu/",
+      "permanent": true
+    },
+    {
+      "source": "/semifinali-e-finali-n278.php",
+      "destination": "/news/semifinali-e-finali/",
+      "permanent": true
+    },
+    {
+      "source": "/settore-giovanile-le-considerazioni-di-coach-rossini-n606.php",
+      "destination": "/news/settore-giovanile-le-considerazioni-di-coach-rossini/",
+      "permanent": true
+    },
+    {
+      "source": "/si--alzato-il-sipario-sui-campionati-europei-under-16-division-c-di-gibilterra-n214.php",
+      "destination": "/news/si-alzato-il-sipario-sui-campionati-europei-under-16-division-c-di-gibilterra/",
+      "permanent": true
+    },
+    {
+      "source": "/small-countries-2022-esordio-con-vittoria-n480.php",
+      "destination": "/news/small-countries-2022-esordio-con-vittoria/",
+      "permanent": true
+    },
+    {
+      "source": "/special-titans-un-incontro-emozionante-n392.php",
+      "destination": "/news/special-titans-un-incontro-emozionante/",
+      "permanent": true
+    },
+    {
+      "source": "/squadra-seniores-n50.php",
+      "destination": "/news/squadra-seniores/",
+      "permanent": true
+    },
+    {
+      "source": "/squadra-under-16-n53.php",
+      "destination": "/news/squadra-under-16/",
+      "permanent": true
+    },
+    {
+      "source": "/squadra-under-18-n52.php",
+      "destination": "/news/squadra-under-18/",
+      "permanent": true
+    },
+    {
+      "source": "/squadra-under-19-n51.php",
+      "destination": "/news/squadra-under-19/",
+      "permanent": true
+    },
+    {
+      "source": "/staff-tecnico-n46.php",
+      "destination": "/news/staff-tecnico/",
+      "permanent": true
+    },
+    {
+      "source": "/staff-tecnico-n62.php",
+      "destination": "/news/staff-tecnico-62/",
+      "permanent": true
+    },
+    {
+      "source": "/staff-tecnico-n63.php",
+      "destination": "/news/staff-tecnico-63/",
+      "permanent": true
+    },
+    {
+      "source": "/staff-tecnico-n65.php",
+      "destination": "/news/staff-tecnico-65/",
+      "permanent": true
+    },
+    {
+      "source": "/stefano-rossini-n382.php",
+      "destination": "/news/stefano-rossini/",
+      "permanent": true
+    },
+    {
+      "source": "/stefano-rossini-responsabile-del-settore-giovanile-federale-n574.php",
+      "destination": "/news/stefano-rossini-responsabile-del-settore-giovanile-federale/",
+      "permanent": true
+    },
+    {
+      "source": "/stefano_rossini-n382.php",
+      "destination": "/news/stefano-rossini/",
+      "permanent": true
+    },
+    {
+      "source": "/storico-seniores-n229.php",
+      "destination": "/news/storico-seniores/",
+      "permanent": true
+    },
+    {
+      "source": "/storico-u19-n235.php",
+      "destination": "/news/storico-u19/",
+      "permanent": true
+    },
+    {
+      "source": "/storico-under-16-n233.php",
+      "destination": "/news/storico-under-16/",
+      "permanent": true
+    },
+    {
+      "source": "/storico-under-17-n234.php",
+      "destination": "/news/storico-under-17/",
+      "permanent": true
+    },
+    {
+      "source": "/storico-under-18-n232.php",
+      "destination": "/news/storico-under-18/",
+      "permanent": true
+    },
+    {
+      "source": "/summer-camp-aperte-le-iscrizioni-n610.php",
+      "destination": "/news/summer-camp-aperte-le-iscrizioni/",
+      "permanent": true
+    },
+    {
+      "source": "/super-aquilotti-al-debutto-n602.php",
+      "destination": "/news/super-aquilotti-al-debutto/",
+      "permanent": true
+    },
+    {
+      "source": "/super-scoiattoli-alla-panzini-e-a-fonte-n570.php",
+      "destination": "/news/super-scoiattoli-alla-panzini-e-a-fonte/",
+      "permanent": true
+    },
+    {
+      "source": "/super-vittoria-dellunder-17-coolthings-titano-a-misano-n656.php",
+      "destination": "/news/super-vittoria-dellunder-17-coolthings-titano-a-misano/",
+      "permanent": true
+    },
+    {
+      "source": "/the-titans-tribe-3-contro-3-san-marino-ce-n569.php",
+      "destination": "/news/the-titans-tribe-3-contro-3-san-marino-ce/",
+      "permanent": true
+    },
+    {
+      "source": "/tim-san-marino-cup-la-finale-sara-basket-2000-old-but-gold-n671.php",
+      "destination": "/news/tim-san-marino-cup-la-finale-sara-basket-2000-old-but-gold/",
+      "permanent": true
+    },
+    {
+      "source": "/tim-san-marino-cup-prima-giornata-n666.php",
+      "destination": "/news/tim-san-marino-cup-prima-giornata/",
+      "permanent": true
+    },
+    {
+      "source": "/tim-san-marino-cup-quarta-giornata-n669.php",
+      "destination": "/news/tim-san-marino-cup-quarta-giornata/",
+      "permanent": true
+    },
+    {
+      "source": "/tim-san-marino-cup-quinta-giornata-n670.php",
+      "destination": "/news/tim-san-marino-cup-quinta-giornata/",
+      "permanent": true
+    },
+    {
+      "source": "/tim-san-marino-cup-seconda-giornata-n667.php",
+      "destination": "/news/tim-san-marino-cup-seconda-giornata/",
+      "permanent": true
+    },
+    {
+      "source": "/tim-san-marino-cup-terza-giornata-n668.php",
+      "destination": "/news/tim-san-marino-cup-terza-giornata/",
+      "permanent": true
+    },
+    {
+      "source": "/titano-u17-ecb-n106.php",
+      "destination": "/news/titano-u17-ecb/",
+      "permanent": true
+    },
+    {
+      "source": "/titano-u17-la-fiorita--n90.php",
+      "destination": "/news/titano-u17-la-fiorita/",
+      "permanent": true
+    },
+    {
+      "source": "/titano-u17-titano-u19-n100.php",
+      "destination": "/news/titano-u17-titano-u19/",
+      "permanent": true
+    },
+    {
+      "source": "/titano-u17-tre-penne-n121.php",
+      "destination": "/news/titano-u17-tre-penne/",
+      "permanent": true
+    },
+    {
+      "source": "/titano-u19-basket-2000-n175.php",
+      "destination": "/news/titano-u19-basket-2000-175/",
+      "permanent": true
+    },
+    {
+      "source": "/titano-u19-basket-2000-n93.php",
+      "destination": "/news/titano-u19-basket-2000/",
+      "permanent": true
+    },
+    {
+      "source": "/titano-u19-basket-2000-orologio-n193.php",
+      "destination": "/news/titano-u19-basket-2000-orologio/",
+      "permanent": true
+    },
+    {
+      "source": "/titano-u19-la-fiorita--n122.php",
+      "destination": "/news/titano-u19-la-fiorita/",
+      "permanent": true
+    },
+    {
+      "source": "/titano-u19-la-fiorita-n285.php",
+      "destination": "/news/titano-u19-la-fiorita-285/",
+      "permanent": true
+    },
+    {
+      "source": "/titano-u19-la-serenissima-n170.php",
+      "destination": "/news/titano-u19-la-serenissima/",
+      "permanent": true
+    },
+    {
+      "source": "/titano-u19-red-devils-n280.php",
+      "destination": "/news/titano-u19-red-devils/",
+      "permanent": true
+    },
+    {
+      "source": "/titano-u19-tre-penne-n117.php",
+      "destination": "/news/titano-u19-tre-penne/",
+      "permanent": true
+    },
+    {
+      "source": "/titano-u19-tre-penne-n289.php",
+      "destination": "/news/titano-u19-tre-penne-289/",
+      "permanent": true
+    },
+    {
+      "source": "/torneo-internazionale-san-marino-1-memorial-gilberto-battistini-finalmente-si-parte-n227.php",
+      "destination": "/news/torneo-internazionale-san-marino-1-memorial-gilberto-battistini-finalmente-si-parte/",
+      "permanent": true
+    },
+    {
+      "source": "/torneo-internazionale-san-marino-1-memorial-gilberto-battistini-trionfa-samara-n228.php",
+      "destination": "/news/torneo-internazionale-san-marino-1-memorial-gilberto-battistini-trionfa-samara/",
+      "permanent": true
+    },
+    {
+      "source": "/torneo-minibasket-ydf-a-pasqua-a-fonte-dellovo-n567.php",
+      "destination": "/news/torneo-minibasket-ydf-a-pasqua-a-fonte-dellovo/",
+      "permanent": true
+    },
+    {
+      "source": "/tre-penne-basket-2000-n91.php",
+      "destination": "/news/tre-penne-basket-2000/",
+      "permanent": true
+    },
+    {
+      "source": "/tre-penne-basket-2000-orologio-n294.php",
+      "destination": "/news/tre-penne-basket-2000-orologio/",
+      "permanent": true
+    },
+    {
+      "source": "/tre-penne-consolemania-n104.php",
+      "destination": "/news/tre-penne-consolemania/",
+      "permanent": true
+    },
+    {
+      "source": "/tre-penne-ecb-n98.php",
+      "destination": "/news/tre-penne-ecb/",
+      "permanent": true
+    },
+    {
+      "source": "/tre-penne-ecb-semifinale-n195.php",
+      "destination": "/news/tre-penne-ecb-semifinale/",
+      "permanent": true
+    },
+    {
+      "source": "/tre-penne-la-fiorita-n176.php",
+      "destination": "/news/tre-penne-la-fiorita/",
+      "permanent": true
+    },
+    {
+      "source": "/tre-penne-la-fiorita-n279.php",
+      "destination": "/news/tre-penne-la-fiorita-279/",
+      "permanent": true
+    },
+    {
+      "source": "/tre-penne-la-fiorita-orologio-n298.php",
+      "destination": "/news/tre-penne-la-fiorita-orologio/",
+      "permanent": true
+    },
+    {
+      "source": "/tre-penne-la-serenissima-n180.php",
+      "destination": "/news/tre-penne-la-serenissima/",
+      "permanent": true
+    },
+    {
+      "source": "/tre-penne-la-serenissima-orologio-n188.php",
+      "destination": "/news/tre-penne-la-serenissima-orologio/",
+      "permanent": true
+    },
+    {
+      "source": "/tre-penne-red-devils-finale-3-4-n305.php",
+      "destination": "/news/tre-penne-red-devils-finale-3-4/",
+      "permanent": true
+    },
+    {
+      "source": "/tre-penne-red-devils-n292.php",
+      "destination": "/news/tre-penne-red-devils/",
+      "permanent": true
+    },
+    {
+      "source": "/tre-penne-titano-under-19-finale-34-posto-n200.php",
+      "destination": "/news/tre-penne-titano-under-19-finale-34-posto/",
+      "permanent": true
+    },
+    {
+      "source": "/tutti-gli-appassionati-sono-invitati-sabato-e-domenica-a-sport-in-fiera-2012-n164.php",
+      "destination": "/news/tutti-gli-appassionati-sono-invitati-sabato-e-domenica-a-sport-in-fiera-2012/",
+      "permanent": true
+    },
+    {
+      "source": "/tvb-u14-e-u13-ai-tornei-di-pasqua-n452.php",
+      "destination": "/news/tvb-u14-e-u13-ai-tornei-di-pasqua/",
+      "permanent": true
+    },
+    {
+      "source": "/u13-i-titans-battono-misano-63-45-n563.php",
+      "destination": "/news/u13-i-titans-battono-misano-63-45/",
+      "permanent": true
+    },
+    {
+      "source": "/u13-ottimi-titans-allesordio-n516.php",
+      "destination": "/news/u13-ottimi-titans-allesordio/",
+      "permanent": true
+    },
+    {
+      "source": "/u13-titans-vincenti-a-bellaria-n541.php",
+      "destination": "/news/u13-titans-vincenti-a-bellaria/",
+      "permanent": true
+    },
+    {
+      "source": "/u14-elite-ottima-partenza-espugnato-il-campo-di-cento-n330.php",
+      "destination": "/news/u14-elite-ottima-partenza-espugnato-il-campo-di-cento/",
+      "permanent": true
+    },
+    {
+      "source": "/u14-i-titans-battono-forlimpopoli-n549.php",
+      "destination": "/news/u14-i-titans-battono-forlimpopoli/",
+      "permanent": true
+    },
+    {
+      "source": "/u14-i-titans-battono-libr-n558.php",
+      "destination": "/news/u14-i-titans-battono-libr/",
+      "permanent": true
+    },
+    {
+      "source": "/u14-i-titans-battono-tiberius-n556.php",
+      "destination": "/news/u14-i-titans-battono-tiberius/",
+      "permanent": true
+    },
+    {
+      "source": "/u14-ko-in-casa-di-morciano-n522.php",
+      "destination": "/news/u14-ko-in-casa-di-morciano/",
+      "permanent": true
+    },
+    {
+      "source": "/u14-sconfitta-con-cattolica-e-vittoria-con-tiberius-n528.php",
+      "destination": "/news/u14-sconfitta-con-cattolica-e-vittoria-con-tiberius/",
+      "permanent": true
+    },
+    {
+      "source": "/u14-super-partita-con-il-ca-ossi-n565.php",
+      "destination": "/news/u14-super-partita-con-il-ca-ossi/",
+      "permanent": true
+    },
+    {
+      "source": "/u14-titans-ko-con-morciano-n542.php",
+      "destination": "/news/u14-titans-ko-con-morciano/",
+      "permanent": true
+    },
+    {
+      "source": "/u15-bella-vittoria-con-cesena-n559.php",
+      "destination": "/news/u15-bella-vittoria-con-cesena/",
+      "permanent": true
+    },
+    {
+      "source": "/u15-bella-vittoria-nel-derby-con-villa-n535.php",
+      "destination": "/news/u15-bella-vittoria-nel-derby-con-villa/",
+      "permanent": true
+    },
+    {
+      "source": "/u15-i-titans-battono-a-misano-n547.php",
+      "destination": "/news/u15-i-titans-battono-a-misano/",
+      "permanent": true
+    },
+    {
+      "source": "/u15-landrsquoasset-banca-perde-ma-resta-in-corsa-per-la-finale-n387.php",
+      "destination": "/news/u15-landrsquoasset-banca-perde-ma-resta-in-corsa-per-la-finale/",
+      "permanent": true
+    },
+    {
+      "source": "/u15-si-chiude-per-landrsquoasset-una-stagione-memorabile-n388.php",
+      "destination": "/news/u15-si-chiude-per-landrsquoasset-una-stagione-memorabile/",
+      "permanent": true
+    },
+    {
+      "source": "/u15-titans-ko-a-cattolica-n545.php",
+      "destination": "/news/u15-titans-ko-a-cattolica/",
+      "permanent": true
+    },
+    {
+      "source": "/u15-titans-ko-a-rimini-n525.php",
+      "destination": "/news/u15-titans-ko-a-rimini/",
+      "permanent": true
+    },
+    {
+      "source": "/u16-eccellenza-per-la-tvb-una-partenza-col-botto-n439.php",
+      "destination": "/news/u16-eccellenza-per-la-tvb-una-partenza-col-botto/",
+      "permanent": true
+    },
+    {
+      "source": "/u16-san-marino-chiude-leuropeo-con-una-bella-vittoria-su-gibilterra-n488.php",
+      "destination": "/news/u16-san-marino-chiude-leuropeo-con-una-bella-vittoria-su-gibilterra/",
+      "permanent": true
+    },
+    {
+      "source": "/u17-gold-grande-vittoria-con-san-lazzaro-n523.php",
+      "destination": "/news/u17-gold-grande-vittoria-con-san-lazzaro/",
+      "permanent": true
+    },
+    {
+      "source": "/u17-gold-i-titans-battono-58-40-laics-n534.php",
+      "destination": "/news/u17-gold-i-titans-battono-58-40-laics/",
+      "permanent": true
+    },
+    {
+      "source": "/u17-gold-i-titans-battono-cento-n538.php",
+      "destination": "/news/u17-gold-i-titans-battono-cento/",
+      "permanent": true
+    },
+    {
+      "source": "/u17-gold-i-titans-cadono-con-riccione-n546.php",
+      "destination": "/news/u17-gold-i-titans-cadono-con-riccione/",
+      "permanent": true
+    },
+    {
+      "source": "/u17-gold-i-titans-piegano-ferrara-n562.php",
+      "destination": "/news/u17-gold-i-titans-piegano-ferrara/",
+      "permanent": true
+    },
+    {
+      "source": "/u17-gold-ko-sul-filo-di-lana-con-ozzano-n564.php",
+      "destination": "/news/u17-gold-ko-sul-filo-di-lana-con-ozzano/",
+      "permanent": true
+    },
+    {
+      "source": "/u17-gold-titans-ko-a-cesena-n548.php",
+      "destination": "/news/u17-gold-titans-ko-a-cesena/",
+      "permanent": true
+    },
+    {
+      "source": "/u17-gold-titans-ko-con-castel-san-pietro-n555.php",
+      "destination": "/news/u17-gold-titans-ko-con-castel-san-pietro/",
+      "permanent": true
+    },
+    {
+      "source": "/u17-gold-titans-ko-con-cesena-n518.php",
+      "destination": "/news/u17-gold-titans-ko-con-cesena/",
+      "permanent": true
+    },
+    {
+      "source": "/u17-gold-titans-vincenti-nella-semifinale-dandata-di-coppa-n571.php",
+      "destination": "/news/u17-gold-titans-vincenti-nella-semifinale-dandata-di-coppa/",
+      "permanent": true
+    },
+    {
+      "source": "/u17gold-faenza-batte-i-titans-n543.php",
+      "destination": "/news/u17gold-faenza-batte-i-titans/",
+      "permanent": true
+    },
+    {
+      "source": "/u18-vince-il-gales-ottimo-argento-per-san-marino.-bronzo-alla-moldavia-n80.php",
+      "destination": "/news/u18-vince-il-gales-ottimo-argento-per-san-marino-bronzo-alla-moldavia/",
+      "permanent": true
+    },
+    {
+      "source": "/u19-i-titans-battono-cattolica-n560.php",
+      "destination": "/news/u19-i-titans-battono-cattolica/",
+      "permanent": true
+    },
+    {
+      "source": "/u19-i-titans-cadono-con-villa-n561.php",
+      "destination": "/news/u19-i-titans-cadono-con-villa/",
+      "permanent": true
+    },
+    {
+      "source": "/u19-i-titans-vincono-con-la-libertas-forli-e-rimangono-imbattuti-in-vetta-n524.php",
+      "destination": "/news/u19-i-titans-vincono-con-la-libertas-forli-e-rimangono-imbattuti-in-vetta/",
+      "permanent": true
+    },
+    {
+      "source": "/u19-semifinale-dandata-bnbaroute64-coolthings-titano-51-54-n619.php",
+      "destination": "/news/u19-semifinale-dandata-bnbaroute64-coolthings-titano-51-54/",
+      "permanent": true
+    },
+    {
+      "source": "/u19-terza-vittoria-per-i-titans-n517.php",
+      "destination": "/news/u19-terza-vittoria-per-i-titans/",
+      "permanent": true
+    },
+    {
+      "source": "/ufficializzate-date-e-formule-delle-tre-competizioni-internazionali-del-2014-n246.php",
+      "destination": "/news/ufficializzate-date-e-formule-delle-tre-competizioni-internazionali-del-2014/",
+      "permanent": true
+    },
+    {
+      "source": "/un-bronzo-che-scintilla-n399.php",
+      "destination": "/news/un-bronzo-che-scintilla/",
+      "permanent": true
+    },
+    {
+      "source": "/un-focus-sulle-nazionali-e-sulle-affiliate-della-federazione-sammarinese-pallacanestro-n312.php",
+      "destination": "/news/un-focus-sulle-nazionali-e-sulle-affiliate-della-federazione-sammarinese-pallacanestro/",
+      "permanent": true
+    },
+    {
+      "source": "/una-nazionale-da-applausi-cede-66-78-allarmenia-n481.php",
+      "destination": "/news/una-nazionale-da-applausi-cede-66-78-allarmenia/",
+      "permanent": true
+    },
+    {
+      "source": "/under-14-bel-successo-a-forlimpopoli-n519.php",
+      "destination": "/news/under-14-bel-successo-a-forlimpopoli/",
+      "permanent": true
+    },
+    {
+      "source": "/under-15-al-giro-di-boa-n532.php",
+      "destination": "/news/under-15-al-giro-di-boa/",
+      "permanent": true
+    },
+    {
+      "source": "/under-15-i-titans-battono-morciano-71-53-n537.php",
+      "destination": "/news/under-15-i-titans-battono-morciano-71-53/",
+      "permanent": true
+    },
+    {
+      "source": "/under-15-titans-a-valanga-su-cattolica-n530.php",
+      "destination": "/news/under-15-titans-a-valanga-su-cattolica/",
+      "permanent": true
+    },
+    {
+      "source": "/under-15-titans-russi-51-49-n551.php",
+      "destination": "/news/under-15-titans-russi-51-49/",
+      "permanent": true
+    },
+    {
+      "source": "/under-16-european-championship-men-division-c-san-marino-2015-6-11-luglio-n315.php",
+      "destination": "/news/under-16-european-championship-men-division-c-san-marino-2015-6-11-luglio/",
+      "permanent": true
+    },
+    {
+      "source": "/under-17-coolthings-titano-morciano-eagles-62-55-n653.php",
+      "destination": "/news/under-17-coolthings-titano-morciano-eagles-62-55/",
+      "permanent": true
+    },
+    {
+      "source": "/under-17-gold-i-titans-cadono-a-imola-n536.php",
+      "destination": "/news/under-17-gold-i-titans-cadono-a-imola/",
+      "permanent": true
+    },
+    {
+      "source": "/under-17-gold-i-titans-domano-lunieuro-forli-n531.php",
+      "destination": "/news/under-17-gold-i-titans-domano-lunieuro-forli/",
+      "permanent": true
+    },
+    {
+      "source": "/under-17-gold-ko-a-san-lazzaro-n553.php",
+      "destination": "/news/under-17-gold-ko-a-san-lazzaro/",
+      "permanent": true
+    },
+    {
+      "source": "/under-17-gold-super-vittoria-a-ferrara-n540.php",
+      "destination": "/news/under-17-gold-super-vittoria-a-ferrara/",
+      "permanent": true
+    },
+    {
+      "source": "/under-17-gold-titans-ko-a-castel-san-pietro-n527.php",
+      "destination": "/news/under-17-gold-titans-ko-a-castel-san-pietro/",
+      "permanent": true
+    },
+    {
+      "source": "/under-19-bella-vittoria-a-cattolica-n529.php",
+      "destination": "/news/under-19-bella-vittoria-a-cattolica/",
+      "permanent": true
+    },
+    {
+      "source": "/under-19-coolthings-titano-in-semifinale-n618.php",
+      "destination": "/news/under-19-coolthings-titano-in-semifinale/",
+      "permanent": true
+    },
+    {
+      "source": "/under-19-debutto-con-vittoria-per-la-coolthings-titano-n652.php",
+      "destination": "/news/under-19-debutto-con-vittoria-per-la-coolthings-titano/",
+      "permanent": true
+    },
+    {
+      "source": "/under-19-doppietta-a-forli-n552.php",
+      "destination": "/news/under-19-doppietta-a-forli/",
+      "permanent": true
+    },
+    {
+      "source": "/under-19-i-titans-piegano-misano-n550.php",
+      "destination": "/news/under-19-i-titans-piegano-misano/",
+      "permanent": true
+    },
+    {
+      "source": "/under15-titans-ko-con-rimini-n539.php",
+      "destination": "/news/under15-titans-ko-con-rimini/",
+      "permanent": true
+    },
+    {
+      "source": "/vince-lirlanda.-in-semifinale-ce-andorra.-n397.php",
+      "destination": "/news/vince-lirlanda-in-semifinale-ce-andorra/",
+      "permanent": true
+    },
+    {
+      "source": "/w-per-galles-e-malta-attesa-per-il-ritorno-in-campo-di-san-marino-n2.php",
+      "destination": "/news/w-per-galles-e-malta-attesa-per-il-ritorno-in-campo-di-san-marino/",
+      "permanent": true
+    },
+    {
+      "source": "/xi-torneo-nazionale-di-minibasket-quotcimone-2018quot-n458.php",
+      "destination": "/news/xi-torneo-nazionale-di-minibasket-cimone-2018/",
+      "permanent": true
+    },
+    {
+      "source": "/xxii-memorial-claudio-papini-unaltra-occasione-di-crescita-n455.php",
+      "destination": "/news/xxii-memorial-claudio-papini-unaltra-occasione-di-crescita/",
+      "permanent": true
+    }
+  ],
+  "headers": [
+    {
+      "source": "/media/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/_astro/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
+    }
+  ]
+}

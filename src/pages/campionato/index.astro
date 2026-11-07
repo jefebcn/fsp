@@ -1,0 +1,32 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import NewsGrid from '../../components/NewsGrid.astro';
+import { getAllNews, byCategory } from '../../lib/news';
+const news = byCategory(await getAllNews(), 'campionato');
+const years = Object.entries(news.reduce<Record<number, number>>((a, n) => { const y = n.data.date.getUTCFullYear(); a[y] = (a[y] ?? 0) + 1; return a; }, {})).sort((a, b) => Number(b[0]) - Number(a[0]));
+---
+<Base title="Campionato Sammarinese" description="Campionato Sammarinese di pallacanestro – Tim San Marino Cup: risultati, tabellini e archivio per anno.">
+  <PageHero title="Campionato Sammarinese" intro="Il campionato di casa, oggi Tim San Marino Cup: giornate, risultati e tabellini, con l'archivio di tutte le stagioni." crumbs={[]} />
+  <section class="section">
+    <div class="wrap">
+      <h2>Archivio per stagione</h2>
+      <ul class="years">
+        {years.map(([y, c]) => <li><a href={`/campionato/${y}/`}><strong>{y}</strong><span>{c} {c === 1 ? 'articolo' : 'articoli'}</span></a></li>)}
+      </ul>
+    </div>
+  </section>
+  <section class="section section--soft">
+    <div class="wrap">
+      <h2>Ultime dal campionato</h2>
+      <NewsGrid items={news.slice(0, 9)} />
+    </div>
+  </section>
+</Base>
+<style>
+  .years { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 12px; }
+  .years a { display: flex; flex-direction: column; padding: 18px; border-radius: var(--radius); background: var(--c-cyan-soft); text-decoration: none; color: var(--c-navy); border: 2px solid transparent; text-align: center; }
+  .years a:hover { border-color: var(--c-cyan); }
+  .years strong { font-size: 1.6rem; }
+  .years span { color: var(--c-muted); font-size: .9rem; font-weight: 600; }
+</style>

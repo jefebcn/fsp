@@ -1,0 +1,21 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import NewsGrid from '../../components/NewsGrid.astro';
+import { getAllNews, byCategory, type News } from '../../lib/news';
+export async function getStaticPaths() {
+  const news = byCategory(await getAllNews(), 'campionato');
+  const by: Record<string, News[]> = {};
+  news.forEach((n) => (by[n.data.date.getUTCFullYear()] ??= []).push(n));
+  return Object.entries(by).map(([year, items]) => ({ params: { year }, props: { items } }));
+}
+const { items } = Astro.props;
+const { year } = Astro.params;
+const chrono = [...items].reverse();
+---
+<Base title={`Campionato Sammarinese ${year}`} description={`Risultati e notizie del Campionato Sammarinese di pallacanestro ${year}.`}>
+  <PageHero title={`Campionato RSM ${year}`} intro={`${items.length} articoli, in ordine cronologico.`} crumbs={[{ label: 'Campionato', href: '/campionato/' }]} />
+  <section class="section">
+    <div class="wrap"><NewsGrid items={chrono} headingLevel="h2" /></div>
+  </section>
+</Base>

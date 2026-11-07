@@ -1,0 +1,92 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Icon from '../components/Icon.astro';
+import { SITE, tel } from '../data/site';
+const endpoint = import.meta.env.PUBLIC_FORM_ENDPOINT || '';
+---
+<Base title="Contatti" description="Contatta la segreteria della Federazione Sammarinese Pallacanestro.">
+  <PageHero title="Contatti" intro="Hai una domanda su iscrizioni, corsi, centro estivo o squadre? Scrivici: rispondiamo volentieri a famiglie, atleti e società." crumbs={[]} />
+  <section class="section">
+    <div class="wrap ct">
+      <div>
+        <h2>Segreteria</h2>
+        <ul class="info-list ct-list">
+          <li><Icon name="pin" /><span><strong>Indirizzo</strong><br />{SITE.address.place}<br />{SITE.address.street}<br />{SITE.address.cap} San Marino<br /><a href={SITE.mapsUrl} rel="noopener" target="_blank">Apri la mappa</a></span></li>
+          <li><Icon name="mail" /><span><strong>E-mail</strong><br /><a href={`mailto:${SITE.email}`}>{SITE.email}</a></span></li>
+          <li><Icon name="phone" /><span><strong>Telefono</strong><br /><a href={tel(SITE.phone)}>{SITE.phone}</a><br />Cell. <a href={tel(SITE.mobile)}>{SITE.mobile}</a><br />Fax {SITE.fax}</span></li>
+          <li><Icon name="instagram" /><span><strong>Social</strong><br /><a href={SITE.social.instagram} rel="noopener" target="_blank">Instagram @fsp1968</a><br /><a href={SITE.social.facebook} rel="noopener" target="_blank">Facebook</a></span></li>
+        </ul>
+      </div>
+      <form class="form card" id="contact-form" data-endpoint={endpoint} novalidate>
+        <h2>Scrivici un messaggio</h2>
+        <p class="form__hint">I campi con * sono obbligatori.</p>
+        <div class="form__row">
+          <div class="field"><label for="f-nome">Nome *</label><input id="f-nome" name="nome" autocomplete="given-name" required /></div>
+          <div class="field"><label for="f-cognome">Cognome *</label><input id="f-cognome" name="cognome" autocomplete="family-name" required /></div>
+        </div>
+        <div class="field"><label for="f-email">E-mail *</label><input id="f-email" name="email" type="email" autocomplete="email" required /></div>
+        <div class="field"><label for="f-oggetto">Oggetto dell'email</label><input id="f-oggetto" name="oggetto" /></div>
+        <div class="field"><label for="f-msg">Richieste particolari</label><textarea id="f-msg" name="messaggio" rows="6"></textarea></div>
+        <div class="check"><input id="f-privacy" name="privacy" type="checkbox" required /><label for="f-privacy">Ho preso visione della <a href="/privacy/">privacy policy</a> *</label></div>
+        <div class="check"><input id="f-news" name="newsletter" type="checkbox" /><label for="f-news">Iscrivimi alla newsletter</label></div>
+        <p class="form__err" role="alert" aria-live="assertive"></p>
+        <button class="btn btn--primary" type="submit"><Icon name="mail" /> Invia messaggio</button>
+        <p class="form__ok" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </section>
+</Base>
+<style>
+  .ct { display: grid; grid-template-columns: 1fr 1.4fr; gap: 48px; align-items: start; }
+  .ct-list { gap: 22px; }
+  .form { padding: clamp(22px, 4vw, 36px); gap: 16px; }
+  .form h2 { margin: 0; }
+  .form__hint { margin: 0; color: var(--c-muted); }
+  .form__row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .field { display: grid; gap: 6px; }
+  .field label { font-weight: 700; color: var(--c-navy); }
+  .field input, .field textarea { font: inherit; padding: 12px 14px; border-radius: var(--radius-sm); border: 2px solid var(--c-border); min-height: 48px; width: 100%; background: #fff; color: var(--c-text); }
+  .field input:focus, .field textarea:focus { border-color: var(--c-blue-dark); outline: 3px solid var(--c-focus); outline-offset: 1px; }
+  .field [aria-invalid='true'] { border-color: #c62828; }
+  .check { display: flex; gap: 10px; align-items: flex-start; }
+  .check input { width: 22px; height: 22px; margin-top: 3px; accent-color: var(--c-navy); flex: none; }
+  .form__err { color: #b71c1c; font-weight: 700; margin: 0; }
+  .form__err:empty, .form__ok:empty { display: none; }
+  .form__ok { background: #e6f5ea; color: #14532d; padding: 12px 16px; border-radius: var(--radius-sm); font-weight: 700; margin: 0; }
+  .form button { align-self: flex-start; }
+  @media (max-width: 860px) { .ct, .form__row { grid-template-columns: 1fr; } }
+</style>
+<script>
+  const form = document.getElementById('contact-form') as HTMLFormElement;
+  const err = form.querySelector('.form__err')!;
+  const ok = form.querySelector('.form__ok')!;
+  const q = new URLSearchParams(location.search).get('oggetto');
+  if (q) (form.elements.namedItem('oggetto') as HTMLInputElement).value = q;
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    err.textContent = ''; ok.textContent = '';
+    const required = Array.from(form.querySelectorAll<HTMLInputElement>('[required]'));
+    let first: HTMLInputElement | null = null;
+    required.forEach((el) => {
+      const bad = el.type === 'checkbox' ? !el.checked : !el.value.trim() || (el.type === 'email' && !el.checkValidity());
+      el.setAttribute('aria-invalid', String(bad));
+      if (bad && !first) first = el;
+    });
+    if (first) { err.textContent = 'Controlla i campi obbligatori: nome, cognome, e-mail valida e consenso privacy.'; (first as HTMLInputElement).focus(); return; }
+    const data = new FormData(form);
+    const endpoint = form.dataset.endpoint;
+    if (endpoint) {
+      try {
+        const r = await fetch(endpoint, { method: 'POST', body: data, headers: { Accept: 'application/json' } });
+        if (!r.ok) throw new Error();
+        form.reset(); ok.textContent = 'Grazie! Il tuo messaggio è stato inviato: ti risponderemo al più presto.';
+      } catch { err.textContent = "Invio non riuscito. Riprova o scrivi direttamente a fsp@omniway.sm."; }
+      return;
+    }
+    const subject = (data.get('oggetto') as string) || 'Richiesta informazioni dal sito';
+    const body = `Nome: ${data.get('nome')} ${data.get('cognome')}\nE-mail: ${data.get('email')}\nNewsletter: ${data.get('newsletter') ? 'sì' : 'no'}\n\n${data.get('messaggio') || ''}`;
+    location.href = `mailto:fsp@omniway.sm?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    ok.textContent = 'Si sta aprendo il tuo programma di posta con il messaggio già compilato: premi "Invia" per spedirlo.';
+  });
+</script>

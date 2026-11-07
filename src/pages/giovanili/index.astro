@@ -1,0 +1,40 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import NewsGrid from '../../components/NewsGrid.astro';
+import Icon from '../../components/Icon.astro';
+import { GIOVANILI } from '../../data/site';
+import { getAllNews, byCategory } from '../../lib/news';
+const news = byCategory(await getAllNews(), 'giovanili');
+---
+<Base title="Settore giovanile" description="Le squadre giovanili della Federazione Sammarinese Pallacanestro, dall'Under 13 all'Under 19.">
+  <PageHero title="Settore giovanile" intro="Dall'Esordienti all'Under 19: i nostri ragazzi crescono insieme, imparando il gioco di squadra con allenatori qualificati." crumbs={[{ label: 'Giovani' }]} />
+  <section class="section">
+    <div class="wrap">
+      <h2>Le squadre</h2>
+      <ul class="teams">
+        {GIOVANILI.map((t) => (
+          <li><a href={`/giovanili/${t.slug}/`}><span class="teams__n">{t.name}</span><span class="teams__a">{t.age}</span><Icon name="arrow" size={20} /></a></li>
+        ))}
+      </ul>
+      <div class="info-box info-box--orange" style="margin-top:32px">
+        <h3>Il tuo bambino ha meno di 11 anni?</h3>
+        <p style="margin:0">Il percorso inizia dal <a href="/minibasket/">Minibasket</a>, per bambine e bambini dai 5 agli 11 anni. D'estate c'è anche il <a href="/attivita/centro-estivo/">Centro estivo</a>.</p>
+      </div>
+    </div>
+  </section>
+  <section class="section section--soft">
+    <div class="wrap">
+      <div class="section-head"><h2>Ultime notizie dalle giovanili</h2><a class="btn btn--ghost" href="/news/categoria/giovanili/">Tutte <Icon name="arrow" /></a></div>
+      <NewsGrid items={news.slice(0, 6)} />
+    </div>
+  </section>
+</Base>
+<style>
+  .teams { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 14px; }
+  .teams a { display: grid; grid-template-columns: 1fr auto; align-items: center; padding: 20px 22px; border-radius: var(--radius); background: var(--c-cyan-soft); text-decoration: none; color: var(--c-navy); border: 2px solid transparent; }
+  .teams a:hover { border-color: var(--c-cyan); }
+  .teams__n { font-weight: 800; font-size: 1.25rem; }
+  .teams__a { grid-row: 2; color: var(--c-muted); font-weight: 600; }
+  .teams :global(svg) { grid-row: 1 / 3; grid-column: 2; color: var(--c-blue-dark); }
+</style>

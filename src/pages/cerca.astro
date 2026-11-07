@@ -1,0 +1,72 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Icon from '../components/Icon.astro';
+---
+<Base title="Cerca" description="Cerca tra le notizie della Federazione Sammarinese Pallacanestro.">
+  <PageHero title="Cerca nel sito" intro="Trova notizie, risultati, squadre e persone in oltre 15 anni di archivio." crumbs={[]} />
+  <section class="section">
+    <div class="wrap">
+      <form class="sbox" role="search" id="search-form">
+        <label for="q" class="visually-hidden">Cosa stai cercando?</label>
+        <Icon name="search" size={24} />
+        <input id="q" name="q" type="search" placeholder="Es. minibasket, Under 16, Tim San Marino Cup…" autocomplete="off" />
+        <button class="btn btn--blue" type="submit">Cerca</button>
+      </form>
+      <p class="sstatus" role="status" aria-live="polite"></p>
+      <ol class="sres"></ol>
+    </div>
+  </section>
+</Base>
+<style>
+  .sbox { display: flex; align-items: center; gap: 12px; padding: 8px 8px 8px 20px; border-radius: 999px; border: 2px solid var(--c-border); background: #fff; box-shadow: var(--shadow); max-width: 760px; }
+  .sbox:focus-within { border-color: var(--c-blue-dark); }
+  .sbox :global(svg) { color: var(--c-muted); flex: none; }
+  .sbox input { flex: 1; border: 0; font: inherit; font-size: 1.15rem; min-height: 48px; min-width: 0; background: transparent; outline: none; }
+  .sstatus { margin: 20px 0; color: var(--c-muted); font-weight: 600; }
+  .sres { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; max-width: 900px; }
+  :global(.sres li) { display: grid; grid-template-columns: 120px 1fr; gap: 16px; padding: 14px; border-radius: var(--radius-sm); background: var(--c-bg-soft); position: relative; }
+  :global(.sres img) { width: 120px; height: 80px; object-fit: cover; border-radius: 8px; }
+  :global(.sres a) { font-weight: 800; color: var(--c-navy); text-decoration: none; font-size: 1.08rem; }
+  :global(.sres a::after) { content: ''; position: absolute; inset: 0; }
+  :global(.sres li:hover a) { text-decoration: underline; }
+  :global(.sres small) { display: block; color: var(--c-muted); font-weight: 600; margin-bottom: 2px; }
+  :global(.sres p) { margin: 4px 0 0; color: var(--c-muted); font-size: .95rem; }
+  :global(.sres mark) { background: #ffe7a3; color: inherit; padding: 0 2px; border-radius: 3px; }
+  @media (max-width: 560px) { :global(.sres li) { grid-template-columns: 1fr; } :global(.sres img) { width: 100%; height: 140px; } }
+</style>
+<script>
+  type Item = { t: string; u: string; d: string; c: string; e: string; i: string; b: string };
+  const form = document.getElementById('search-form') as HTMLFormElement;
+  const input = document.getElementById('q') as HTMLInputElement;
+  const status = document.querySelector('.sstatus')!;
+  const list = document.querySelector('.sres')!;
+  let data: Item[] | null = null;
+  const norm = (s: string) => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  const esc = (s: string) => s.replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]!);
+  const fmt = new Intl.DateTimeFormat('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
+  async function load() { if (!data) data = await (await fetch('/search.json')).json(); return data!; }
+  async function run(q: string) {
+    const terms = norm(q).split(/\s+/).filter((t) => t.length > 1);
+    list.innerHTML = '';
+    if (!terms.length) { status.textContent = ''; return; }
+    status.textContent = 'Ricerca in corso…';
+    const items = await load();
+    const scored = items.map((it) => {
+      const t = norm(it.t), b = norm(it.e + ' ' + it.b);
+      let s = 0;
+      for (const term of terms) { if (t.includes(term)) s += 5; else if (b.includes(term)) s += 1; else return null; }
+      return { it, s };
+    }).filter(Boolean) as { it: Item; s: number }[];
+    scored.sort((a, b) => b.s - a.s || b.it.d.localeCompare(a.it.d));
+    const top = scored.slice(0, 50);
+    status.textContent = scored.length ? `${scored.length} risultati per "${q}"${scored.length > 50 ? ' (mostrati i primi 50)' : ''}` : `Nessun risultato per "${q}". Prova con un'altra parola.`;
+    const re = new RegExp(`(${terms.map((t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).join('|')})`, 'gi');
+    list.innerHTML = top.map(({ it }) => `<li>${it.i ? `<img src="${it.i}" alt="" loading="lazy">` : '<span></span>'}<div><small>${esc(it.c)} · ${fmt.format(new Date(it.d))}</small><a href="${it.u}">${esc(it.t).replace(re, '<mark>$1</mark>')}</a><p>${esc(it.e)}</p></div></li>`).join('');
+  }
+  form.addEventListener('submit', (e) => { e.preventDefault(); const q = input.value.trim(); history.replaceState(null, '', q ? `?q=${encodeURIComponent(q)}` : location.pathname); run(q); });
+  let timer: number | undefined;
+  input.addEventListener('input', () => { clearTimeout(timer); timer = window.setTimeout(() => run(input.value.trim()), 250); });
+  const initial = new URLSearchParams(location.search).get('q');
+  if (initial) { input.value = initial; run(initial); }
+</script>

@@ -1,0 +1,40 @@
+---
+import { CATEGORIES } from '../data/site';
+import { formatDate, isoDate, newsUrl, type News } from '../lib/news';
+interface Props { item: News; big?: boolean; headingLevel?: 'h2' | 'h3' }
+const { item, big = false, headingLevel: H = 'h3' } = Astro.props;
+const d = item.data;
+const cat = CATEGORIES[d.categories[0]];
+---
+<article class:list={['news-card card', { 'news-card--big': big }]}>
+  <div class="news-card__media">
+    {d.cover ? <img src={d.cover} alt="" loading="lazy" decoding="async" width="800" height="500" /> : <div class="news-card__ph" aria-hidden="true">FSP</div>}
+  </div>
+  <div class="card__body">
+    <div class="news-card__meta">
+      {cat && <span class="chip" style={`--chip:${cat.color}`}>{cat.label}</span>}
+      <time datetime={isoDate(d.date)}>{formatDate(d.date)}</time>
+    </div>
+    <H class="news-card__title"><a href={newsUrl(item)}>{d.title}</a></H>
+    {d.excerpt && <p class="news-card__exc">{d.excerpt}</p>}
+  </div>
+</article>
+
+<style>
+  .news-card { position: relative; transition: transform .2s ease, box-shadow .2s ease; }
+  .news-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+  .news-card__media { aspect-ratio: 16 / 10; background: var(--c-cyan-soft); overflow: hidden; }
+  .news-card__media img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }
+  .news-card:hover .news-card__media img { transform: scale(1.04); }
+  .news-card__ph { width: 100%; height: 100%; display: grid; place-items: center; font-weight: 800; font-size: 2.5rem; color: var(--c-cyan); }
+  .news-card__meta { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; font-size: .9rem; color: var(--c-muted); }
+  .news-card__title { font-size: 1.15rem; line-height: 1.3; margin: 2px 0 0; overflow-wrap: anywhere; }
+  .news-card__title a { color: var(--c-navy); text-decoration: none; }
+  .news-card__title a::after { content: ''; position: absolute; inset: 0; }
+  .news-card__title a:hover { text-decoration: underline; }
+  .news-card__title a:focus-visible { outline: none; }
+  .news-card:has(a:focus-visible) { outline: 3px solid var(--c-focus); outline-offset: 3px; }
+  .news-card__exc { color: var(--c-muted); font-size: .98rem; margin: 0; display: -webkit-box; -webkit-line-clamp: 3; line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .news-card--big .news-card__title { font-size: clamp(1.35rem, 2.4vw, 1.75rem); }
+  .news-card--big .news-card__exc { -webkit-line-clamp: 4; line-clamp: 4; font-size: 1.05rem; }
+</style>

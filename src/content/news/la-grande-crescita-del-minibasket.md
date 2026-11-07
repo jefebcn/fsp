@@ -1,0 +1,24 @@
+---
+title: "LA GRANDE CRESCITA DEL MINIBASKET"
+date: "2017-01-06"
+categories: ["giovanili"]
+featured: false
+cover: "/media/n-1483706522__mg_0381.webp"
+excerpt: "Pausa natalizia e tempo di primi bilanci per la Federazione Sammarinese Pallacanestro: più che positiva la stagione del minibasket, che vede ulteriormente incrementati i numeri già importanti della…"
+legacyId: 424
+legacyUrl: "/la-grande-crescita-del-minibasket-n424.php"
+---
+
+<p>Pausa natalizia e tempo di primi bilanci per la Federazione Sammarinese Pallacanestro: più che positiva la stagione del minibasket, che vede ulteriormente incrementati i numeri già importanti della scorsa stagione. Sono bene 156 infatti i giovani Titani che frequentano i tre centri minibasket di Fonte Dell’Ovo, Acquaviva e Serravalle.<br>
+	Al Responsabile Minibasket della federazione Oscar Valentini il compito di illustrare più in dettaglio il lavoro dentro e fuori dal campo.<br>
+	<em>«Siamo molto soddisfatti per i tanti bambini che hanno scelto il minibasket. Abbiamo fatto un ottimo lavoro di arruolamento con i centri estivi, grazie ai quali una quindicina di bambini ha scelto la pallacanestro, e con il lavoro di sviluppo nelle scuole che lo scorso anno ha coinvolto le quarte elementari della Repubblica in minitornei di prova. Certamente il sistema di “arruolamento” più efficace resta il passaparola e questo è possibile perché il nostro è un ambiente sano che invoglia i bambini ad invitare gli amici. Per quanto riguarda i numeri, a Fonte Dell’Ovo abbiamo 89 bambini allenati da me e Federico Bombini, 19 ad Acquaviva con Edoardo Angelini e 38 a Serravalle con Fabrizio Bartolini e Gianluca Raschi»</em>.<br>
+	Quante squadre sono attualmente coinvolte in campionati ufficiali?<br>
+	<em>«Al momento abbiamo cinque squadre con ben due gruppi di 2005, la squadra verde e la squadra rossa. Potrebbero essere di più ma abbiamo tanti bambini nuovi che hanno appena cominciato e non sono ancora pronti per le partite. Partecipare ad un campionato è un lavoro impegnativo anche fuori dal campo: bisogna organizzare calendari, turni per le palestre e i pulmini, ma è importante dare ai bambini la possibilità di giocare le partite per abituarsi poco alla volta»</em>.<br>
+	Come valuti il lavoro educativo in ambito sportivo?<br>
+	<em>«Una volta c’erano le parrocchie, un centro forte di aggregazione per attività, sport, o semplice ritrovo. Purtroppo questo elemento sta venendo a mancare e le società sportive sono diventate così l’ente educativo per eccellenza, perché insegnano le regole del gruppo attraverso il gioco e favoriscono la motricità. Abbiamo sempre più bambini sedentari e sovrappeso che arrivano in palestra col bisogno di sfogarsi: al di là della pallacanestro in senso stretto, correre, saltare, arrampicarsi sono attività necessarie per la crescita. Le società andrebbero supportate maggiormente, perché colmano tanto un vuoto educativo quanto un vuoto di attività motoria»</em>.<br>
+	Come si gestisce il rapporto tra gioco e competizione?<br>
+	<em>«Questo è un punto cruciale che dipende dalla sensibilità dell’allenatore. Ci sono gruppi in cui puoi introdurre prima elementi di competizione e fondamentali e altri, tecnicamente più indietro, in cui c’è bisogno più di gioco più che di competizione. Sono valutazioni che spettano al coach che deve calibrare di conseguenza il proprio lavoro. Non sono i bambini che si devono adattare all’allenatore, ma l’allenatore che si deve adattare al gruppo e preparare un allenamento mirato»</em>.<br>
+	Quali sono i rapporti con le altre società?<br>
+	<em>«Salvo rari attriti c’è sempre un rapporto di grande collaborazione, volto alla tutela dei bambini. Ad esempio si può concordare prima della gara con l’allenatore avversario di far giocare i più bravi nei primi due quarti e lasciare spazio nel secondo tempo a quelli che stanno imparando. Nel campionato Scoiattoli, ad esempio, la partita è suddivisa in 8 tempi da 6’ ciascuno: tutti devono giocare e il risultato viene azzerato ad ogni tempo, per evitare che il punteggio assuma proporzioni “demoralizzanti”. Scarti eccessivi ed eccessivi livelli di competitività possono traumatizzare bambini così piccoli e non penso sia giusto vedere un bambino che piange perché ha perso di 80…»</em>.<br>
+	Che ruolo svolge la prima squadra?<br>
+	<em>«La prima squadra è importante perché fa da traino a tutto il movimento. Avere giocatori agli allenamenti è un grande stimolo, perché si crea un legame affettivo che incentiva i bimbi ad andare alla partita. Veder giocare i senior permette ai bambini di osservare, fare domande e capire come ci si muove in campo. Poi è chiaro che i livelli di attenzione variano con l’età, ma guardando si impara. Penso sia una collaborazione da incentivare ulteriormente, perché utile a tutto il movimento»</em>.</p>

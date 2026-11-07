@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import PersonCard from '../../components/PersonCard.astro';
+import { DIRETTIVO } from '../../data/site';
+---
+<Base title="Consiglio direttivo" description="Il Consiglio direttivo della Federazione Sammarinese Pallacanestro.">
+  <PageHero title="Consiglio direttivo" intro="Lo staff dirigenziale eletto per il quadriennio olimpico 2025-2028." crumbs={[{ label: 'Federazione', href: '/federazione/' }]} />
+  <section class="section">
+    <div class="wrap">
+      <ul class="grid grid--3" style="list-style:none;padding:0;margin:0">
+        {DIRETTIVO.map((p) => <PersonCard person={p} />)}
+      </ul>
+    </div>
+  </section>
+</Base>

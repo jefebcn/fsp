@@ -1,0 +1,52 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Icon from '../../components/Icon.astro';
+---
+<Base title="Basket a scuola" description="I progetti della FSP nelle scuole sammarinesi: torneo delle classi quarte elementari e delle seconde medie.">
+  <PageHero title="Basket a scuola" intro="La Federazione Sammarinese Pallacanestro è impegnata da anni a portare il basket nelle scuole sammarinesi con due progetti importanti." crumbs={[{ label: 'Attività', href: '/attivita/' }]} />
+  <section class="section">
+    <div class="wrap">
+      <div class="projects">
+        <article class="proj">
+          <span class="proj__i"><Icon name="school" size={30} /></span>
+          <p class="eyebrow">Ottobre e novembre</p>
+          <h2>Torneo delle classi quarte delle Scuole Elementari</h2>
+          <p>Il campionato viene organizzato ogni anno in collaborazione con gli insegnanti di educazione fisica.</p>
+          <ol class="steps">
+            <li>Una <strong>lezione di basket</strong> durante le ore di educazione fisica, svolta assieme ai nostri allenatori, per impartire le prime regole del gioco e far conoscere ai ragazzi e alle ragazze una nuova disciplina sportiva.</li>
+            <li>Il giro di <strong>tutte le classi quarte</strong> di tutte le scuole elementari della Repubblica.</li>
+            <li>Un <strong>torneo alla Palestra del Multieventi</strong> per far sfidare i bambini e le bambine in piccole partitelle.</li>
+          </ol>
+        </article>
+        <article class="proj proj--b">
+          <span class="proj__i"><Icon name="trophy" size={30} /></span>
+          <p class="eyebrow">Novembre e dicembre</p>
+          <h2>Torneo delle classi seconde delle Scuole Medie</h2>
+          <p>Per i ragazzi e le ragazze della scuola media due ore di educazione fisica diventano un allenamento base di pallacanestro, sempre con la partecipazione dei nostri allenatori.</p>
+          <ol class="steps">
+            <li>Si insegnano le <strong>regole base del gioco</strong>, così da riuscire a fare in seguito delle partite.</li>
+            <li>A conclusione del percorso con tutte le classi seconde si organizza un <strong>torneo alla palestra di Fonte dell'Ovo</strong>.</li>
+            <li>Le classi si affrontano in varie partite, fino ad ottenere una <strong>classe vincitrice</strong>.</li>
+          </ol>
+        </article>
+      </div>
+      <div class="info-box info-box--orange quote">
+        <p>Queste occasioni per la nostra Federazione sono molto importanti, perché permettono di far conoscere sempre di più questa bellissima disciplina a ragazzi, ragazze, bambini e bambine e farli magari così appassionare ad un nuovo sport!</p>
+      </div>
+      <img class="sc-img" src="/media/aaa.webp" alt="" loading="lazy" width="938" height="906" />
+    </div>
+  </section>
+</Base>
+<style>
+  .projects { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .proj { background: var(--c-cyan-soft); border-radius: var(--radius); padding: 28px; }
+  .proj--b { background: #e6f5ea; }
+  .proj__i { width: 56px; height: 56px; border-radius: 16px; display: grid; place-items: center; background: var(--c-navy); color: #fff; margin-bottom: 14px; }
+  .proj h2 { font-size: 1.45rem; }
+  .steps { padding-left: 1.3em; margin: 0; display: grid; gap: 10px; }
+  .quote { margin-top: 32px; font-size: 1.15rem; font-weight: 600; }
+  .quote p { margin: 0; }
+  .sc-img { margin: 32px auto 0; max-width: 520px; width: 100%; border-radius: var(--radius); }
+  @media (max-width: 860px) { .projects { grid-template-columns: 1fr; } }
+</style>

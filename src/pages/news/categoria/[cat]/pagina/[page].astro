@@ -1,0 +1,14 @@
+---
+import NewsIndex from '../../../../../components/NewsIndex.astro';
+import { CATEGORIES } from '../../../../../data/site';
+import { getAllNews, byCategory } from '../../../../../lib/news';
+import { pageCount } from '../../../../../lib/paging';
+export async function getStaticPaths() {
+  const all = await getAllNews();
+  return Object.keys(CATEGORIES).filter((c) => c !== 'hall-of-fame').flatMap((cat) => {
+    const n = pageCount(byCategory(all, cat).length);
+    return Array.from({ length: n - 1 }, (_, i) => ({ params: { cat, page: String(i + 2) } }));
+  });
+}
+---
+<NewsIndex cat={Astro.params.cat} page={Number(Astro.params.page)} />

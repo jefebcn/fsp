@@ -1,0 +1,9 @@
+---
+import NewsIndex from '../../../components/NewsIndex.astro';
+import { getAllNews } from '../../../lib/news';
+export async function getStaticPaths() {
+  const years = new Set((await getAllNews()).map((n) => n.data.date.getUTCFullYear()));
+  return [...years].map((y) => ({ params: { year: String(y) } }));
+}
+---
+<NewsIndex year={Number(Astro.params.year)} />

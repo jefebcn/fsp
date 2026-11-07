@@ -1,0 +1,27 @@
+---
+title: "Saluto del Presidente"
+date: "2010-11-21"
+categories: ["federazione"]
+featured: false
+excerpt: "1968-2008, Federazione Sammarinese Pallacanestro: 40 anni di grandi emozioni, amore e……. passione che riviviamo insieme. Il 9 febbraio 1968 è nata la Federazione Sammarinese Pallacanestro.…"
+legacyId: 55
+legacyUrl: "/saluto-del-presidente-n55.php"
+---
+
+<p><strong>1968-2008, Federazione Sammarinese Pallacanestro: 40 anni di grandi emozioni, amore e……. passione che riviviamo insieme.</strong></p>
+
+<p>Il 9 febbraio 1968 è nata la Federazione Sammarinese Pallacanestro. Un’avvincente storia di persone e di basket, di passioni e di orgoglio, di vittorie e di mancati successi, di ricordi che si rinnovano in questo volume, dedicato a tutti i protagonisti che l’hanno resa possibile.</p>
+<p>E’ con immenso piacere che mi trovo a fare gli auguri di buon compleanno al basket sammarinese. Gli auguri non si possono scindere dai ringraziamenti verso chi ha reso possibile questa storia che cercheremo di ripercorrere nei suoi momenti salienti. </p>
+<p>Dal capannone industriale fatiscente della Saima al Multieventi, passando per il Palazzo degli Studi, anche in versione open-air, e la palestra di Serravalle, dal primo campionato sammarinese disputatosi nel 1971 che vide la vittoria del Città I (Tre Penne) all’ultima edizione conclusasi in novembre 2007 con la vittoria della Serenissima, dalla prima partecipazione nel 1987 ai Giochi dei Piccoli Stati d’Europa (dopo la dolorosa rinuncia alla disputa del primo torneo organizzato in casa nei Giochi del 1985) all’ultima che si è svolta sempre a Monaco, dalle prime eccitanti apparizioni della società Pallacanestro Titano ai campionati regionali italiani degli anni ’70, alle deludenti retrocessioni degli ultimi anni, passando attraverso la scalata ai campionati nazionali degli anni ‘80 e toccando il culmine sfiorando la promozione in B d’eccellenza negli anni ‘90, tante storie di protagonisti e di gente comune che hanno costruito e sviluppato il movimento cestistico.      </p>
+<p>Il merito dell’inizio dell’avventura va ascritto al Prof. Luciano Capicchioni che, giovanissimo e di rientro dagli Stati Uniti, dove frequentando la scuola si avvicinò al nostro sport, coinvolse un gruppo di amici e fondò il movimento che ho l’onore di presiedere. Tutti noi siamo debitori a Luciano Capicchioni, ora stimato manager di fama internazionale, che dopo aver coltivato l’interesse per la pallacanestro negli Stati Uniti, appena arrivato a San Marino, mosso da grande amore verso questo sport, ha coinvolto altri 10 appassionati, e dopo aver sottoscritto il documento fondante della nostra organizzazione, ha dato inizio all’attività della palla a spicchi, da vero pioniere della pallacanestro a San Marino. Infatti, pur trovandosi in una situazione ambientale a dir poco difficile, vedi la scarsa cultura cestistica del tempo, l’assenza di strutture e di persone con esperienza, iniziò l’attività facendo, come succede spesso in questi casi, il factotum, cioè il presidente, l’allenatore, il giocatore, un po’ di tutto. E nonostante le difficoltà trovò il modo di attivare la prima società a San Marino (Pallacanestro Titano), che nel 1969, a seguito della convenzione sottoscritta con l’omologa Federazione Italiana, ebbe la possibilità di partecipare ai campionati Italiani e, ben presto, ci fu il riconoscimento da parte della Federazione Internazionale.</p>
+<p>Un ringraziamento particolare anche al successore, signor Alessandro Liberti, che dopo l’abbandono da parte di Luciano Capicchioni a seguito degli impegni professionali che gli impedivano di poter condurre da vicino l’attività della Federazione, ha portato avanti il lavoro per molti anni consolidando la struttura ed ottenendo i primi grandi risultati internazionali. Non posso dimenticare che nel 1996 si impegnò con successo alla organizzazione a San Marino della Promotion Cup dove la Nazionale biancazzurra ottenne la prima medaglia della sua storia.</p>
+<p>La menzione dei presidenti che mi hanno preceduto vuole rappresentare tutte le persone che , a vario titolo, tempo per tempo, hanno supportato con sacrificio e dedizione l’attività della Federazione, dal punto di vista amministrativo, economico, tecnico, agonistico, logistico e di promozione, e che abbiamo inteso ricordare con un’ampia rassegna di foto d’archivio. </p>
+
+
+<p>Il libro del quarantennale oltre ad illustrare la storia della nostra Federazione, soprattutto ai più giovani, vuole trasmettere i valori che da sempre sono alla base della pallacanestro, vale a dire l’impegno, la lealtà, l’umiltà, il sacrificio, il sano divertimento, il rispetto delle regole, la capacità di sviluppare lo spirito di corpo e di esaltare le caratteristiche di ognuno nel gioco di squadra, dentro e fuori dal campo!</p>
+<p>Solo l’esempio e la continua diffusione dei suddetti valori favorirà l’ulteriore crescita del nostro movimento e la continuazione di una storia densa di soddisfazioni.</p>
+<p>Mi preme rivolgere un sincero ringraziamento ai collaboratori ed agli sponsor che, con il loro contributo hanno sostenuto e permesso la realizzazione di questa opera.</p>
+
+<p>Che l’entusiasmo ci guidi sempre nel tentativo di scrivere nuove pagine all’insegna dei successi.</p>
+
+<p> Gian Primo Giardi, Presidente dal 2001 al 2012<br></p>

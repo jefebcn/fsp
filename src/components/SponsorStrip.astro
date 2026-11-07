@@ -1,0 +1,28 @@
+---
+import { SPONSORS } from '../data/site';
+---
+<section class="sponsors" aria-labelledby="sponsor-t">
+  <div class="wrap">
+    <h2 id="sponsor-t" class="sponsors__t">Grazie ai nostri partner</h2>
+    <ul class="sponsors__list">
+      {SPONSORS.map((s) => (
+        <li>
+          {s.url ? (
+            <a href={s.url} rel="noopener" target="_blank" title={s.name}><img src={s.logo} alt={s.name} loading="lazy" width="150" height="100" /></a>
+          ) : (
+            <img src={s.logo} alt={s.name} loading="lazy" width="150" height="100" />
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+<style>
+  .sponsors { padding-block: 48px; background: #fff; border-top: 1px solid var(--c-border); }
+  .sponsors__t { text-align: center; font-size: 1.1rem; letter-spacing: .1em; text-transform: uppercase; color: var(--c-muted); margin-bottom: 24px; }
+  .sponsors__list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 16px 24px; align-items: center; }
+  .sponsors__list li { display: grid; place-items: center; }
+  .sponsors__list a { display: block; border-radius: 10px; }
+  .sponsors__list img { max-height: 70px; width: auto; max-width: 140px; object-fit: contain; filter: grayscale(1); opacity: .8; transition: filter .2s, opacity .2s; }
+  .sponsors__list a:hover img, .sponsors__list a:focus-visible img { filter: none; opacity: 1; }
+</style>
