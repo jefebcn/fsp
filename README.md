@@ -37,6 +37,11 @@ I vecchi indirizzi `.php` (es. `/contatti.php`, `/…-n672.php`) vengono reindir
 | `--c-navy` | `#0C3A6D` | titoli, intestazioni |
 | `--c-orange` | `#E8701A` | arancio del pallone del logo, pulsanti principali |
 
+## Area Segreteria
+
+La segreteria gestisce notizie e contenuti dalla dashboard riservata in `dashboard/` (progetto Vercel separato):
+vedi [dashboard/README.md](dashboard/README.md). I contenuti modificabili sono in `src/data/contenuti/*.json` e `src/content/news/`.
+
 ## Sviluppo
 
 ```bash

@@ -1,0 +1,59 @@
+[
+  {
+    "name": "Luca Liberti",
+    "role": "Presidente",
+    "photo": "/media/1655727055_luca-liberti.webp"
+  },
+  {
+    "name": "Stefano Rossini",
+    "role": "Head Coach Under 17, Under 13 e Head Coach Nazionale Under 18",
+    "photo": "/media/1756297305_ross.webp"
+  },
+  {
+    "name": "Sergio Del Bianco",
+    "role": "Head Coach Under 19 e Head Coach Nazionale Under 16",
+    "photo": "/media/1756297373_sergio.webp"
+  },
+  {
+    "name": "Alberto Vivenzio",
+    "role": "Head Coach Under 15"
+  },
+  {
+    "name": "Federico Guida",
+    "role": "Assistant Coach Under 19 e Nazionale Under 16",
+    "photo": "/media/1756297332_fede.webp"
+  },
+  {
+    "name": "Luca Ricci",
+    "role": "Assistant Coach Under 15 e Under 13"
+  },
+  {
+    "name": "Nicolò Botteghi",
+    "role": "Assistant Coach Under 17"
+  },
+  {
+    "name": "Oscar Valentini",
+    "role": "Responsabile Minibasket, Istruttore Minibasket, Head Coach Under 12",
+    "photo": "/media/1756296917_oscar.webp"
+  },
+  {
+    "name": "Giovanna Cristiano",
+    "role": "Istruttrice Minibasket"
+  },
+  {
+    "name": "Valentina Selva",
+    "role": "Allenatrice Minibasket"
+  },
+  {
+    "name": "Luigi Raschi",
+    "role": "Allenatore Minibasket"
+  },
+  {
+    "name": "Davide Macina",
+    "role": "Preparatore atletico"
+  },
+  {
+    "name": "Loriano Zannoni",
+    "role": "Addetto Stampa"
+  }
+]

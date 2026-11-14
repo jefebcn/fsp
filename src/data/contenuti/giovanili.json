@@ -1,0 +1,72 @@
+[
+  {
+    "slug": "under-19",
+    "name": "Under 19",
+    "age": "17-19 anni",
+    "coaches": [
+      "Sergio Del Bianco",
+      "Federico Guida"
+    ],
+    "keywords": "under 19, u19"
+  },
+  {
+    "slug": "under-18",
+    "name": "Under 18",
+    "age": "16-18 anni",
+    "coaches": [],
+    "keywords": "under 18, u18"
+  },
+  {
+    "slug": "under-17",
+    "name": "Under 17",
+    "age": "15-17 anni",
+    "coaches": [
+      "Stefano Rossini",
+      "Nicolò Botteghi"
+    ],
+    "keywords": "under 17, u17"
+  },
+  {
+    "slug": "under-16",
+    "name": "Under 16",
+    "age": "14-16 anni",
+    "coaches": [],
+    "keywords": "under 16, u16"
+  },
+  {
+    "slug": "under-15",
+    "name": "Under 15",
+    "age": "13-15 anni",
+    "coaches": [
+      "Alberto Vivenzio",
+      "Luca Ricci"
+    ],
+    "keywords": "under 15, u15"
+  },
+  {
+    "slug": "under-14",
+    "name": "Under 14",
+    "age": "12-14 anni",
+    "coaches": [],
+    "keywords": "under 14, u14"
+  },
+  {
+    "slug": "under-13",
+    "name": "Under 13",
+    "age": "11-13 anni",
+    "coaches": [
+      "Stefano Rossini",
+      "Luca Ricci"
+    ],
+    "keywords": "under 13, u13"
+  },
+  {
+    "slug": "esordienti",
+    "name": "Esordienti",
+    "age": "11-12 anni",
+    "coaches": [
+      "Oscar Valentini"
+    ],
+    "keywords": "esordienti, under 12, u12"
+  }
+]

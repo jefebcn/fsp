@@ -50,6 +50,8 @@ const config = {
   framework: 'astro',
   buildCommand: 'npm run build',
   outputDirectory: 'dist',
+  // Non ricostruire il sito quando cambia solo la dashboard
+  ignoreCommand: "git diff --quiet HEAD^ HEAD -- . ':(exclude)dashboard'",
   trailingSlash: true,
   redirects,
   headers: [

@@ -9,6 +9,8 @@ export const GET: APIRoute = async () => {
     u: `/news/${n.id}/`,
     d: isoDate(n.data.date),
     c: CATEGORIES[n.data.categories[0]]?.label ?? '',
+    k: n.data.categories,
+    f: n.data.featured || undefined,
     e: n.data.excerpt,
     i: n.data.cover ?? '',
     b: (n.body ?? '').replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').slice(0, 1500),

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Luca Liberti",
+    "role": "Presidente",
+    "photo": "/media/1655196274_luca-liberti.webp"
+  },
+  {
+    "name": "Simone Botteghi",
+    "role": "Vice Presidente",
+    "photo": "/media/1655724102_botteghi-2.webp"
+  },
+  {
+    "name": "Roberto Berardi",
+    "role": "Segretario Generale"
+  },
+  {
+    "name": "Veronica Zavoli",
+    "role": "Tesoriere",
+    "photo": "/media/1756297823_senza-titolo.webp"
+  },
+  {
+    "name": "Davide Giovagnoli",
+    "role": "Consigliere"
+  },
+  {
+    "name": "Gabriele Vitali",
+    "role": "Consigliere"
+  },
+  {
+    "name": "Diego De Simone",
+    "role": "Sindaco Revisore",
+    "photo": "/media/1750091314_diegojumpin2-min.webp"
+  },
+  {
+    "name": "Lorenzo Sarti",
+    "role": "Sindaco Revisore"
+  },
+  {
+    "name": "Gianfranco Trombetti",
+    "role": "Sindaco Revisore"
+  }
+]

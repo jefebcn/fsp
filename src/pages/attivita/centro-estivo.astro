@@ -3,23 +3,14 @@ import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import Icon from '../../components/Icon.astro';
 import NewsGrid from '../../components/NewsGrid.astro';
-import { SITE, tel } from '../../data/site';
+import { SITE, tel, CENTRO_ESTIVO } from '../../data/site';
 import { getAllNews, matching } from '../../lib/news';
 const news = matching(await getAllNews(), /centro estivo|centri estivi|summer camp|camp estivo/i).slice(0, 3);
-const program = [
-  ['8:00-9:00', 'Accoglienza in palestra', 'users'],
-  ['9:00-10:00', 'Basket divisi per annate o uscita in passeggiata', 'ball'],
-  ['10:00-10:30', 'Merenda offerta da noi a base di frutta fresca', 'heart'],
-  ['10:30-12:30', "Giochi all'aria aperta ed attività varie", 'sun'],
-  ['12:30', 'Uscita SMALL', 'clock'],
-  ['13:00-14:00', 'Pranzo presso il ristorante Match Point al centro tennis', 'food'],
-  ['14:00-15:00', 'Gioco libero', 'child'],
-  ['15:00-16:00', 'Giochi organizzati', 'star'],
-  ['16:00', 'Uscita FULL', 'clock'],
-];
+const ce = CENTRO_ESTIVO;
+const icons = ['users', 'ball', 'heart', 'sun', 'clock', 'food', 'child', 'star', 'clock'];
 ---
-<Base title="Centro estivo" description="Centro estivo di basket a San Marino per bambini e bambine dai 5 agli 11 anni." image="/media/n-1679303416_summer-camp-fsp-2023.webp">
-  <PageHero title="Centro estivo" intro="Il Centro estivo di basket a San Marino è pensato per i bambini e bambine dai 5 agli 11 anni di età (compresi)." crumbs={[{ label: 'Attività', href: '/attivita/' }]}>
+<Base title="Centro estivo" description="Centro estivo di basket a San Marino per bambini e bambine dai 5 agli 11 anni." image={CENTRO_ESTIVO.poster}>
+  <PageHero title="Centro estivo" intro={ce.intro} crumbs={[{ label: 'Attività', href: '/attivita/' }]}>
     <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
       <a class="btn btn--primary" href="/contatti/?oggetto=Centro%20estivo">Richiedi informazioni</a>
     </div>
@@ -28,27 +19,23 @@ const program = [
     <div class="wrap ce">
       <div>
         <ul class="ce-facts">
-          <li><Icon name="child" size={28} /><div><strong>Età</strong>Bambini e bambine dai 5 agli 11 anni (compresi)</div></li>
-          <li><Icon name="calendar" size={28} /><div><strong>Turni</strong>Da metà giugno fino alla fine di luglio, poi da fine agosto fino alla prima settimana di settembre</div></li>
-          <li><Icon name="pin" size={28} /><div><strong>Dove</strong>Palestra U. Briganti di Fonte dell'Ovo</div></li>
-          <li><Icon name="bus" size={28} /><div><strong>Navetta</strong>Servizio di navetta dal Multieventi</div></li>
-          <li><Icon name="clock" size={28} /><div><strong>Orari</strong>FULL dalle 8:00 alle 16:00, oppure SMALL con uscita anticipata prima del pranzo alle 12:30</div></li>
+          {ce.info.map((f) => <li><Icon name={f.icon} size={28} /><div><strong>{f.title}</strong>{f.text}</div></li>)}
         </ul>
         <h2>Programma della giornata</h2>
         <ol class="day">
-          {program.map(([h, t, i]) => <li><span class="day__h">{h}</span><Icon name={i} size={22} /><span>{t}</span></li>)}
+          {ce.programma.map((p, i) => <li><span class="day__h">{p.ora}</span><Icon name={icons[i % icons.length]} size={22} /><span>{p.attivita}</span></li>)}
         </ol>
-        <p class="note"><strong>Tariffe:</strong> consultare il volantino. Per riceverlo, contatta la segreteria.</p>
+        {ce.tariffe && <p class="note"><strong>Tariffe:</strong> {ce.tariffe}</p>}
       </div>
       <aside>
-        <img class="ce-poster" src="/media/n-1679303416_summer-camp-fsp-2023.webp" alt="Volantino del Summer Camp FSP" loading="lazy" />
+        {ce.poster && <img class="ce-poster" src={ce.poster} alt="Volantino del centro estivo FSP" loading="lazy" />}
         <div class="info-box" style="margin-top:20px">
           <h3>Info e iscrizioni</h3>
           <ul class="info-list">
             <li><Icon name="phone" /><span>Segreteria FSP <a href={tel(SITE.phone)}>0549 885691</a><br />Cell. <a href={tel(SITE.mobile)}>335 5704089</a></span></li>
             <li><Icon name="mail" /><a href={`mailto:${SITE.email}`}>{SITE.email}</a></li>
             <li><Icon name="facebook" /><a href={SITE.social.facebook} rel="noopener" target="_blank">Federazione Sammarinese Pallacanestro</a></li>
-            <li><Icon name="users" /><span>Oscar Valentini (Responsabile): <a href="tel:3333617850">333 3617850</a></span></li>
+            {ce.responsabile?.nome && <li><Icon name="users" /><span>{ce.responsabile.nome} (Responsabile): <a href={tel(ce.responsabile.telefono)}>{ce.responsabile.telefono}</a></span></li>}
           </ul>
         </div>
       </aside>

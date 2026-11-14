@@ -1,0 +1,25 @@
+{
+  "name": "Federazione Sammarinese Pallacanestro",
+  "short": "FSP",
+  "tagline": "Il basket di San Marino, dal 1968",
+  "description": "Sito ufficiale della Federazione Sammarinese Pallacanestro: minibasket, settore giovanile, nazionali, Campionato Sammarinese, news e contatti.",
+  "founded": "9 febbraio 1968",
+  "coe": "C.o.E. SM 02404",
+  "email": "fsp@omniway.sm",
+  "phone": "+39 0549 885691",
+  "fax": "+39 0549 885692",
+  "mobile": "+39 335 5704089",
+  "address": {
+    "street": "Via Rancaglia, 22",
+    "place": "Centro Sportivo, Serravalle",
+    "cap": "47899",
+    "city": "Serravalle",
+    "country": "Repubblica di San Marino"
+  },
+  "social": {
+    "instagram": "https://www.instagram.com/fsp1968/",
+    "facebook": "https://www.facebook.com/federazionesammarinese.pallacanestro/",
+    "facebookGroup": "https://www.facebook.com/groups/173302223309090/",
+    "fibaEurope": "https://www.fibaeurope.com/"
+  }
+}

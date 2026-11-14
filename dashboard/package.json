@@ -1,0 +1,12 @@
+{
+  "name": "fsp-dashboard-segreteria",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Dashboard della segreteria FSP per gestire i contenuti del sito",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "crea-utente": "node scripts/crea-utente.mjs"
+  }
+}

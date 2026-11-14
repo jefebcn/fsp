@@ -1,0 +1,25 @@
+---
+import { AVVISO } from '../data/site';
+const a = AVVISO;
+---
+{a && (
+  <div class:list={['avviso', `avviso--${a.tipo}`]} role="region" aria-label="Avviso">
+    <div class="wrap avviso__in">
+      <span class="avviso__dot" aria-hidden="true"></span>
+      <p>{a.testo}</p>
+      {a.link && <a href={a.link}>{a.etichettaLink || 'Scopri di più'} →</a>}
+    </div>
+  </div>
+)}
+<style>
+  .avviso { background: var(--c-orange-soft); border-bottom: 1px solid #ffd7b8; color: var(--c-text); }
+  .avviso--urgente { background: #b71c1c; color: #fff; border-color: #8e1515; }
+  .avviso--successo { background: #e6f5ea; border-color: #b9e2c5; }
+  .avviso__in { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; padding-block: 12px; }
+  .avviso p { margin: 0; font-weight: 700; flex: 1 1 280px; }
+  .avviso a { font-weight: 800; color: inherit; white-space: nowrap; }
+  .avviso--urgente a { color: #fff; }
+  .avviso__dot { width: 12px; height: 12px; border-radius: 50%; background: var(--c-orange); flex: none; }
+  .avviso--urgente .avviso__dot { background: #fff; }
+  .avviso--successo .avviso__dot { background: var(--c-green); }
+</style>

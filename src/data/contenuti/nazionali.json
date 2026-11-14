@@ -1,0 +1,187 @@
+[
+  {
+    "slug": "senior",
+    "name": "Nazionale Senior",
+    "season": "2024",
+    "photo": "/media/1719015947_nazionale-senior-san-marino-2024.webp",
+    "players": [
+      {
+        "name": "Nicola Borello",
+        "born": "25-06-1997"
+      },
+      {
+        "name": "Matteo Federico Botteghi",
+        "born": "10-11-1995"
+      },
+      {
+        "name": "Mathias Alberto Cadiman",
+        "born": "27-09-2006"
+      },
+      {
+        "name": "Tommaso Felici",
+        "born": "17-10-2001"
+      },
+      {
+        "name": "Leonardo Maria Fiorani",
+        "born": "11-05-2000"
+      },
+      {
+        "name": "Francesco Maria Guida",
+        "born": "18-04-2004"
+      },
+      {
+        "name": "Davide Macina",
+        "born": "01-07-1993"
+      },
+      {
+        "name": "Gioele Moretti",
+        "born": "02-11-1993"
+      },
+      {
+        "name": "Matteo Mularoni",
+        "born": "27-07-2003"
+      },
+      {
+        "name": "Kevin Riccardi",
+        "born": "22-03-1998"
+      },
+      {
+        "name": "Pietro Ugolini",
+        "born": "05-11-2000"
+      },
+      {
+        "name": "Enrico Zanotti",
+        "born": "11-04-1990"
+      }
+    ],
+    "staff": [
+      {
+        "role": "Head coach",
+        "name": "Daniele Valentini"
+      },
+      {
+        "role": "Assistant coach",
+        "name": "Nicola Galli"
+      }
+    ],
+    "keywords": "senior, seniores, piccoli stati, small countries, nazionale maggiore"
+  },
+  {
+    "slug": "under-18",
+    "name": "Nazionale Under 18",
+    "season": "2025",
+    "photo": "/media/1756297097_u18.webp",
+    "players": [
+      {
+        "name": "Eugenio Falcioni"
+      },
+      {
+        "name": "Michele Pagliarani"
+      },
+      {
+        "name": "Matteo Valamggi"
+      },
+      {
+        "name": "Manuel San Martini"
+      },
+      {
+        "name": "Thomas Gasperoni"
+      },
+      {
+        "name": "Mattia Sartini"
+      },
+      {
+        "name": "Federico San Martini"
+      },
+      {
+        "name": "Edoardo Cenni"
+      },
+      {
+        "name": "Mattia Giovannini"
+      },
+      {
+        "name": "Samuele Cecchetti"
+      },
+      {
+        "name": "Giacomo Valentini"
+      },
+      {
+        "name": "Mattia Nanni"
+      }
+    ],
+    "staff": [
+      {
+        "role": "Head coach",
+        "name": "Stefano Rossini"
+      },
+      {
+        "role": "Assistant coach",
+        "name": "Oscar Valentini"
+      },
+      {
+        "role": "Fisioterapista",
+        "name": "Matteo Iuliani"
+      }
+    ],
+    "keywords": "under 18, u18, u.18"
+  },
+  {
+    "slug": "under-16",
+    "name": "Nazionale Under 16",
+    "season": "2025",
+    "photo": "/media/1756296450_webp.webp",
+    "players": [
+      {
+        "name": "Giacomo Casadei"
+      },
+      {
+        "name": "Edoardo Cenni"
+      },
+      {
+        "name": "Mattia Fantini"
+      },
+      {
+        "name": "Mattia Giovannini"
+      },
+      {
+        "name": "Alex Lisi"
+      },
+      {
+        "name": "Giacomo Lullo"
+      },
+      {
+        "name": "Lorenzo Mattia Mussoni"
+      },
+      {
+        "name": "Alex Pelliccioni"
+      },
+      {
+        "name": "Manuel San Martini"
+      },
+      {
+        "name": "Matteo Alejo Suarez Ramirez"
+      },
+      {
+        "name": "Gianluca Tura"
+      },
+      {
+        "name": "Giacomo Valentini"
+      }
+    ],
+    "staff": [
+      {
+        "role": "Head coach",
+        "name": "Sergio Del Bianco"
+      },
+      {
+        "role": "Assistant coach",
+        "name": "Federico Guida"
+      },
+      {
+        "role": "Fisioterapista",
+        "name": "Matteo Iuliani"
+      }
+    ],
+    "keywords": "under 16, u16, u.16"
+  }
+]

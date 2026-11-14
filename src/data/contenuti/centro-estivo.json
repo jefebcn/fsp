@@ -1,0 +1,24 @@
+{
+  "intro": "Il Centro estivo di basket a San Marino è pensato per i bambini e bambine dai 5 agli 11 anni di età (compresi).",
+  "poster": "/media/n-1679303416_summer-camp-fsp-2023.webp",
+  "info": [
+    { "icon": "child", "title": "Età", "text": "Bambini e bambine dai 5 agli 11 anni (compresi)" },
+    { "icon": "calendar", "title": "Turni", "text": "Da metà giugno fino alla fine di luglio, poi da fine agosto fino alla prima settimana di settembre" },
+    { "icon": "pin", "title": "Dove", "text": "Palestra U. Briganti di Fonte dell'Ovo" },
+    { "icon": "bus", "title": "Navetta", "text": "Servizio di navetta dal Multieventi" },
+    { "icon": "clock", "title": "Orari", "text": "FULL dalle 8:00 alle 16:00, oppure SMALL con uscita anticipata prima del pranzo alle 12:30" }
+  ],
+  "programma": [
+    { "ora": "8:00-9:00", "attivita": "Accoglienza in palestra" },
+    { "ora": "9:00-10:00", "attivita": "Basket divisi per annate o uscita in passeggiata" },
+    { "ora": "10:00-10:30", "attivita": "Merenda offerta da noi a base di frutta fresca" },
+    { "ora": "10:30-12:30", "attivita": "Giochi all'aria aperta ed attività varie" },
+    { "ora": "12:30", "attivita": "Uscita SMALL" },
+    { "ora": "13:00-14:00", "attivita": "Pranzo presso il ristorante Match Point al centro tennis" },
+    { "ora": "14:00-15:00", "attivita": "Gioco libero" },
+    { "ora": "15:00-16:00", "attivita": "Giochi organizzati" },
+    { "ora": "16:00", "attivita": "Uscita FULL" }
+  ],
+  "tariffe": "Consultare il volantino. Per riceverlo, contatta la segreteria.",
+  "responsabile": { "nome": "Oscar Valentini", "telefono": "333 3617850" }
+}

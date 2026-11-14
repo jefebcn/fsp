@@ -1,0 +1,40 @@
+[
+  {
+    "name": "Palestra Multieventi Sport Domus",
+    "venue": "Multieventi Sport Domus",
+    "address": [
+      "Via Rancaglia 30",
+      "47899 Serravalle"
+    ],
+    "phone": "0549 885628",
+    "built": "1998",
+    "surface": "Parquet, 44 x 22 m",
+    "seats": "1.200 posti",
+    "photo": "/media/impianti_domus.webp"
+  },
+  {
+    "name": "Palestra \"Umberto Briganti\" Fonte dell'Ovo",
+    "venue": "Centro Studi Fonte dell'Ovo",
+    "address": [
+      "Viale Campo dei Giudei",
+      "47890 San Marino"
+    ],
+    "phone": "0549 991994",
+    "built": "1990",
+    "surface": "Resina, 36 x 18 m",
+    "seats": "150 posti",
+    "photo": "/media/impianti_briganti.webp"
+  },
+  {
+    "name": "Palestra Acquaviva",
+    "venue": "Palestra Scuole di Acquaviva",
+    "address": [
+      "Via Nitella",
+      "47892 Acquaviva"
+    ],
+    "built": "2009",
+    "surface": "Parquet, 36 x 18 m",
+    "seats": "200 posti",
+    "photo": "/media/impianti_acquaviva.webp"
+  }
+]
